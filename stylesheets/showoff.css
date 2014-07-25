@@ -1,12 +1,32 @@
-html, body {height: 100%;margin:0;}
-body{
-    display: -webkit-box; display: -moz-box; display: box;
-    -webkit-box-align: center;-moz-box-align: center;flex-align: center;
-    -webkit-box-pack: center;-moz-box-pack: center;flex-pack: center;
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    flex-align: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    flex-pack: center;
 }
 @media all and (max-width: 720px) {
-    body{ -webkit-box-orient: vertical;box-orient: vertical; }
+    body {
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+    }
 }
-div {
+div.center {
     font-size: 10em;
+}
+div.copyright {
+    font-size: 1em;
+    font-family: sans-serif;
+    color: gray;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
 }
