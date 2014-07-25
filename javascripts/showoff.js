@@ -1,7 +1,7 @@
-var imgUrl = "images/showoff.png";
+var imgUrl = "http://limingjie.github.io/images/showoff.png";
 var lineLink = "http://limingjie.github.io/showoff.html";
 var descContent = "我与神经猫大战三天三夜, 终于用十万步围住了神经猫!";
-var shareTitle = "大战神经猫";
+var shareTitle = "我与神经猫大战三天三夜, 终于用十万步围住了神经猫!";
 var appid = '';
  
 function shareFriend() {
