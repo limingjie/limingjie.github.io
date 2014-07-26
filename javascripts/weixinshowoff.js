@@ -1,18 +1,28 @@
 var data = {
-    image   : getUrlParameters("image"),
-    title   : getUrlParameters("title"),
-    desc    : "",
-    showoff : getUrlParameters("showoff"),
+    image   : "http://limingjie.github.io/images/weixin.png",
+    title   : "微信显摆 Weixin Showoff",
+    desc    : "微信显摆 Weixin Showoff",
+    showoff : "微信显摆 Weixin Showoff",
     link    : window.location.href
 };
 
 function onload() {
-    if (data.title.length > 0) {
-        document.title = data.title;
-        data.desc = data.title;
+    var value = getUrlParameters("image");
+    if (value.length > 0) {
+        data.image = value;
     }
-    if (data.showoff.length > 0) {
-        document.getElementById("showoff").innerHTML = data.showoff;
+
+    value = getUrlParameters("title");
+    if (value > 0) {
+        document.title = value;
+        data.title = value;
+        data.desc = value;
+    }
+
+    value = getUrlParameters("showoff");
+    if (value > 0) {
+        document.getElementById("showoff").innerHTML = value;
+        data.showoff = value;
     }
 }
 
