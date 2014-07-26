@@ -21,6 +21,7 @@ body {
 }
 div.center {
     font-size: 10em;
+    text-align: center;
 }
 div.copyright {
     font-size: 3em;
