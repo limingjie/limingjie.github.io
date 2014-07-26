@@ -11,11 +11,13 @@ function onload() {
     document.getElementById("showoff").innerHTML = data.showoff;
 }
 
-if (window.addEventListener)
+if (window.addEventListener) {
     window.addEventListener("load", onload, false);
-else if (window.attachEvent)
+} else if (window.attachEvent) {
     window.attachEvent("onload", onload);
-else window.onload = onload;
+} else {
+    window.onload = onload;
+}
 
 document.addEventListener('WeixinJSBridgeReady', function () {
     WeixinJSBridge.on('menu:share:appmessage', function (argv) {
