@@ -1,10 +1,15 @@
 document.addEventListener('WeixinJSBridgeReady', function () {
     var data = {
-        image : "http://limingjie.github.io/images/showoff.png",
-        link  : "http://limingjie.github.io/showoff.html",
-        desc  : "我与神经猫大战三天三夜, 终于用十万步围住了神经猫!",
-        title : "我与神经猫苦战三天三夜, 终于用十万步围住了神经猫!"
+        image   : getUrlParameters("image"),
+        desc    : getUrlParameters("title"),
+        title   : getUrlParameters("title"),
+        showoff : getUrlParameters("showoff"),
+        link    : window.location.href
     };
+    
+    document.title = data.title;
+    document.getElementById("showoff").innerHTML = data.title;
+    
     WeixinJSBridge.on('menu:share:appmessage', function (argv) {
         WeixinJSBridge.invoke('sendAppMessage', {
             "appid"      : "",
