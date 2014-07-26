@@ -1,4 +1,4 @@
-document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+document.addEventListener('WeixinJSBridgeReady', function () {
     var data = {
         image : "http://limingjie.github.io/images/showoff.png",
         link  : "http://limingjie.github.io/showoff.html",
