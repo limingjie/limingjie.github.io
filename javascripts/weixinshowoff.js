@@ -68,15 +68,15 @@ document.addEventListener('WeixinJSBridgeReady', function () {
 }, false);
 
 function getUrlParameters(parameter) {
-    var url = window.location.search,
-        arr = url.split("?")[1].split("&"),
-        l = arr.length,
-        i;
+    var url = window.location.search, arr, param, l, i;
 
-    for (i = 0; i < l; ++i) {
-        param = arr[i].split("=");
-        if (param[0] === parameter) {
-            return decodeURIComponent(param[1]);
+    if (url.length > 0) {
+        arr = url.split("?")[1].split("&");
+        for (i = 0, l = arr.length; i < l; ++i) {
+            param = arr[i].split("=");
+            if (param[0] === parameter) {
+                return decodeURIComponent(param[1]);
+            }
         }
     }
 
