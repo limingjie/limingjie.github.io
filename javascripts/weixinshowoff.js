@@ -1,14 +1,19 @@
 var data = {
     image   : getUrlParameters("image"),
-    desc    : getUrlParameters("title"),
     title   : getUrlParameters("title"),
+    desc    : "",
     showoff : getUrlParameters("showoff"),
     link    : window.location.href
 };
 
 function onload() {
-    document.title = data.title;
-    document.getElementById("showoff").innerHTML = data.showoff;
+    if (data.title.length > 0) {
+        document.title = data.title;
+        data.desc = data.title;
+    }
+    if (data.showoff.length > 0) {
+        document.getElementById("showoff").innerHTML = data.showoff;
+    }
 }
 
 if (window.addEventListener) {
