@@ -1,52 +1,39 @@
-var image = "http://limingjie.github.io/images/showoff.png";
-var link  = "http://limingjie.github.io/showoff.html";
-var desc  = "我与神经猫大战三天三夜, 终于用十万步围住了神经猫!";
-var title = "我与神经猫大战三天三夜, 终于用十万步围住了神经猫!";
-
-function shareFriend() {
-    WeixinJSBridge.invoke('sendAppMessage', {
-        "appid"      : "",
-        "img_url"    : image,
-        "img_width"  : "80",
-        "img_height" : "80",
-        "link"       : link,
-        "desc"       : desc,
-        "title"      : title
-    }, function (res) {
-    });
-}
-function shareTimeline() {
-    WeixinJSBridge.invoke('shareTimeline', {
-        "img_url"    : image,
-        "img_width"  : "80",
-        "img_height" : "80",
-        "link"       : link,
-        "desc"       : desc,
-        "title"      : title
-    }, function (res) {
-    });
-}
-function shareWeibo() {
-    WeixinJSBridge.invoke('shareWeibo', {
-        "content" : desc,
-        "url"     : link
-    }, function (res) {
-    });
-}
-
-// Weixin browser will invoke WeixinJSBridgeReady after initialized.
 document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-    // share with friend
+    var data = {
+        image : "http://limingjie.github.io/images/showoff.png",
+        link  : "http://limingjie.github.io/showoff.html",
+        desc  : "我与神经猫大战三天三夜, 终于用十万步围住了神经猫!",
+        title : "我与神经猫苦战三天三夜, 终于用十万步围住了神经猫!"
+    };
     WeixinJSBridge.on('menu:share:appmessage', function (argv) {
-        shareFriend();
+        WeixinJSBridge.invoke('sendAppMessage', {
+            "appid"      : "",
+            "img_url"    : data.image,
+            "img_width"  : "80",
+            "img_height" : "80",
+            "link"       : data.link,
+            "desc"       : data.desc,
+            "title"      : data.title
+        }, function (res) {
+        });
     });
-    // share on moment
     WeixinJSBridge.on('menu:share:timeline', function (argv) {
-        shareTimeline();
+        WeixinJSBridge.invoke('shareTimeline', {
+            "img_url"    : data.image,
+            "img_width"  : "80",
+            "img_height" : "80",
+            "link"       : data.link,
+            "desc"       : data.desc,
+            "title"      : data.title
+        }, function (res) {
+        });
     });
-    // share to weibo
     WeixinJSBridge.on('menu:share:weibo', function (argv) {
-        shareWeibo();
+        WeixinJSBridge.invoke('shareWeibo', {
+            "content" : data.desc,
+            "url"     : data.link
+        }, function (res) {
+        });
     });
 }, false);
 
