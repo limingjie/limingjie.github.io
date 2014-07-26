@@ -13,14 +13,14 @@ function onload() {
     }
 
     value = getUrlParameters("title");
-    if (value > 0) {
+    if (value.length > 0) {
         document.title = value;
         data.title = value;
         data.desc = value;
     }
 
     value = getUrlParameters("showoff");
-    if (value > 0) {
+    if (value.length > 0) {
         document.getElementById("showoff").innerHTML = value;
         data.showoff = value;
     }
