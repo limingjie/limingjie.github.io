@@ -1,15 +1,23 @@
-document.addEventListener('WeixinJSBridgeReady', function () {
-    var data = {
-        image   : getUrlParameters("image"),
-        desc    : getUrlParameters("title"),
-        title   : getUrlParameters("title"),
-        showoff : getUrlParameters("showoff"),
-        link    : window.location.href
-    };
-    
+var data = {
+    image   : getUrlParameters("image"),
+    desc    : getUrlParameters("title"),
+    title   : getUrlParameters("title"),
+    showoff : getUrlParameters("showoff"),
+    link    : window.location.href
+};
+
+function onload() {
     document.title = data.title;
-    document.getElementById("showoff").innerHTML = data.title;
-    
+    document.getElementById("showoff").innerHTML = data.showoff;
+}
+
+if (window.addEventListener)
+    window.addEventListener("load", onload, false);
+else if (window.attachEvent)
+    window.attachEvent("onload", onload);
+else window.onload = onload;
+
+document.addEventListener('WeixinJSBridgeReady', function () {
     WeixinJSBridge.on('menu:share:appmessage', function (argv) {
         WeixinJSBridge.invoke('sendAppMessage', {
             "appid"      : "",
