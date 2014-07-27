@@ -161,18 +161,18 @@ function onImageClick(event) {
 }
 
 function buildGallery() {
-    addImage("http://limingjie.github.io/images/finance/liberty.png");
-    addImage("http://limingjie.github.io/images/finance/lincoln.png");
-    addImage("http://limingjie.github.io/images/finance/stock.png");
+    addImage("http://limingjie.github.io/images/finance/liberty.jpg");
+    addImage("http://limingjie.github.io/images/finance/lincoln.jpg");
+    addImage("http://limingjie.github.io/images/finance/stock.jpg");
     addImage("http://limingjie.github.io/images/presidents/mao.jpg");
     addImage("http://limingjie.github.io/images/presidents/obama.jpg");
     addImage("http://limingjie.github.io/images/presidents/putin.jpg");
-    addImage("http://limingjie.github.io/images/brands/mcd.png");
-    addImage("http://limingjie.github.io/images/brands/kdf.png");
-    addImage("http://limingjie.github.io/images/brands/starbucks.png");
-    addImage("http://limingjie.github.io/images/brands/audi.png");
-    addImage("http://limingjie.github.io/images/brands/benz.png");
-    addImage("http://limingjie.github.io/images/brands/vw.png");
+    addImage("http://limingjie.github.io/images/brands/mcd.jpg");
+    addImage("http://limingjie.github.io/images/brands/kfc.jpg");
+    addImage("http://limingjie.github.io/images/brands/starbucks.jpg");
+    addImage("http://limingjie.github.io/images/brands/audi.jpg");
+    addImage("http://limingjie.github.io/images/brands/benz.jpg");
+    addImage("http://limingjie.github.io/images/brands/vw.jpg");
     addImage("http://limingjie.github.io/images/ali/1.gif");
     addImage("http://limingjie.github.io/images/ali/2.gif");
     addImage("http://limingjie.github.io/images/ali/3.gif");
