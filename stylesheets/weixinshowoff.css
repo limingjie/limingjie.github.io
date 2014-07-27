@@ -87,27 +87,27 @@ textarea {
 }
 .preview {
     background-color: white;
-    height: 100px;
-    padding: 10px;
+    height: 150px;
+    padding: 15px;
 }
 .pbox {
     background-color: #f0f1f2;
-    width: 500px;
-    height: 80px;
-    padding: 10px;
+    width: 750px;
+    height: 120px;
+    padding: 15px;
 }
 .pbox div {
     float: left;
 }
 .picon {
     float: left;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
 }
 .ptext {
-    width: 380px;
-    height: 80px;
-    padding-left: 15px;
+    width: 580px;
+    height: 120px;
+    padding-left: 20px;
     font-size: 3em;
     color: black;
     -o-text-overflow: ellipsis;
