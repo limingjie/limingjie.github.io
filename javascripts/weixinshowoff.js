@@ -172,6 +172,27 @@ function buildGallery() {
     addImage("http://limingjie.github.io/images/ali/4.gif");
     addImage("http://limingjie.github.io/images/ali/5.gif");
     addImage("http://limingjie.github.io/images/ali/6.gif");
+    addImage("http://limingjie.github.io/images/ali/7.gif");
+    addImage("http://limingjie.github.io/images/ali/8.gif");
+    addImage("http://limingjie.github.io/images/ali/9.gif");
+    addImage("http://limingjie.github.io/images/ali/10.gif");
+    addImage("http://limingjie.github.io/images/ali/11.gif");
+    addImage("http://limingjie.github.io/images/ali/12.gif");
+    addImage("http://limingjie.github.io/images/ali/13.gif");
+    addImage("http://limingjie.github.io/images/ali/14.gif");
+    addImage("http://limingjie.github.io/images/ali/15.gif");
+    addImage("http://limingjie.github.io/images/ali/16.gif");
+    addImage("http://limingjie.github.io/images/ali/17.gif");
+    addImage("http://limingjie.github.io/images/ali/18.gif");
+    addImage("http://limingjie.github.io/images/ali/19.gif");
+    addImage("http://limingjie.github.io/images/ali/20.gif");
+    addImage("http://limingjie.github.io/images/ali/21.gif");
+    addImage("http://limingjie.github.io/images/ali/22.gif");
+    addImage("http://limingjie.github.io/images/ali/23.gif");
+    addImage("http://limingjie.github.io/images/ali/24.gif");
+    addImage("http://limingjie.github.io/images/ali/25.gif");
+    addImage("http://limingjie.github.io/images/ali/26.gif");
+    addImage("http://limingjie.github.io/images/ali/27.gif");
 }
 
 function addImage(src) {
