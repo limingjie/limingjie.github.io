@@ -5,10 +5,10 @@ html, body {
 body {
     background-color: black;
     color: white;
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 div {
     width: 100%;
-    clear: both;
 }
 a {
     text-decoration: none;
@@ -60,7 +60,6 @@ textarea {
     line-height: 120px;
     font-size: 4em;
     text-align: center;
-    position: fixed;
     bottom: 0;
 }
 .nav a {
@@ -85,4 +84,33 @@ textarea {
 }
 .input {
     text-align: center;
+}
+.preview {
+    background-color: white;
+    height: 100px;
+    padding: 10px;
+}
+.pbox {
+    background-color: #f0f1f2;
+    width: 500px;
+    height: 80px;
+    padding: 10px;
+}
+.pbox div {
+    float: left;
+}
+.picon {
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+.ptext {
+    width: 380px;
+    height: 80px;
+    padding-left: 15px;
+    font-size: 3em;
+    color: black;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

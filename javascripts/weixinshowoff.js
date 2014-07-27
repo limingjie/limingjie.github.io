@@ -8,27 +8,31 @@ var data = {
     link    : window.location.href
 };
 
-var show, title, showoff, image;
+var show, title, showoff, image, ptitle, pimage;
 
 function onload() {
     show    = document.getElementById("show");
     title   = document.getElementById("title");
     showoff = document.getElementById("showoff");
     image   = document.getElementById("image");
+    ptitle  = document.getElementById("ptext");
+    pimage  = document.getElementById("picon");
 
     var value = getUrlParameters("image");
     if (value.length > 0) {
         data.image = value;
     }
     image.value = data.image;
+    pimage.src  = data.image;
 
     value = getUrlParameters("title");
     if (value.length > 0) {
         data.title = value;
         data.desc  = value;
     }
-    title.value    = data.title;
-    document.title = data.title;
+    title.value      = data.title;
+    document.title   = data.title;
+    ptitle.innerHTML = data.title;
 
     value = getUrlParameters("showoff");
     if (value.length > 0) {
@@ -110,8 +114,10 @@ function updateData() {
         "&showoff=" + encodeURIComponent(data.showoff) +
         "&image=" + encodeURIComponent(data.image);
 
-    document.title = data.title;
-    show.innerHTML = data.showoff;
+    document.title   = data.title;
+    show.innerHTML   = data.showoff;
+    ptitle.innerHTML = data.title;
+    pimage.src       = data.image;
 }
 
 function onNextClick() {
