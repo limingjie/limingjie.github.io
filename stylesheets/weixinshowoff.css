@@ -87,7 +87,9 @@ textarea {
 }
 .preview {
     background-color: white;
-    height: 150px;
+    height: 180px;
+}
+.padbox {
     padding: 15px;
 }
 .pbox {
