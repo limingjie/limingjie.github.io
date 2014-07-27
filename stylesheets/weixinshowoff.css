@@ -36,7 +36,7 @@ textarea {
     height: 96px;
     line-height: 96px;
     font-size: 3em;
-    text-align: center;
+    text-align: right;
 }
 .copyright span {
     vertical-align: middle;
@@ -81,5 +81,8 @@ textarea {
     height: 120px;
     line-height: 120px;
     font-size: 4em;
+    text-align: center;
+}
+.input {
     text-align: center;
 }
