@@ -27,15 +27,15 @@ textarea {
     resize: none;
     background-color: #bbb;
     color: black;
-    font-size: 2em;
+    font-size: 4em;
     width: 500px;
     height: 400px;
 }
 .copyright {
     background-color: #333;
-    height: 64px;
-    line-height: 64px;
-    font-size: 2em;
+    height: 96px;
+    line-height: 96px;
+    font-size: 3em;
     text-align: center;
 }
 .copyright span {
