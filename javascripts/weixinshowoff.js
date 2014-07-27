@@ -6,42 +6,38 @@ var data = {
     link    : window.location.href
 };
 
+var show, title, showoff, image;
+
 function onload() {
+    show    = document.getElementById("show");
+    title   = document.getElementById("title");
+    showoff = document.getElementById("showoff");
+    image   = document.getElementById("image");
+
     var value = getUrlParameters("image");
     if (value.length > 0) {
         data.image = value;
     }
+    image.value = data.image;
 
     value = getUrlParameters("title");
     if (value.length > 0) {
-        document.title = value;
         data.title = value;
-        data.desc = value;
+        data.desc  = value;
     }
+    title.value    = data.title;
+    document.title = data.title;
 
     value = getUrlParameters("showoff");
     if (value.length > 0) {
-        document.getElementById("showoff").innerHTML = value;
         data.showoff = value;
     }
+    showoff.value  = data.showoff;
+    show.innerHTML = data.showoff;
 
-    document.getElementById("next").onclick = function() {
-        var pages = document.getElementsByClassName("page"),
-            currentPage = document.getElementsByClassName("show")[0],
-            nextPage,
-            length = pages.length;
-
-        for (var i = 0; i < length; i++) {
-            if (currentPage === pages[i]) {
-                nextPage = pages[(i + 1) % length];
-                break;
-            }
-        }
-        
-        currentPage.style.display = "none";
-        currentPage.className = "page";
-        nextPage.style.display = "block";
-        nextPage.className = "page show";
+    var nextButtons = document.getElementsByClassName("next");
+    for (var i = 0; i < nextButtons.length; i++) {
+        nextButtons[i].onclick = onNextClick;
     }
 }
 
@@ -100,4 +96,33 @@ function getUrlParameters(parameter) {
     }
 
     return "";
+}
+
+function updateData() {
+    data.title     = title.value;
+    data.showoff   = showoff.value;
+    data.image     = image.value;
+    document.title = data.title;
+    show.innerHTML = data.showoff;
+}
+
+function onNextClick() {
+    var pages       = document.getElementsByClassName("page"),
+        currentPage = document.getElementsByClassName("show")[0],
+        nextPage,
+        length      = pages.length;
+
+    for (var i = 0; i < length; i++) {
+        if (currentPage === pages[i]) {
+            nextPage = pages[(i + 1) % length];
+            break;
+        }
+    }
+
+    currentPage.style.display = "none";
+    currentPage.className = "page";
+    nextPage.style.display = "block";
+    nextPage.className = "page show";
+
+    updateData();
 }
