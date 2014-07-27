@@ -102,6 +102,7 @@ function getUrlParameters(parameter) {
 
 function updateData() {
     data.title     = title.value;
+    data.desc      = title.value;
     data.showoff   = showoff.value;
     data.image     = image.value;
     data.link = baseurl +
