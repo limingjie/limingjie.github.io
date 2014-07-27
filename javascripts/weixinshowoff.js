@@ -1,3 +1,5 @@
+var baseurl = "http://limingjie.github.io/weixinshowoff.html";
+
 var data = {
     image   : "http://limingjie.github.io/images/weixin.png",
     title   : "微信显摆 Weixin Showoff",
@@ -102,6 +104,11 @@ function updateData() {
     data.title     = title.value;
     data.showoff   = showoff.value;
     data.image     = image.value;
+    data.link = baseurl +
+        "?title=" + encodeURIComponent(data.title) +
+        "&showoff=" + encodeURIComponent(data.showoff) +
+        "&image=" + encodeURIComponent(data.image);
+
     document.title = data.title;
     show.innerHTML = data.showoff;
 }
