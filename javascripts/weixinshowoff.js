@@ -8,7 +8,7 @@ var data = {
     link    : window.location.href
 };
 
-var show, title, showoff, image, ptitle, pimage;
+var show, title, showoff, image, ptitle, pimage, gallery;
 
 function onload() {
     show    = document.getElementById("show");
@@ -17,6 +17,7 @@ function onload() {
     image   = document.getElementById("image");
     ptitle  = document.getElementById("ptext");
     pimage  = document.getElementById("picon");
+    gallery = document.getElementById("gallery");
 
     var value = getUrlParameters("image");
     if (value.length > 0) {
@@ -44,6 +45,13 @@ function onload() {
     var nextButtons = document.getElementsByClassName("next");
     for (var i = 0; i < nextButtons.length; i++) {
         nextButtons[i].onclick = onNextClick;
+    }
+    
+    buildGallery();
+
+    var images = document.getElementsByClassName("image");
+    for (var i = 0; i < images.length; i++) {
+        images[i].onclick = onImageClick;
     }
 }
 
@@ -120,7 +128,7 @@ function updateData() {
     pimage.src       = data.image;
 }
 
-function onNextClick() {
+function onNextClick(event) {
     var pages       = document.getElementsByClassName("page"),
         currentPage = document.getElementsByClassName("show")[0],
         nextPage,
@@ -139,4 +147,28 @@ function onNextClick() {
     nextPage.className = "page show";
 
     updateData();
+    
+    return false;
+}
+
+function onImageClick(event) {
+    var el = (event.target === "undefined") ? event.srcElement : event.target;
+    image.value = el.src;
+    
+    updateData();
+    
+    return false;
+}
+
+function buildGallery() {
+    addImage("http://limingjie.github.io/images/2048.png");
+    addImage("http://limingjie.github.io/images/weixin.png");
+    addImage("http://limingjie.github.io/images/cat.png");
+    addImage("http://limingjie.github.io/images/cat2.png");
+    addImage("http://limingjie.github.io/images/texi.png");
+}
+
+function addImage(src) {
+    gallery.innerHTML += '<div class="image"><a href="#"><img src="' +
+        src + '"></img></a></div>';
 }

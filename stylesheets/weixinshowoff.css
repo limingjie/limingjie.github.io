@@ -108,9 +108,22 @@ textarea {
     width: 580px;
     height: 120px;
     padding-left: 20px;
-    font-size: 2.8em;
+    font-size: 2.5em;
     color: black;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+.gallery {
+    background-color: #black;
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+}
+.image {
+    float: left;
+    background-color: #f0f1f2;
+    margin: 5px;
+    width: 120px;
+    height: 120px;
 }
