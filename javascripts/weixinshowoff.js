@@ -166,6 +166,12 @@ function buildGallery() {
     addImage("http://limingjie.github.io/images/cat.png");
     addImage("http://limingjie.github.io/images/cat2.png");
     addImage("http://limingjie.github.io/images/texi.png");
+    addImage("http://limingjie.github.io/images/ali/1.gif");
+    addImage("http://limingjie.github.io/images/ali/2.gif");
+    addImage("http://limingjie.github.io/images/ali/3.gif");
+    addImage("http://limingjie.github.io/images/ali/4.gif");
+    addImage("http://limingjie.github.io/images/ali/5.gif");
+    addImage("http://limingjie.github.io/images/ali/6.gif");
 }
 
 function addImage(src) {
