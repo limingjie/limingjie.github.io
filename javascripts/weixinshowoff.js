@@ -24,6 +24,58 @@ function onload() {
         document.getElementById("showoff").innerHTML = value;
         data.showoff = value;
     }
+
+    document.getElementById("next").onclick = function() {
+        var pages = document.getElementsByClassName("page"),
+            currentPage = document.getElementsByClassName("show")[0],
+            nextPage,
+            length = pages.length;
+
+        for (var i = 0; i < length; i++) {
+            if (currentPage === pages[i]) {
+                nextPage = pages[(i + 1) % length];
+                break;
+            }
+        }
+        
+        currentPage.style.display = "none";
+        currentPage.className = "page";
+        nextPage.style.display = "block";
+        nextPage.className = "page show";
+    }
+
+    document.addEventListener('WeixinJSBridgeReady', function () {
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "appid"      : "",
+                "img_url"    : data.image,
+                "img_width"  : "80",
+                "img_height" : "80",
+                "link"       : data.link,
+                "desc"       : data.desc,
+                "title"      : data.title
+            }, function (res) {
+            });
+        });
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url"    : data.image,
+                "img_width"  : "80",
+                "img_height" : "80",
+                "link"       : data.link,
+                "desc"       : data.desc,
+                "title"      : data.title
+            }, function (res) {
+            });
+        });
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content" : data.desc,
+                "url"     : data.link
+            }, function (res) {
+            });
+        });
+    }, false);
 }
 
 if (window.addEventListener) {
@@ -33,39 +85,6 @@ if (window.addEventListener) {
 } else {
     window.onload = onload;
 }
-
-document.addEventListener('WeixinJSBridgeReady', function () {
-    WeixinJSBridge.on('menu:share:appmessage', function (argv) {
-        WeixinJSBridge.invoke('sendAppMessage', {
-            "appid"      : "",
-            "img_url"    : data.image,
-            "img_width"  : "80",
-            "img_height" : "80",
-            "link"       : data.link,
-            "desc"       : data.desc,
-            "title"      : data.title
-        }, function (res) {
-        });
-    });
-    WeixinJSBridge.on('menu:share:timeline', function (argv) {
-        WeixinJSBridge.invoke('shareTimeline', {
-            "img_url"    : data.image,
-            "img_width"  : "80",
-            "img_height" : "80",
-            "link"       : data.link,
-            "desc"       : data.desc,
-            "title"      : data.title
-        }, function (res) {
-        });
-    });
-    WeixinJSBridge.on('menu:share:weibo', function (argv) {
-        WeixinJSBridge.invoke('shareWeibo', {
-            "content" : data.desc,
-            "url"     : data.link
-        }, function (res) {
-        });
-    });
-}, false);
 
 function getUrlParameters(parameter) {
     var url = window.location.search, arr, param, l, i;
