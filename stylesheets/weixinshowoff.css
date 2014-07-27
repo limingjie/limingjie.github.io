@@ -45,10 +45,10 @@ textarea {
      color: gray;
 }
 .title {
-    background-color: #023;
-    height: 96px;
-    line-height: 96px;
-    font-size: 3em;
+    background-color: #f90;
+    height: 120px;
+    line-height: 120px;
+    font-size: 4em;
     text-align: center;
 }
 .navplaceholder {
@@ -56,9 +56,9 @@ textarea {
 }
 .nav {
     background-color: #f90;
-    height: 96px;
-    line-height: 96px;
-    font-size: 3em;
+    height: 120px;
+    line-height: 120px;
+    font-size: 4em;
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -78,8 +78,8 @@ textarea {
 }
 .stepname {
     background-color: #333;
-    height: 96px;
-    line-height: 96px;
-    font-size: 3em;
+    height: 120px;
+    line-height: 120px;
+    font-size: 4em;
     text-align: center;
 }
