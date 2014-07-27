@@ -3,75 +3,83 @@ html, body {
     margin: 0;
 }
 body {
-    background-image: linear-gradient(red, #f06d06);
+    background-color: black;
+    color: white;
 }
-/* Content */
-.pages {
-    height: 100%;
-    margin: 0;
+div {
+    width: 100%;
+    clear: both;
 }
-.content {
-    height: 100%;
-    margin: 0;
-    font-size: 96px;
+a {
+    text-decoration: none;
+}
+span {
+    vertical-align: middle;
+}
+textarea {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10px;
+    resize: none;
+    background-color: #bbb;
+    color: black;
+    font-size: 2em;
+    width: 500px;
+    height: 400px;
+}
+.copyright {
+    background-color: #333;
+    height: 64px;
+    line-height: 64px;
+    font-size: 2em;
+    text-align: center;
+}
+.copyright span {
+    vertical-align: middle;
+}
+.copyright a {
+     color: gray;
+}
+.title {
+    background-color: #023;
+    height: 96px;
+    line-height: 96px;
+    font-size: 3em;
+    text-align: center;
+}
+.navplaceholder {
+    height: 96px;
+}
+.nav {
+    background-color: #f90;
+    height: 96px;
+    line-height: 96px;
+    font-size: 3em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+.nav a {
+    color: #fff;
 }
 .page {
     display: none;
 }
 .page.show {
-    height: 100%;
-    margin: 0;
     display: block;
 }
-.clear {
-    position: static;
-    clear: both;
-    padding: 60px;
+.showoff {
+    font-size: 10em;
+    color: red;
+}
+.stepname {
+    background-color: #333;
+    height: 96px;
+    line-height: 96px;
+    font-size: 3em;
     text-align: center;
-}
-textarea {
-    font-size: 64px;
-    width: 80%;
-    height: 300px;
-}
-/* Navigation */
-.nav {
-    position: fixed;
-    bottom: 5px;
-    margin: 0px;
-    width: 100%;
-    font-size: 64px;
-    font-family: sans-serif;
-    text-align: center;
-}
-.nav ul {
-    margin: 0 auto;
-    padding-left: 100px;
-    padding-bottom: 180px;
-}
-.nav li {
-    background: #777;
-    display: block;
-    float: left;
-}
-.nav li:hover {
-    background-color: #f90
-}
-.nav a {
-    color: #fff;
-    display: block;
-    padding: 6px 12px 6px 12px;
-    text-decoration: none;
-}
-/* Copyright */
-.copyright {
-    position: fixed;
-    right: 5px;
-    bottom: 5px;
-}
-.copyright a {
-    font-size: 32px;
-    font-family: sans-serif;
-    color: gray;
-    text-decoration: none;
 }
