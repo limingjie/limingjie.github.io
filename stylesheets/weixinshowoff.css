@@ -20,43 +20,12 @@ body {
         box-orient: vertical;
     }
 }
-.center {
-    font-size: 96px;
+div.center {
+    font-size: 10em;
     text-align: center;
 }
-.page {
-    display: none;
-}
-.page.show {
-    display: block;
-}
-.nav {
-    float: left;
-    font-size: 125%;
-    position: fixed;
-    bottom: 5px;
-    left: 5px;
-}
-.nav ul {
-    margin: 0
-}
-.nav li {
-    background: #777;
-    display: block;
-    float: left;
-    margin-right: 7px;
-}
-.nav li:hover {
-    background-color: #f90
-}
-.nav a {
-    color: #fff;
-    display: block;
-    padding: 6px 12px 6px 12px;
-    text-decoration: none;
-}
 div.copyright {
-    font-size: 32px;
+    font-size: 3em;
     font-family: sans-serif;
     color: gray;
     position: fixed;
