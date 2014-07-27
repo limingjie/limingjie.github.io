@@ -161,11 +161,18 @@ function onImageClick(event) {
 }
 
 function buildGallery() {
-    addImage("http://limingjie.github.io/images/2048.png");
-    addImage("http://limingjie.github.io/images/weixin.png");
-    addImage("http://limingjie.github.io/images/cat.png");
-    addImage("http://limingjie.github.io/images/cat2.png");
-    addImage("http://limingjie.github.io/images/texi.png");
+    addImage("http://limingjie.github.io/images/finance/liberty.png");
+    addImage("http://limingjie.github.io/images/finance/lincoln.png");
+    addImage("http://limingjie.github.io/images/finance/stock.png");
+    addImage("http://limingjie.github.io/images/presidents/mao.jpg");
+    addImage("http://limingjie.github.io/images/presidents/obama.jpg");
+    addImage("http://limingjie.github.io/images/presidents/putin.jpg");
+    addImage("http://limingjie.github.io/images/brands/mcd.png");
+    addImage("http://limingjie.github.io/images/brands/kdf.png");
+    addImage("http://limingjie.github.io/images/brands/starbucks.png");
+    addImage("http://limingjie.github.io/images/brands/audi.png");
+    addImage("http://limingjie.github.io/images/brands/benz.png");
+    addImage("http://limingjie.github.io/images/brands/vw.png");
     addImage("http://limingjie.github.io/images/ali/1.gif");
     addImage("http://limingjie.github.io/images/ali/2.gif");
     addImage("http://limingjie.github.io/images/ali/3.gif");
