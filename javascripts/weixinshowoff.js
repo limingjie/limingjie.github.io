@@ -2,9 +2,9 @@ var baseurl = "http://limingjie.github.io/weixinshowoff.html";
 
 var data = {
     image   : "http://limingjie.github.io/images/weixin.png",
-    title   : "微信显摆 Weixin Showoff",
-    desc    : "微信显摆 Weixin Showoff",
-    showoff : "微信显摆 Weixin Showoff",
+    title   : "微信臭显摆 Weixin Showoff",
+    desc    : "微信臭显摆 Weixin Showoff",
+    showoff : "微信臭显摆 Weixin Showoff",
     link    : window.location.href
 };
 
