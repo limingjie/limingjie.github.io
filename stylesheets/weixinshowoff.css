@@ -32,6 +32,8 @@ textarea {
     height: 600px;
 }
 .copyright {
+    position: fixed;
+    bottom: 0;
     background-color: #333;
     height: 96px;
     line-height: 96px;
