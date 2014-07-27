@@ -60,8 +60,8 @@ document.addEventListener('WeixinJSBridgeReady', function () {
         WeixinJSBridge.invoke('sendAppMessage', {
             "appid"      : "",
             "img_url"    : data.image,
-            "img_width"  : "80",
-            "img_height" : "80",
+            "img_width"  : "120",
+            "img_height" : "120",
             "link"       : data.link,
             "desc"       : data.desc,
             "title"      : data.title
@@ -71,8 +71,8 @@ document.addEventListener('WeixinJSBridgeReady', function () {
     WeixinJSBridge.on('menu:share:timeline', function (argv) {
         WeixinJSBridge.invoke('shareTimeline', {
             "img_url"    : data.image,
-            "img_width"  : "80",
-            "img_height" : "80",
+            "img_width"  : "120",
+            "img_height" : "120",
             "link"       : data.link,
             "desc"       : data.desc,
             "title"      : data.title
