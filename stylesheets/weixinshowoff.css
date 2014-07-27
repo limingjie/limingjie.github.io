@@ -68,7 +68,10 @@ textarea {
     position: fixed;
     right: 5px;
     bottom: 5px;
+}
+.copyright a {
     font-size: 32px;
     font-family: sans-serif;
     color: gray;
+    text-decoration: none;
 }
