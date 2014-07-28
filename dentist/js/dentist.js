@@ -1,4 +1,4 @@
-var $title, $image, $text;
+var $title, $image, $text, $loading, $content;
 
 var data = {
     image   : "http://limingjie.github.io/dentist/images/dentist.small.png",
@@ -21,6 +21,8 @@ $(document).ready(function () {
     $title = $("#title");
     $image = $("#image");
     $text  = $("#text");
+    $loading = $("#loading");
+    $content = $("#content");
     
     showLoading(true);
     showContent(false);
@@ -94,9 +96,9 @@ function getUrlParameters(parameter) {
 }
 
 function showLoading(show) {
-    $("#loading").css("display", show ? "block" : "none");
+    $loading.css("display", show ? "block" : "none");
 }
 
 function showContent(show) {
-    $("#content").css("display", show ? "block" : "none");
+    $content.css("display", show ? "block" : "none");
 }
