@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+div {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+span {
+    vertical-align: middle;
+}
+.copyright {
+    background-color: #333;
+    height: 96px;
+    line-height: 96px;
+    font-size: 3em;
+    text-align: right;
+}
+.copyright span {
+    vertical-align: middle;
+}
+.copyright a {
+     color: gray;
+}
+.title {
+    background-color: #f90;
+    height: 120px;
+    line-height: 120px;
+    font-size: 4em;
+    text-align: center;
+}
