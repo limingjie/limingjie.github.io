@@ -28,12 +28,12 @@ $(document).ready(function () {
         callback : function (r) {
             var row = r.records.rows[0];
             
-            $title.val(row.title);
+            $title.html(row.title);
             $image.attr("src", row.image);
-            $text.val(row.text);
+            $text.html(row.text);
             
             data.title = row.title;
-            data.desc = row.text;
+            data.desc = $(row.text).text();
         }
     });
 });
