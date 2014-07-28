@@ -91,11 +91,8 @@ textarea {
 }
 .preview {
     background-color: white;
-    height: 180px;
-}
-.padbox {
-    width: 780px;
     padding: 15px;
+    height: 180px;
 }
 .pbox {
     background-color: #f0f1f2;
