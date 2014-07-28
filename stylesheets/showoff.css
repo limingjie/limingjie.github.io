@@ -12,7 +12,6 @@ body {
     -webkit-box-pack: center;
     -moz-box-pack: center;
     flex-pack: center;
-    background-image: linear-gradient(red, #f06d06);
 }
 @media all and (max-width: 720px) {
     body {
