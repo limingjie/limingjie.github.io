@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>RdbHost Plugin .populateTable div Demo</title>
+    <script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="http://www.rdbhost.com/js/easyxdm/easyXDM.min.js"></script>
+    <script language="javascript" type="text/javascript" src="http://www.rdbhost.com/js/jquery.rdbhost.js"></script>
+    <script language="javascript" type="text/javascript" src="http://www.rdbhost.com/js/json2.js"></script>
+    <script>
+        $(document).ready(function () {
+            var uid = 'r0000001396';
+            var authcode = '-';
+            var rdb = new SQLEngine(uid, authcode,'www.rdbhost.com');
+            var query = 'select * from dentist.advice';
+            var res = rdb.query( {'callback' : success, 'q' : query } );
+        });
+        function success(json) {
+            // do something useful with data
+            var row = json.records.rows[0];
+            getElementById('targets').innerHTML = row[0] + ' ' + row[1] + ' ' + row[2] + ' ' + row[3];
+        }
+    </script>
+</head>
+<body>
+  <h3>jQuery.Rdbhost $.populateTable div Demo</h3>
+    <p>This html table is populated from the database, and is generated to suit the
+      data. Demonstrates generating a table to fill a <i>div</i>.</p>
+
+  <div class="targets"><pre id="target"></pre></div>
+</body>
+</html>
