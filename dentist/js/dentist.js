@@ -21,12 +21,18 @@ $(document).ready(function () {
     $title = $("#title");
     $image = $("#image");
     $text  = $("#text");
+    
+    showLoading(true);
+    showContent(false);
 
     $.postData({
         kw       : 'GetAdvice', // preauth
         args     : [ id ],
         callback : function (r) {
             var row = r.records.rows[0];
+            
+            showLoading(false);
+            showContent(true);
             
             $title.html(row.title);
             $image.attr("src", row.image);
@@ -85,4 +91,12 @@ function getUrlParameters(parameter) {
     }
 
     return "";
+}
+
+function showLoading(show) {
+    $("#loading").css("display", show ? "block" : "none");
+}
+
+function showContent(show) {
+    $("#content").css("display", show ? "block" : "none");
 }

@@ -40,6 +40,17 @@ span {
     font-size: 4em;
     text-align: center;
 }
+.loading {
+    display: none;
+    text-align: center;
+}
+.loading img {
+    width: 60px;
+    height: 60px;
+}
+.content {
+    display: none;
+}
 .title {
     background-color: #f90;
     height: 120px;
