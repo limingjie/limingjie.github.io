@@ -1,86 +1,33 @@
-<!doctype html>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-    <head>
-      <meta name="fragment" content="!">
-      <title>OpenID Demo</title>
-  <!-- link href="css/custom.css" rel="stylesheet" -->
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-      <script src="http://www.rdbhost.com/vendor/Modernizr/2.6/modernizr-2.6.2.min.js"></script>
-      <script src="http://www.rdbhost.com/js/jquery.rdbhost.js"></script>
-      <script src="http://www.rdbhost.com/js/json2.js"></script>
-    </head>
-    <body>
-
-<div class="formContainer">
-
-
-        <h1>Login Form</h1>
-        <p> This example shows how a user can use openId login for your Rdbhost site.</p>
-        <p>Before OpenID logins will work, you must enable them from your account profile page.</p>
-
-        <p><script type="text/javascript">
-            document.write("Domain: " + location.host);
-        </script></p>
-        <div id="form-container">
-              <form id="openidForm" action="~" method="post">
-                <p><label>OpenID Identifier URL</label><input name="openidurl" size="75" />  <br/>
-                <input type="submit" /></p>
-                <p>Provide your OpenId identifier, complete with http: <br/>
-                  Examples: <ul><li>http://example.livejournal.com</li>
-                <li>http://example.myopenid.com</li></ul>
-                <p>The OpenID Provider may ask if you wish to verify ID for
-                  "www.rdbhost.com".  Respond "yes", as Rdbhost handles the OpenID
-                  verification for us.</p>
-              </form>
-            </div>
-
-            <div id="alreadyLoggedIn">
-              <p>You are already logged in, as <span id="ident"></span></p>
-            </div>
-<input type="button" value="Back to Home" class="backHome" onclick="location.href='index.html'" />
-          </div>
-
-
-
-        <script src="https://www.rdbhost.com/js/jquery.cookie.js"></script>
-        <script>
-          var R = window.Rdbhost;
-
-          $(document).ready(function () {
-
-            var $inputForm = $('#openidForm'),
-                $alreadyForm = $('#alreadyLoggedIn'),
-                $identFld = $('#ident');
-
-            function onSuccess(key, ident) {
-
-              $inputForm.hide();
-              $alreadyForm.show();
-              $identFld.text(ident);
-            }
-
-            function onFailure(ident) {
-
-              $inputForm.show();
-              $alreadyForm.hide();
-              $identFld.val('');
-            }
-
-            $.rdbHostConfig({
-              accountNumber: 1396,
-              'userName': "read",
-              'domain': "www.rdbhost.com"
-            });
-
-            R.loginOpenId({
-              'loginForm' : 'openidForm',
-              'callback' : onSuccess,
-              'errback' : onFailure
-            });
-
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>RdbHost Plugin .populateTable div Demo</title>
+    <script language="javascript" type="text/javascript"
+				src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="http://www.rdbhost.com/js/easyxdm/easyXDM.debug.js"></script>
+    <script language="javascript" type="text/javascript" src="http://www.paginaswww.com/rdb/js/jquery.rdbhost.js"></script>
+    <script language="javascript" type="text/javascript"
+				src="http://www.paginaswww.com/rdb/js/json2.js"></script>
+		<script>
+    $(document).ready(function () {
+		    $.rdbHostConfig({
+            'userName' : "r0000001396",
+            'authcode' : "-",
+            'domain' : 'www.rdbhost.com'
           });
-        </script>
+        var q = 'SELECT * FROM capitols';
+        $('.targets').populateTable( { q : q } );
+    });
+    </script>
+</head>
+<body>
+  <h3>jQuery.Rdbhost $.populateTable div Demo</h3>
+	<p>This html table is populated from the database, and is generated to suit the
+	  data. Demonstrates generating a table to fill a <i>div</i>.</p>
 
-
-    </body>
+  <div class="targets"><pre id="target"></pre></div>
+</body>
 </html>
