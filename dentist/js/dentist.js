@@ -1,7 +1,7 @@
 var $title, $image, $text;
 
 var data = {
-    image   : "http://limingjie.github.io/dentist/img/dentist.small.png",
+    image   : "http://limingjie.github.io/dentist/images/dentist.small.png",
     title   : "",
     desc    : "",
     link    : window.location.href
