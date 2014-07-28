@@ -11,7 +11,7 @@
         $(document).ready(function () {
             var uid = 'r0000001396';
             var authcode = '-';
-            var rdb = new SQLEngine(uid, authcode,'www.rdbhost.com');
+            var rdb = new SQLEngine(uid, authcode,'rdbhost');
             var query = 'select * from dentist.advice';
             var res = rdb.query( {'callback' : success, 'q' : query } );
         });
