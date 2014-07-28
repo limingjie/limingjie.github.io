@@ -45,8 +45,9 @@ span {
     text-align: center;
 }
 .loading img {
-    width: 90px;
-    height: 90px;
+    width: 200px;
+    height: 200px;
+    margin: 100px;
 }
 .content {
     display: none;
