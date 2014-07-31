@@ -162,6 +162,7 @@ function onImageClick(event) {
 
 function buildGallery() {
     addImage("http://limingjie.github.io/images/games/monster.jpg");
+    addImage("http://limingjie.github.io/images/games/monster2.jpg");
     addImage("http://limingjie.github.io/images/finance/liberty.jpg");
     addImage("http://limingjie.github.io/images/finance/lincoln.jpg");
     addImage("http://limingjie.github.io/images/finance/stock.jpg");
