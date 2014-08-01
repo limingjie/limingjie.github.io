@@ -1,7 +1,7 @@
 var c = 0;
 var arr = [];
 var cr = ["red", "orange", "yellow", "green", "blue", "purple"];
-var b = false;
+var b = false, e = false;
 var time = 10;
 var r = 0;
 var msg, countEl;
@@ -24,14 +24,15 @@ function onload() {
     countEl = document.getElementById("count");
     document.getElementById("touch").style.height = (y - 360) + "px";
     arr = document.getElementsByClassName("block");
+    for (var i = 0; i < arr.length; ++i) {
+        arr[i].onclick = yes;
+    }
     colorize();
 }
 
 function colorize() {
     var o = r;
     r = random();
-    arr[r].onclick = yes;
-    arr[o].onclick = null;
     arr[r].style["background-color"] = cr[r];
     arr[o].style["background-color"] = "white";
 }
@@ -44,7 +45,12 @@ function random() {
     return n;
 }
 
-function yes() {
+function yes(event) {
+    if (e) return;
+
+    // var index = arr.indexOf(event.target);
+    // if (index !== r) return;
+
     if (!b) {
         b = true;
         countdown(time, stop);
@@ -56,7 +62,7 @@ function yes() {
 }
 
 function stop() {
-    arr[r].onclick = null;
+    e = true;
     var i, l = arr.length;
     for (var i = 0; i < l; ++i) {
         arr[i].style["background-color"] = cr[i];
