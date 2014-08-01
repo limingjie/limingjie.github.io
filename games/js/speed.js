@@ -22,7 +22,7 @@ function onload() {
         y = w.innerHeight|| e.clientHeight|| g.clientHeight;
     msg = document.getElementById("msg");
     countEl = document.getElementById("count");
-    document.getElementById("touch").style.height = (y - 100) + "px";
+    document.getElementById("touch").style.height = (y - 360) + "px";
     arr = document.getElementsByClassName("block");
     colorize();
 }
@@ -65,18 +65,17 @@ function stop() {
 
 function countdown(seconds, stop)
 {
-    var time = seconds * 1000,
-        interval = 100, // ms
+    var time = seconds * 1000 + 500,
+        interval = 500, // ms
         s, ms;
         
     function update() {
         if (time < interval) {
-            msg.innerHTML = "0.0s";
+            msg.innerHTML = "0s";
             if (typeof(stop) !== "undefined") stop();
         } else {
-            s = Math.floor(time  / 1000);
-            ms = time % 1000;
-            msg.innerHTML = s + '.' + ms / 100 + 's';
+            s = Math.floor(time  / 1000)
+            msg.innerHTML = s + 's';
             time -= interval;
             setTimeout(update, interval);
         }
