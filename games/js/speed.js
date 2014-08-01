@@ -28,11 +28,12 @@ function onload() {
 }
 
 function colorize() {
-    arr[r].onclick = null;
-    arr[r].style["background-color"] = "white";
+    var o = r;
     r = random();
     arr[r].onclick = yes;
+    arr[o].onclick = null;
     arr[r].style["background-color"] = cr[r];
+    arr[o].style["background-color"] = "white";
 }
 
 function random() {
@@ -49,9 +50,9 @@ function yes() {
         countdown(time, stop);
     }
     
+    colorize();
     c++;
     countEl.innerHTML = c;
-    colorize();
 }
 
 function stop() {
