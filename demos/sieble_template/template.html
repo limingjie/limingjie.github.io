@@ -11,6 +11,7 @@
     //<![CDATA[
     $(window).load(function() {
         CKEDITOR.config.height = 500;
+        CKEDITOR.config.width = 800;
         CKEDITOR.config.extraAllowedContent = 'div(greeting,body,closing,template){border}';
         CKEDITOR.config.contentsCss = ['contents.css', CKEDITOR.getUrl('contents.css')];
         CKEDITOR.replace('editor1');
@@ -22,22 +23,34 @@
 <body>
     <textarea id="editor1">
         <div class="greeting template">
-            Dear customer,
-            <br> Good morning!
+            <p>Dear customer,
+                <br>Greetings!
+                <br>
+                <br><strong>##This is greeting template</strong>
+            </p>
         </div>
         <div class="body template">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, minus, illum, deleniti debitis rerum accusantium possimus id sit eum sunt quia sint adipisci consectetur optio provident praesentium soluta culpa laboriosam!
-            <br> Molestias, pariatur, nemo, beatae, aliquam natus maxime veniam reprehenderit inventore illum dolor velit odit exercitationem eveniet sunt consequuntur accusantium delectus voluptates temporibus optio fugiat quo iste non voluptate. Nemo, voluptatem.
-            <br> Fugit, voluptatibus porro debitis similique minus fugiat dicta fuga. Iste, magnam, nostrum doloremque velit sed dicta cum architecto repellat molestias unde earum deserunt incidunt deleniti quis voluptatum culpa perspiciatis facilis.
-            <br> At, a, blanditiis dicta voluptatum architecto eius asperiores esse dolorem quos possimus inventore voluptates! Facilis, inventore, nobis nulla dolores assumenda molestiae neque nam quaerat minima id sint aliquid aperiam facere!
-            <br>
+            <p><strong>##This is a body template</strong>
+                <br>- To modify template content, directly edit inside the orange template border. However, if the template is replaced, the modified part will be treated as part of template, hence also replaced.
+                <br>- To insert text between 2 templates, or after the last template, hover on the bottom of orange template border, until CKEditor's "Insert paragraph here" indicator shows, click it.
+            </p>
         </div>
-        <p>This is not template
-            <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, labore, porro, velit quo soluta perferendis commodi cum reprehenderit est ducimus quam quibusdam totam delectus a nobis. Temporibus beatae quaerat nam!
-            <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eaque, iure, aut, deserunt similique iusto ad ratione officiis repellendus obcaecati enim aliquam ipsum eius assumenda possimus laudantium doloremque deleniti ex.</p>
+        <div class="body template">
+            <p><strong>##This is another body template</strong>
+                <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, minus, alias mollitia modi nesciunt quas quo cum beatae velit itaque ratione dolore autem porro sapiente hic. Culpa eum inventore animi.
+                <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, enim fugit reprehenderit exercitationem eum rerum dolore quis omnis fuga praesentium repellendus sequi illo suscipit magnam earum aut consequuntur natus minus.
+                <br>
+            </p>
+        </div>
+        <p><strong>##This is not template</strong>
+            <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, labore, porro, velit quo soluta perferendis commodi cum reprehenderit est ducimus quam quibusdam totam delectus a nobis. Temporibus beatae quaerat nam!
+            <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eaque, iure, aut, deserunt similique iusto ad ratione officiis repellendus obcaecati enim aliquam ipsum eius assumenda possimus laudantium doloremque deleniti ex.
+        </p>
         <div class="closing template">
-            <p>Thanks,
-                <br> Mingjie
+            <p><strong>##This is closing template</strong>
+                <br>
+                <br>Thanks,
+                <br>Mingjie
             </p>
         </div>
     </textarea>
