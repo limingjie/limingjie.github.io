@@ -4,15 +4,15 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Siebel EMR Template Demo</title>
-    <script type='text/javascript' src='//code.jquery.com/jquery-2.1.0.js'></script>
+    <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.0.js'></script>
     <link rel="stylesheet" type="text/css" href="/css/result-light.css">
     <script type='text/javascript' src="https://cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
     <script type='text/javascript'>
     //<![CDATA[
     $(window).load(function() {
         CKEDITOR.config.height = 500;
-        CKEDITOR.config.extraAllowedContent = 'div(greeting,closing){border}';
-        CKEDITOR.config.contentsCss = ['contents.css'];
+        CKEDITOR.config.extraAllowedContent = 'div(greeting,body,closing,template){border}';
+        CKEDITOR.config.contentsCss = ['contents.css', CKEDITOR.getUrl('contents.css')];
         CKEDITOR.replace('editor1');
 
     }); //]]>
@@ -21,14 +21,31 @@
 
 <body>
     <textarea id="editor1">
-        <div class="greeting">
-            <p>Dear customer,</p>
-            <p>Good morning!</p>
+        <div class="greeting template">
+            Dear customer,
+            <br> Good morning!
         </div>
-        <p>This email is to address template problem.</p>
-        <div class="closing">
-            <p>Thanks,</p>
-            <p>Mingjie</p>
+        <div class="body template">
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, minus, illum, deleniti debitis rerum accusantium possimus id sit eum sunt quia sint adipisci consectetur optio provident praesentium soluta culpa laboriosam!
+                <br>
+            </div>
+            <div>Molestias, pariatur, nemo, beatae, aliquam natus maxime veniam reprehenderit inventore illum dolor velit odit exercitationem eveniet sunt consequuntur accusantium delectus voluptates temporibus optio fugiat quo iste non voluptate. Nemo, voluptatem.
+                <br>
+            </div>
+            <div>Fugit, voluptatibus porro debitis similique minus fugiat dicta fuga. Iste, magnam, nostrum doloremque velit sed dicta cum architecto repellat molestias unde earum deserunt incidunt deleniti quis voluptatum culpa perspiciatis facilis.
+                <br>
+            </div>
+            <div>At, a, blanditiis dicta voluptatum architecto eius asperiores esse dolorem quos possimus inventore voluptates! Facilis, inventore, nobis nulla dolores assumenda molestiae neque nam quaerat minima id sint aliquid aperiam facere!
+                <br>
+            </div>
+        </div>
+        <p>This is not template
+            <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, labore, porro, velit quo soluta perferendis commodi cum reprehenderit est ducimus quam quibusdam totam delectus a nobis. Temporibus beatae quaerat nam!
+            <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eaque, iure, aut, deserunt similique iusto ad ratione officiis repellendus obcaecati enim aliquam ipsum eius assumenda possimus laudantium doloremque deleniti ex.</p>
+        <div class="closing template">
+            <p>Thanks,
+                <br> Mingjie
+            </p>
         </div>
     </textarea>
 </body>

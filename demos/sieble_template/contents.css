@@ -1,4 +1,4 @@
-div {
+div.template {
     border: 1px dotted orange;
 }
 
@@ -7,6 +7,10 @@ div.greeting {
 
 }
 
+div.body {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='12px' width='100px'><rect x='0' y='0' width='100' height='12' fill='orange' /><text x='20' y='9' fill='white' font-size='9'>Body Template</text></svg>") right top no-repeat;
+}
+
 div.closing {
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='12px' width='100px'><rect x='0' y='0' width='100' height='12' fill='orange' /><text x='10' y='9' fill='white' font-size='9'>Closing Template</text></svg>") right top no-repeat;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='12px' width='100px'><rect x='0' y='0' width='100' height='12' fill='orange' /><text x='15' y='9' fill='white' font-size='9'>Closing Template</text></svg>") right top no-repeat;
 }
