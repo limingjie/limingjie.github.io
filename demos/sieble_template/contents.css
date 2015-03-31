@@ -1,5 +1,11 @@
-div
-{
-    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='300px'><text x='0' y='9' fill='orange' font-size='9'>Greeting Template</text></svg>") no-repeat;
+div {
     border: 1px dotted orange;
+}
+
+div.greeting {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='300px'><text x='0' y='9' fill='orange' font-size='9'>Greeting Template</text></svg>") right top no-repeat;
+}
+
+div.closing {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='300px'><text x='0' y='9' fill='orange' font-size='9'>Closing Template</text></svg>") right top no-repeat;
 }
