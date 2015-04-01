@@ -13,7 +13,6 @@
         CKEDITOR.config.extraAllowedContent = 'div(greeting,body,closing,template){border}';
         CKEDITOR.config.contentsCss = ['contents.css', CKEDITOR.getUrl('contents.css')];
         CKEDITOR.replace('editor1');
-
     }
 
     if (window.addEventListener) {
@@ -22,7 +21,8 @@
         window.attachEvent("onload", onload);
     } else {
         window.onload = onload;
-    }//]]>
+    }
+    //]]>
     </script>
 </head>
 
