@@ -4,19 +4,25 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Siebel EMR Template Demo</title>
-    <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.0.js'></script>
-    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
     <script type='text/javascript' src="https://cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
     <script type='text/javascript'>
     //<![CDATA[
-    $(window).load(function() {
+    function onload() {
         CKEDITOR.config.height = 500;
         CKEDITOR.config.width = 800;
         CKEDITOR.config.extraAllowedContent = 'div(greeting,body,closing,template){border}';
         CKEDITOR.config.contentsCss = ['contents.css', CKEDITOR.getUrl('contents.css')];
         CKEDITOR.replace('editor1');
 
-    }); //]]>
+    }
+
+    if (window.addEventListener) {
+        window.addEventListener("load", onload, false);
+    } else if (window.attachEvent) {
+        window.attachEvent("onload", onload);
+    } else {
+        window.onload = onload;
+    }//]]>
     </script>
 </head>
 
