@@ -1,6 +1,0 @@
-div
-{
-    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='300px'><text x='0' y='9' fill='orange' font-size='9'>Greeting Template</text></svg>") no-repeat;
-    border: 1px dotted orange;
-    background-color: transparent;
-}
