@@ -27,14 +27,9 @@
                 args     : ['0.0.0.0', userAgent, datetime],
                 callback : function (r) {
                     console.log(r);
-                }
+                    var q = 'select * from useragent.useragent order by time desc fetch first 20 rows only';
+                    $('#history').populateTable({q:q});                }
             });
-
-            setTimeout(function()
-            {
-                var q = 'select * from useragent.useragent order by time desc fetch first 20 rows only';
-                $('#history').populateTable({q:q});
-            }, 2000);
         });
     </script>
   </head>
