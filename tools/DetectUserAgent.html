@@ -19,12 +19,13 @@
             });
             
             var userAgent = navigator.userAgent;
+            var datetime = new Date().toLocaleString();
             $('#useragent').html(userAgent);
 
             $.postData({
-                q        : 'insert into UserAgent.UserAgent values (%s, %s, %s, %s)',
+                q        : 'insert into useragent.useragent values (%s, %s, %s, %s)',
                 kw       : 'InsertUserAgent',
-                args     : [ '1', '0.0.0.0', userAgent, '0' ],
+                args     : ['1', '0.0.0.0', userAgent, datetime],
                 callback : function (r) {
                     alert(JSON.stringify(r));
                 }
