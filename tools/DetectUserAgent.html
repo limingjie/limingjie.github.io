@@ -30,10 +30,14 @@
                     console.log(r);
                 }
             });
+
+            var q = 'select * from useragent.useragent order by time desc fetch first 10 rows only';
+            $('#history').populateTable({q:q});
         });
     </script>
   </head>
   <body>
     <div id='useragent'></div>
+    <div id='history'></div>
   </body>
 </html>
