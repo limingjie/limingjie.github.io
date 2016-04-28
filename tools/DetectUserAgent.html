@@ -17,11 +17,14 @@
                     alert(errcode.toString() + ' ' + errmsg);
                 }
             });
+            
+            var userAgent = navigator.userAgent;
+            $('#useragent').html(userAgent);
 
             $.postData({
-                q        : 'SELECT title, text, image FROM dentist.advice WHERE id = %s',
-                kw       : 'GetAdvice',
-                args     : [ "1" ],
+                q        : 'insert into UserAgent.UserAgent values (%s, %s, %s, %s)',
+                kw       : 'InsertUserAgent',
+                args     : [ '1', '0.0.0.0', userAgent, '0' ],
                 callback : function (r) {
                     alert(JSON.stringify(r));
                 }
@@ -30,5 +33,6 @@
     </script>
   </head>
   <body>
+    <div id='useragent'></div>
   </body>
 </html>
