@@ -23,11 +23,11 @@
             $('#useragent').html("User Agent:" + userAgent);
 
             $.postData({
-                q        : 'insert into useragent.useragent values (%s, %s, %s)',
+                q        : 'insert into useragent.useragent (ipv4, useragent, time) values (%s, %s, %s)',
                 kw       : 'InsertUserAgent',
                 args     : ['0.0.0.0', userAgent, datetime],
                 callback : function (r) {
-                    alert(JSON.stringify(r));
+                    console.log(r);
                 }
             });
         });
