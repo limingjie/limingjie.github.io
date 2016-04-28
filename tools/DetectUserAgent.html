@@ -19,7 +19,7 @@
             });
             
             var userAgent = navigator.userAgent;
-            var datetime = new Date().toLocaleString();
+            var datetime = new Date().toUTCString();
             $('#useragent').html(userAgent);
 
             $.postData({
