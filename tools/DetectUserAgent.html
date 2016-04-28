@@ -18,17 +18,21 @@
                 }
             });
             
-            var userAgent = navigator.userAgent;
-            var datetime = new Date().toUTCString();
-            $('#useragent').html(userAgent);
+            $.getJSON('//api.ipify.org?format=jsonp&callback=?', function(data) {
+                var ip = data['ip'] || "";
+                var datetime = new Date().toUTCString();
+                var userAgent = navigator.userAgent;
+                $('#useragent').html(userAgent);
 
-            $.postData({
-                kw       : 'InsertUserAgent',
-                args     : ['0.0.0.0', userAgent, datetime],
-                callback : function (r) {
-                    console.log(r);
-                    var q = 'select * from useragent.useragent order by time desc fetch first 20 rows only';
-                    $('#history').populateTable({q:q});                }
+                $.postData({
+                    kw       : 'InsertUserAgent',
+                    args     : [ip, userAgent, datetime],
+                    callback : function (r) {
+                        console.log(r);
+                        var q = 'select * from useragent.useragent order by time desc fetch first 20 rows only';
+                        $('#history').populateTable({q:q});
+                    }
+                });
             });
         });
     </script>
