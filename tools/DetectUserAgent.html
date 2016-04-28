@@ -23,7 +23,6 @@
             $('#useragent').html(userAgent);
 
             $.postData({
-                q        : 'insert into useragent.useragent (ipv4, useragent, time) values (%s, %s, %s)',
                 kw       : 'InsertUserAgent',
                 args     : ['0.0.0.0', userAgent, datetime],
                 callback : function (r) {
@@ -33,7 +32,7 @@
 
             setTimeout(function()
             {
-                var q = 'select * from useragent.useragent order by time desc fetch first 10 rows only';
+                var q = 'select * from useragent.useragent order by time desc fetch first 20 rows only';
                 $('#history').populateTable({q:q});
             }, 2000);
         });
