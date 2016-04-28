@@ -29,8 +29,7 @@
                     args     : [ip, userAgent, datetime],
                     callback : function (r) {
                         console.log(r);
-                        var q = 'select * from useragent.useragent order by time desc fetch first 20 rows only';
-                        $('#history').populateTable({q:q});
+                        $('#history').populateTable({kw:'QueryUserAgent'});
                     }
                 });
             });
