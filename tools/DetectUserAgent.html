@@ -20,7 +20,7 @@
             
             var userAgent = navigator.userAgent;
             var datetime = new Date().toLocaleString();
-            $('#useragent').html("User Agent:" + userAgent);
+            $('#useragent').html(userAgent);
 
             $.postData({
                 q        : 'insert into useragent.useragent (ipv4, useragent, time) values (%s, %s, %s)',
@@ -37,7 +37,9 @@
     </script>
   </head>
   <body>
+    <h2>User Agent</h2>
     <div id='useragent'></div>
+    <h2>History</h2>
     <div id='history'></div>
   </body>
 </html>
