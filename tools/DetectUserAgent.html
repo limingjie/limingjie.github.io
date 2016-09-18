@@ -63,8 +63,8 @@
             $('#useragent').html(userAgent);
 
             // Get IP address from ipify
-            $.getJSON('https://api.ipify.org?format=json', function(data) {
-                var ip = data['ip'] || "";
+            $.getJSON('http://ip-api.com/json', function(data) {
+                var ip = data['query'] || "";
 
                 // Get UTC timestamp
                 var datetime = new Date().toUTCString();
