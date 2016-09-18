@@ -62,9 +62,9 @@
             var userAgent = navigator.userAgent;
             $('#useragent').html(userAgent);
 
-            // Get IP address from ipify
-            $.getJSON('http://ip-api.com/json', function(data) {
-                var ip = data['query'] || "";
+            // Get IP address from jsonip
+            $.getJSON('http://jsonip.com/', function(data) {
+                var ip = data['ip'] || "";
 
                 // Get UTC timestamp
                 var datetime = new Date().toUTCString();
