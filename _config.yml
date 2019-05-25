@@ -26,9 +26,9 @@ github_username:  limingjie
 markdown: kramdown
 theme: minima
 plugins:
-  - jekyll-feed
 kramdown:
   math_engine: mathjax
+highlighter: pygments
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
