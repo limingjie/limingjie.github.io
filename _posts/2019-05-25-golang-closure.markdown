@@ -59,9 +59,9 @@ $$
 
 Base on the formula, it could also be extended to negative index
 
-| F<sub>−4</sub> | F<sub>−3</sub> | F<sub>−2</sub> | F<sub>−1</sub> | F<sub>0 </sub> | F<sub>1 </sub> | F<sub>2 </sub> | F<sub>3 </sub> | F<sub>4 </sub> | F<sub>5 </sub> | F<sub>6 </sub> | F<sub>7 </sub> | F<sub>8 |
-| -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | ------- |
-| −3             | 2              | −1             | 1              | 0              | 1              | 1              | 2              | 3              | 5              | 8              | 13             | 21      |
+| $$F_{-3}$$ | $$F_{-2}$$ | $$F_{-1}$$ | $$F_{0}$$ | $$F_{1}$$ | $$F_{2}$$ | $$F_{3}$$ | $$F_{4}$$ | $$F_{5}$$ | $$F_{6}$$ |
+| :--------: | :--------: | :--------: | :-------: | :-------: | :-------: | :-------: | :-------: | :-------: | :-------: |
+|     2      |     −1     |     1      |     0     |     1     |     1     |     2     |     3     |     5     |     8     |
 
 A typical C++ implementation would not need closure, it can be implemented by
 static variables. It is much more straightforward, although it does not have the

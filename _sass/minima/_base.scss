@@ -233,6 +233,7 @@
   * Tables
   */
  table {
+   @include relative-font-size(0.9375);
    margin-bottom: $spacing-unit;
    width: 100%;
    text-align: $table-text-align;
@@ -245,7 +246,7 @@
      }
    }
    th, td {
-     padding: ($spacing-unit / 3) ($spacing-unit / 2);
+     padding: ($spacing-unit / 6) ($spacing-unit / 6);
    }
    th {
      background-color: lighten($grey-color-light, 3%);
