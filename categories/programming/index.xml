@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mingjie Li</title>
-    <link>https://limingjie.github.io/</link>
-    <description>Recent content on Mingjie Li</description>
+    <title>Programming on Mingjie Li</title>
+    <link>https://limingjie.github.io/categories/programming/</link>
+    <description>Recent content in Programming on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 May 2019 15:00:00 +0800</lastBuildDate>
     
-	<atom:link href="https://limingjie.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://limingjie.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,20 +21,6 @@
 Until last night, I saw this Exercise: Fibonacci closure in A tour of Go. I have to admit I am not a fun of closure, sometimes it makes easy logic complex. But it is still great for learning.
  Exercise: Fibonacci closure
 Let&#39;s have some fun with functions.</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://limingjie.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://limingjie.github.io/about/</guid>
-      <description>Experience  Software Engineering Manager &amp;middot; Everbridge
-Aug 2017 – Present &amp;middot; Beijing, China Software Development Manager &amp;middot; Oracle
-Dec 2015 – Aug 2017 &amp;middot; Beijing, China Principal Software Engineer &amp;middot; Oracle
-Mar 2011 – Dec 2015 &amp;middot; Beijing, China IT Specialist &amp;middot; IBM
-Mar 2006 – Mar 2011 &amp;middot; Dalian, China  Certifications  PMI Agile Certified Practitioner (PMI-ACP)® &amp;middot; Project Management Institute
-Issued Dec 2018 &amp;middot; Expires Dec 2021</description>
     </item>
     
   </channel>

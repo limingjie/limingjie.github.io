@@ -3,6 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://limingjie.github.io/categories/</loc>
+    <lastmod>2019-05-25T15:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/golang/</loc>
+    <lastmod>2019-05-25T15:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://limingjie.github.io/posts/2019-05-25-golang-closure-exercise/</loc>
     <lastmod>2019-05-25T15:00:00+08:00</lastmod>
   </url>
@@ -20,17 +32,19 @@
   </url>
   
   <url>
-    <loc>https://limingjie.github.io/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://limingjie.github.io/categories/</loc>
+    <loc>https://limingjie.github.io/categories/programming/</loc>
+    <lastmod>2019-05-25T15:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/tags/</loc>
+    <lastmod>2019-05-25T15:00:00+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/about/</loc>
   </url>
   
 </urlset>

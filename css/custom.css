@@ -1,0 +1,31 @@
+table {
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    border: 1px solid #dfe2e5;
+    padding: 6px 13px;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa
+}
+
+table tr:first-child th {
+    border-top: 1px solid #dfe2e5;
+}
+
+table tr:last-child td {
+    border-bottom: 1px solid #dfe2e5;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+    border-left: 1px solid #dfe2e5;
+}
+
+table tr td:last-child,
+table tr th:last-child {
+    border-right: 1px solid #dfe2e5;
+}
