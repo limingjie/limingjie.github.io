@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mechanical Keyboard on Mingjie Li</title>
+    <link>https://limingjie.github.io/categories/mechanical-keyboard/</link>
+    <description>Recent content in Mechanical Keyboard on Mingjie Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://limingjie.github.io/categories/mechanical-keyboard/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My Mechanical Keyboards</title>
+      <link>https://limingjie.github.io/posts/2019-05-01-my-mechanical-keyboards/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2019-05-01-my-mechanical-keyboards/</guid>
+      <description>My very fist impression of mechanical keyboard is a clunky ISO layout IBM keyboard on which I learned touch typing, I can still remember it was full of noise like rusty sprints. Then suddenly, the whole world is dominated by membrane keyboards for its low cost and quiet experience.
+As a fun to keyboards and mice. I owned Logitech mice M505, M525, and M545, guess what? I only paid the first one, they kept broken within warranty and got replaced.</description>
+    </item>
+    
+  </channel>
+</rss>
