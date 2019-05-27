@@ -11,14 +11,14 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Golang Closure Exercise"/>
-<meta name="twitter:description" content="I always had a question, if Golang does not have static variable, how could it gracefully handle long lifetime variables except using global variables?
-Until last night, I saw this Exercise: Fibonacci closure in A tour of Go. I have to admit I am not a fun of closure, sometimes it makes easy logic complex. But it is still great for learning.
+<meta name="twitter:description" content="I always had a question, if Golang does not have the static variable, how could it gracefully handle long lifetime variables except using global variables?
+Until last night, I saw this Exercise: Fibonacci closure in A tour of Go. I have to admit I am not a fan of closure, sometimes it makes easy logic complex. But it is still great for learning.
  Exercise: Fibonacci closure
 Let&#39;s have some fun with functions."/>
 
     <meta property="og:title" content="Golang Closure Exercise" />
-<meta property="og:description" content="I always had a question, if Golang does not have static variable, how could it gracefully handle long lifetime variables except using global variables?
-Until last night, I saw this Exercise: Fibonacci closure in A tour of Go. I have to admit I am not a fun of closure, sometimes it makes easy logic complex. But it is still great for learning.
+<meta property="og:description" content="I always had a question, if Golang does not have the static variable, how could it gracefully handle long lifetime variables except using global variables?
+Until last night, I saw this Exercise: Fibonacci closure in A tour of Go. I have to admit I am not a fan of closure, sometimes it makes easy logic complex. But it is still great for learning.
  Exercise: Fibonacci closure
 Let&#39;s have some fun with functions." />
 <meta property="og:type" content="article" />
@@ -128,15 +128,9 @@ Let&#39;s have some fun with functions." />
       </header>
 
       <div>
-        <p>I always had a question, if Golang does not have
-<a href="https://en.wikipedia.org/wiki/Static_variable">static variable</a>, how could it
-gracefully handle long lifetime variables except using global variables?</p>
+        <p>I always had a question, if Golang does not have the <a href="https://en.wikipedia.org/wiki/Static_variable">static variable</a>, how could it gracefully handle long lifetime variables except using global variables?</p>
 
-<p>Until last night, I saw this
-<a href="https://tour.golang.org/moretypes/26">Exercise: Fibonacci closure</a> in
-<a href="https://tour.golang.org/list">A tour of Go</a>. I have to admit I am not a fun of
-closure, sometimes it makes easy logic complex. But it is still great for
-learning.</p>
+<p>Until last night, I saw this <a href="https://tour.golang.org/moretypes/26">Exercise: Fibonacci closure</a> in <a href="https://tour.golang.org/list">A tour of Go</a>. I have to admit I am not a fan of closure, sometimes it makes easy logic complex. But it is still great for learning.</p>
 
 <blockquote>
 <p><strong>Exercise: Fibonacci closure</strong></p>
@@ -192,11 +186,9 @@ returns successive fibonacci numbers (0, 1, 1, 2, 3, 5, ...).</p>
 }</code></pre></td></tr></table>
 </div>
 </div>
-<p>Usually, it is easy to choose the initial values of <code>first</code> and <code>second</code>, if the
-sequence starts from <code>1</code>. What if the sequence starts from <code>0</code>, why <code>1</code> and <code>0</code>?</p>
+<p>Usually, it is easy to choose the initial values of <code>first</code> and <code>second</code>, if the sequence starts from <code>1</code>. What if the sequence starts from <code>0</code>, why <code>1</code> and <code>0</code>?</p>
 
-<p>Let's take a close look at
-<a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a> sequence</p>
+<p>Let's take a close look at the <a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a> sequence.</p>
 
 <p><span  class="math">\(
 F_{0}=0,\quad F_{1}=1, \\
@@ -206,7 +198,7 @@ for\quad n > 1
 \)</span>
 .</p>
 
-<p>Base on the formula, it could also be extended to negative index</p>
+<p>Base on the formula, it could also be extended to negative index.</p>
 
 <table>
 <thead>
@@ -240,10 +232,7 @@ for\quad n > 1
 </tbody>
 </table>
 
-<p>A typical C++ implementation would not need closure, it can be implemented by
-static variables. It is much more straightforward, although it does not have the
-ability to leverage the multiple return values like
-<code>first, second = second, first + second</code> in Golang.</p>
+<p>A typical C++ implementation would not need closure, it can be implemented by static variables. It is much more straightforward, although it does not have the ability to leverage the multiple return values like <code>first, second = second, first + second</code> in Golang.</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1

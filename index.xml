@@ -17,8 +17,8 @@
       <pubDate>Sat, 25 May 2019 15:00:00 +0800</pubDate>
       
       <guid>https://limingjie.github.io/posts/2019-05-25-golang-closure-exercise/</guid>
-      <description>I always had a question, if Golang does not have static variable, how could it gracefully handle long lifetime variables except using global variables?
-Until last night, I saw this Exercise: Fibonacci closure in A tour of Go. I have to admit I am not a fun of closure, sometimes it makes easy logic complex. But it is still great for learning.
+      <description>I always had a question, if Golang does not have the static variable, how could it gracefully handle long lifetime variables except using global variables?
+Until last night, I saw this Exercise: Fibonacci closure in A tour of Go. I have to admit I am not a fan of closure, sometimes it makes easy logic complex. But it is still great for learning.
  Exercise: Fibonacci closure
 Let&#39;s have some fun with functions.</description>
     </item>
@@ -29,8 +29,8 @@ Let&#39;s have some fun with functions.</description>
       <pubDate>Wed, 01 May 2019 00:00:00 +0800</pubDate>
       
       <guid>https://limingjie.github.io/posts/2019-05-01-my-mechanical-keyboards/</guid>
-      <description>My very fist impression of mechanical keyboard is a clunky ISO layout IBM keyboard on which I learned touch typing, I can still remember it was full of noise like rusty sprints. Then suddenly, the whole world is dominated by membrane keyboards for its low cost and quiet experience.
-As a fun to keyboards and mice. I owned Logitech mice M505, M525, and M545, guess what? I only paid the first one, they kept broken within warranty and got replaced.</description>
+      <description>My very first impression of a mechanical keyboard is a clunky ISO layout IBM keyboard on which I learned touch typing, I can still remember it was full of noise like rusty sprints. Then suddenly, the whole world is dominated by membrane keyboards for its low cost and quiet experience.
+As a fan of keyboards and mice. I owned Logitech mice M505, M525, and M545, guess what? I only paid the first one, they kept broken within the warranty and got replaced.</description>
     </item>
     
     <item>
