@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://limingjie.github.io/tags/algorithm/</loc>
+    <loc>https://limingjie.github.io/categories/algorithm/</loc>
     <lastmod>2019-05-26T22:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://limingjie.github.io/categories/algorithm/</loc>
+    <loc>https://limingjie.github.io/tags/algorithm/</loc>
     <lastmod>2019-05-26T22:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -21,6 +21,12 @@
   
   <url>
     <loc>https://limingjie.github.io/categories/</loc>
+    <lastmod>2019-05-26T22:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/golang/</loc>
     <lastmod>2019-05-26T22:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>

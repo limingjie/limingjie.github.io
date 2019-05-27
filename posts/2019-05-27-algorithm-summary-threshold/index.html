@@ -11,16 +11,16 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Algorithm: Array Summary Threshold"/>
-<meta name="twitter:description" content="Question Given an array of integers \(A (a_n \geq 0)\) and a threshold \(T\).
-If \(\sum_{n = i} a_n  T\), find an integer \(t\); for \(a_n  t\), set \(a_n = t\).
-Find the largest \(t\) which makes \(\sum_{n = i} a_n .
+<meta name="twitter:description" content="Question Given an array of integers \(A (a_i \geq 0, i \in [0, n])\) and a threshold \(T\).
+If \(\sum_{i = 0}^n a_i  T\), find an integer \(t\), for \(a_i  t (i \in [0, n]) \rArr a_i = t\).
+Find the largest \(t\) which makes \(\sum_{i = 0}^n a_i \leq T\).
 Answer ArraySummaryThreshold.go
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45  package algorithms import &#34;sort&#34; // ArraySummaryThreshold - Find the threshold for array A func ArraySummaryThreshold(A []int, T int) (t int) { // If the array is empty, return 0."/>
 
     <meta property="og:title" content="Algorithm: Array Summary Threshold" />
-<meta property="og:description" content="Question Given an array of integers \(A (a_n \geq 0)\) and a threshold \(T\).
-If \(\sum_{n = i} a_n  T\), find an integer \(t\); for \(a_n  t\), set \(a_n = t\).
-Find the largest \(t\) which makes \(\sum_{n = i} a_n .
+<meta property="og:description" content="Question Given an array of integers \(A (a_i \geq 0, i \in [0, n])\) and a threshold \(T\).
+If \(\sum_{i = 0}^n a_i  T\), find an integer \(t\), for \(a_i  t (i \in [0, n]) \rArr a_i = t\).
+Find the largest \(t\) which makes \(\sum_{i = 0}^n a_i \leq T\).
 Answer ArraySummaryThreshold.go
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45  package algorithms import &#34;sort&#34; // ArraySummaryThreshold - Find the threshold for array A func ArraySummaryThreshold(A []int, T int) (t int) { // If the array is empty, return 0." />
 <meta property="og:type" content="article" />
@@ -126,6 +126,8 @@ Answer ArraySummaryThreshold.go
   <i class="fas fa-tag"></i>
     <a href="/tags/algorithm/">Algorithm</a>
       <span class="separator">•</span>
+    <a href="/tags/golang/">Golang</a>
+      <span class="separator">•</span>
     <a href="/tags/programming/">Programming</a></div>
 
         </div>
@@ -134,11 +136,11 @@ Answer ArraySummaryThreshold.go
       <div>
         <h2 id="question">Question</h2>
 
-<p>Given an array of integers <span  class="math">\(A (a_n \geq 0)\)</span> and a threshold <span  class="math">\(T\)</span>.</p>
+<p>Given an array of integers <span  class="math">\(A (a_i \geq 0, i \in [0, n])\)</span> and a threshold <span  class="math">\(T\)</span>.</p>
 
-<p>If <span  class="math">\(\sum_{n = i} a_n > T\)</span>, find an integer <span  class="math">\(t\)</span>; for <span  class="math">\(a_n > t\)</span>, set <span  class="math">\(a_n = t\)</span>.</p>
+<p>If <span  class="math">\(\sum_{i = 0}^n a_i > T\)</span>, find an integer <span  class="math">\(t\)</span>, for <span  class="math">\(a_i > t (i \in [0, n]) \rArr a_i = t\)</span>.</p>
 
-<p>Find the largest <span  class="math">\(t\)</span> which makes <span  class="math">\(\sum_{n = i} a_n < T\)</span>.</p>
+<p>Find the largest <span  class="math">\(t\)</span> which makes <span  class="math">\(\sum_{i = 0}^n a_i \leq T\)</span>.</p>
 
 <h2 id="answer">Answer</h2>
 
