@@ -6,7 +6,7 @@
     <description>Recent content in Hugo on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 May 2019 11:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 00:30:00 +0800</lastBuildDate>
     
 	<atom:link href="https://limingjie.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Render TeX in Hugo Blog</title>
       <link>https://limingjie.github.io/posts/2019-05-28-render-tex-in-hugo/</link>
-      <pubDate>Tue, 28 May 2019 11:30:00 +0800</pubDate>
+      <pubDate>Wed, 29 May 2019 00:30:00 +0800</pubDate>
       
       <guid>https://limingjie.github.io/posts/2019-05-28-render-tex-in-hugo/</guid>
       <description>Recently, I started to think about learning $\TeX$, adding $\TeX$ support to blog looks like a good start for me. It took me quite some time to figure out all the culprits of embedding $\TeX$ in markdown. I hope this blog could save you some time before starting writing in $\TeX$.
