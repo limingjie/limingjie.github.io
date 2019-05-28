@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 May 2019 22:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2019 22:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://limingjie.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://limingjie.github.io/tags/hugo/</link>
+      <pubDate>Tue, 28 May 2019 22:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KaTeX</title>
+      <link>https://limingjie.github.io/tags/katex/</link>
+      <pubDate>Tue, 28 May 2019 22:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/tags/katex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LaTeX</title>
+      <link>https://limingjie.github.io/tags/latex/</link>
+      <pubDate>Tue, 28 May 2019 22:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TeX</title>
+      <link>https://limingjie.github.io/tags/tex/</link>
+      <pubDate>Tue, 28 May 2019 22:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/tags/tex/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Algorithm</title>

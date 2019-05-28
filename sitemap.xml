@@ -3,6 +3,65 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://limingjie.github.io/categories/</loc>
+    <lastmod>2019-05-28T22:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/categories/hugo/</loc>
+    <lastmod>2019-05-28T22:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/hugo/</loc>
+    <lastmod>2019-05-28T22:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/katex/</loc>
+    <lastmod>2019-05-28T22:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/latex/</loc>
+    <lastmod>2019-05-28T22:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/</loc>
+    <lastmod>2019-05-28T22:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/posts/</loc>
+    <lastmod>2019-05-28T22:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/posts/2019-05-28-render-tex-in-hugo/</loc>
+    <lastmod>2019-05-28T22:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/</loc>
+    <lastmod>2019-05-28T22:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/tex/</loc>
+    <lastmod>2019-05-28T22:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://limingjie.github.io/categories/algorithm/</loc>
     <lastmod>2019-05-26T22:00:00+08:00</lastmod>
     <priority>0</priority>
@@ -20,37 +79,13 @@
   </url>
   
   <url>
-    <loc>https://limingjie.github.io/categories/</loc>
-    <lastmod>2019-05-26T22:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://limingjie.github.io/tags/golang/</loc>
     <lastmod>2019-05-26T22:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://limingjie.github.io/</loc>
-    <lastmod>2019-05-26T22:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://limingjie.github.io/posts/</loc>
-    <lastmod>2019-05-26T22:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://limingjie.github.io/tags/programming/</loc>
-    <lastmod>2019-05-26T22:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://limingjie.github.io/tags/</loc>
     <lastmod>2019-05-26T22:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>

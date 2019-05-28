@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 May 2019 22:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2019 22:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://limingjie.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://limingjie.github.io/categories/hugo/</link>
+      <pubDate>Tue, 28 May 2019 22:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/categories/hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Algorithm</title>
