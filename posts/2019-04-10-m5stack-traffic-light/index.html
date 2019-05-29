@@ -51,6 +51,8 @@ M5Stack Traffic Light · Mingjie Li
     
 
     
+      <link rel="stylesheet" href="/css/syntax.css" />
+    
       <link rel="stylesheet" href="/css/custom.css" />
     
 
@@ -142,40 +144,40 @@ M5Stack Traffic Light · Mingjie Li
 <h2 id="customize-the-traffic-light">Customize The Traffic Light</h2>
 
 <p>Find the traffic light sequence definition in <code>TrafficLight.ino</code>. Customize the sequence in <code>lights</code> array.</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Traffic light struct
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span>
-{
-    <span style="color:#66d9ef">int</span> color_index; <span style="color:#75715e">// 1 - Red, 2 - Yellow, 3 - Green
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">bool</span> blink;
-    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> interval; <span style="color:#75715e">// milliseconds
-</span><span style="color:#75715e"></span>} Traffic_Light;
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Traffic light struct
+</span><span class="c1"></span><span class="k">typedef</span> <span class="k">struct</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">color_index</span><span class="p">;</span> <span class="c1">// 1 - Red, 2 - Yellow, 3 - Green
+</span><span class="c1"></span>    <span class="kt">bool</span> <span class="n">blink</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">interval</span><span class="p">;</span> <span class="c1">// milliseconds
+</span><span class="c1"></span><span class="p">}</span> <span class="n">Traffic_Light</span><span class="p">;</span>
 
-<span style="color:#75715e">// Traffic light sequences
-</span><span style="color:#75715e"></span>Traffic_Light lights[] <span style="color:#f92672">=</span> {
-    {<span style="color:#ae81ff">3</span>, false, <span style="color:#ae81ff">99999</span>},
-    {<span style="color:#ae81ff">3</span>, true, <span style="color:#ae81ff">10999</span>},
-    {<span style="color:#ae81ff">2</span>, true, <span style="color:#ae81ff">10999</span>},
-    {<span style="color:#ae81ff">1</span>, false, <span style="color:#ae81ff">30999</span>},
-    {<span style="color:#ae81ff">1</span>, true, <span style="color:#ae81ff">10999</span>}};
+<span class="c1">// Traffic light sequences
+</span><span class="c1"></span><span class="n">Traffic_Light</span> <span class="n">lights</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="nb">false</span><span class="p">,</span> <span class="mi">99999</span><span class="p">},</span>
+    <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">10999</span><span class="p">},</span>
+    <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">10999</span><span class="p">},</span>
+    <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="nb">false</span><span class="p">,</span> <span class="mi">30999</span><span class="p">},</span>
+    <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">10999</span><span class="p">}};</span>
 </code></pre></td></tr></table>
 </div>
 </div>
