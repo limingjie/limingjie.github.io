@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LaTeX on Mingjie Li</title>
-    <link>https://limingjie.github.io/tags/latex/</link>
-    <description>Recent content in LaTeX on Mingjie Li</description>
+    <title>KaTeX on Mingjie Li</title>
+    <link>https://limingjie.github.io/categories/katex/</link>
+    <description>Recent content in KaTeX on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 May 2019 23:50:59 +0800</lastBuildDate>
     
-	<atom:link href="https://limingjie.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://limingjie.github.io/categories/katex/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>https://limingjie.github.io/posts/2019-05-29-katex-pinyin/</guid>
       <description>$$ \gdef\py#1#2{{\scriptsize\text{#2}} \atop {#1}} 关雎 \\~\\ {\py{关}{gu\=an}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} {\py{鸠}{ji\=u}} {\py{，}{}} {\py{在}{z\`ai}} {\py{河}{h\&#39;e}} {\py{之}{zh\=\i}} {\py{洲}{zh\=ou}} {\py{。}{}} \\~\\ {\py{窈}{y\v{a}o}} {\py{窕}{ti\v{a}o}} {\py{淑}{sh\=u}} {\py{女}{n\v{\&#34;u}}} {\py{，}{}} {\py{君}{j\=un}} {\py{子}{z\v\i}} {\py{好}{h\v{a}o}} {\py{逑}{qi\&#39;u}} {\py{。}{}} $$  1 2 3 4 5 6 7 8 9 10  \gdef\py#1#2{{\scriptsize\text{#2}} \atop {#1}} 关雎 \\~\\ {\py{关}{gu\=an}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} {\py{鸠}{ji\=u}} {\py{，}{}} {\py{在}{z\`ai}} {\py{河}{h\&amp;#39;e}} {\py{之}{zh\=\i}} {\py{洲}{zh\=ou}} {\py{。}{}} \\~\\ {\py{窈}{y\v{a}o}} {\py{窕}{ti\v{a}o}} {\py{淑}{sh\=u}} {\py{女}{n\v{\&amp;#34;u}}} {\py{，}{}} {\py{君}{j\=un}} {\py{子}{z\v\i}} {\py{好}{h\v{a}o}} {\py{逑}{qi\&amp;#39;u}} {\py{。}{}}   Note: Wrap the code with &amp;lt;div&amp;gt;$$ $$&amp;lt;/div&amp;gt;.</description>
-    </item>
-    
-    <item>
-      <title>Render TeX in Hugo Blog</title>
-      <link>https://limingjie.github.io/posts/2019-05-28-render-tex-in-hugo/</link>
-      <pubDate>Wed, 29 May 2019 00:30:00 +0800</pubDate>
-      
-      <guid>https://limingjie.github.io/posts/2019-05-28-render-tex-in-hugo/</guid>
-      <description>Recently, I started to think about learning $\TeX$, adding $\TeX$ support to blog looks like a good start for me. It took me quite some time to figure out all the culprits of embedding $\TeX$ in markdown. I hope this blog could save you some time before starting writing in $\TeX$.
-Required Components  The default Blackfriday markdown engine. $\KaTeX$ math typesetting library for the web.  Steps to Setup $\KaTeX$ in Hugo $\KaTeX$ is an excellent fast engineer for rendering $\TeX$ on web.</description>
     </item>
     
   </channel>

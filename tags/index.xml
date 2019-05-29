@@ -6,24 +6,15 @@
     <description>Recent content in Tags on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 May 2019 00:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 23:50:59 +0800</lastBuildDate>
     
 	<atom:link href="https://limingjie.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hugo</title>
-      <link>https://limingjie.github.io/tags/hugo/</link>
-      <pubDate>Wed, 29 May 2019 00:30:00 +0800</pubDate>
-      
-      <guid>https://limingjie.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>KaTeX</title>
       <link>https://limingjie.github.io/tags/katex/</link>
-      <pubDate>Wed, 29 May 2019 00:30:00 +0800</pubDate>
+      <pubDate>Wed, 29 May 2019 23:50:59 +0800</pubDate>
       
       <guid>https://limingjie.github.io/tags/katex/</guid>
       <description></description>
@@ -32,18 +23,36 @@
     <item>
       <title>LaTeX</title>
       <link>https://limingjie.github.io/tags/latex/</link>
-      <pubDate>Wed, 29 May 2019 00:30:00 +0800</pubDate>
+      <pubDate>Wed, 29 May 2019 23:50:59 +0800</pubDate>
       
       <guid>https://limingjie.github.io/tags/latex/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Pinyin</title>
+      <link>https://limingjie.github.io/tags/pinyin/</link>
+      <pubDate>Wed, 29 May 2019 23:50:59 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/tags/pinyin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>TeX</title>
       <link>https://limingjie.github.io/tags/tex/</link>
-      <pubDate>Wed, 29 May 2019 00:30:00 +0800</pubDate>
+      <pubDate>Wed, 29 May 2019 23:50:59 +0800</pubDate>
       
       <guid>https://limingjie.github.io/tags/tex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://limingjie.github.io/tags/hugo/</link>
+      <pubDate>Wed, 29 May 2019 00:30:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
