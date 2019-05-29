@@ -26,6 +26,24 @@ blockquote {
   color: gray;
 }
 
+.page .about a {
+  color: #212121;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.page .about a:hover,
+.page .about a:focus {
+  color: #1565c0;
+  text-decoration: none;
+}
+
+.page .about a i {
+  font-size: 3.2rem;
+}
+
 /* Override table style */
 table {
   border-collapse: collapse;
