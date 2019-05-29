@@ -56,5 +56,16 @@ Let&amp;rsquo;s have some fun with functions.</description>
 As a fan of keyboards and mice. I owned Logitech mice M505, M525, and M545, guess what? I only paid the first one, they kept broken within the warranty and got replaced.</description>
     </item>
     
+    <item>
+      <title>M5Stack Traffic Light</title>
+      <link>https://limingjie.github.io/posts/2019-04-10-m5stack-traffic-light/</link>
+      <pubDate>Wed, 10 Apr 2019 22:10:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2019-04-10-m5stack-traffic-light/</guid>
+      <description> A traffic light toy build on M5Stack. Find the source code on GitHub.
+Customize The Traffic Light Find the traffic light sequence definition in TrafficLight.ino. Customize the sequence in lights array.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  // Traffic light struct typedef struct { int color_index; // 1 - Red, 2 - Yellow, 3 - Green  bool blink; unsigned long interval; // milliseconds } Traffic_Light; // Traffic light sequences Traffic_Light lights[] = { {3, false, 99999}, {3, true, 10999}, {2, true, 10999}, {1, false, 30999}, {1, true, 10999}};   </description>
+    </item>
+    
   </channel>
 </rss>

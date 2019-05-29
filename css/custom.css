@@ -29,3 +29,12 @@ table tr td:last-child,
 table tr th:last-child {
     border-right: 1px solid #dfe2e5;
 }
+
+#TableOfContents>ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#TableOfContents ul ul {
+    list-style-type: disc;
+}

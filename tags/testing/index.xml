@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing on Mingjie Li</title>
+    <link>https://limingjie.github.io/tags/testing/</link>
+    <description>Recent content in Testing on Mingjie Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 May 2019 22:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://limingjie.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Algorithm: Array Summary Threshold</title>
+      <link>https://limingjie.github.io/posts/2019-05-27-algorithm-summary-threshold/</link>
+      <pubDate>Sun, 26 May 2019 22:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2019-05-27-algorithm-summary-threshold/</guid>
+      <description>Question Given an array of integers $A (a_i \geq 0, i \in [0, n])$ and a threshold $T$.
+If $\sum_{i = 0}^n a_i &amp;gt; T$, find an integer $t$, for $a_i &amp;gt; t (i \in [0, n]) \to a_i = t$.
+Find the largest $t$ which makes $\sum_{i = 0}^n a_i \leq T$.
+For Example, $A = [30, 20, 10, 50, 40],\,\,T = 127$. Expecting $t = 33$.
+Answer ArraySummaryThreshold.</description>
+    </item>
+    
+  </channel>
+</rss>

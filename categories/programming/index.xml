@@ -6,10 +6,23 @@
     <description>Recent content in Programming on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 May 2019 15:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 22:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://limingjie.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Algorithm: Array Summary Threshold</title>
+      <link>https://limingjie.github.io/posts/2019-05-27-algorithm-summary-threshold/</link>
+      <pubDate>Sun, 26 May 2019 22:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2019-05-27-algorithm-summary-threshold/</guid>
+      <description>Question Given an array of integers $A (a_i \geq 0, i \in [0, n])$ and a threshold $T$.
+If $\sum_{i = 0}^n a_i &amp;gt; T$, find an integer $t$, for $a_i &amp;gt; t (i \in [0, n]) \to a_i = t$.
+Find the largest $t$ which makes $\sum_{i = 0}^n a_i \leq T$.
+For Example, $A = [30, 20, 10, 50, 40],\,\,T = 127$. Expecting $t = 33$.
+Answer ArraySummaryThreshold.</description>
+    </item>
     
     <item>
       <title>Golang Closure Exercise</title>
@@ -20,7 +33,18 @@
       <description>I always had a question, if Golang does not have the static variable, how could it gracefully handle long lifetime variables except using global variables?
 Until last night, I saw this Exercise: Fibonacci closure in A tour of Go. I have to admit I am not a fan of closure, sometimes it makes easy logic complex. But it is still great for learning.
  Exercise: Fibonacci closure
-Let&#39;s have some fun with functions.</description>
+Let&amp;rsquo;s have some fun with functions.</description>
+    </item>
+    
+    <item>
+      <title>M5Stack Traffic Light</title>
+      <link>https://limingjie.github.io/posts/2019-04-10-m5stack-traffic-light/</link>
+      <pubDate>Wed, 10 Apr 2019 22:10:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2019-04-10-m5stack-traffic-light/</guid>
+      <description> A traffic light toy build on M5Stack. Find the source code on GitHub.
+Customize The Traffic Light Find the traffic light sequence definition in TrafficLight.ino. Customize the sequence in lights array.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  // Traffic light struct typedef struct { int color_index; // 1 - Red, 2 - Yellow, 3 - Green  bool blink; unsigned long interval; // milliseconds } Traffic_Light; // Traffic light sequences Traffic_Light lights[] = { {3, false, 99999}, {3, true, 10999}, {2, true, 10999}, {1, false, 30999}, {1, true, 10999}};   </description>
     </item>
     
   </channel>
