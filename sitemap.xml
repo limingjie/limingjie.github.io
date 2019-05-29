@@ -9,12 +9,6 @@
   </url>
   
   <url>
-    <loc>https://limingjie.github.io/categories/katex/</loc>
-    <lastmod>2019-05-29T23:50:59+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://limingjie.github.io/tags/katex/</loc>
     <lastmod>2019-05-29T23:50:59+08:00</lastmod>
     <priority>0</priority>
@@ -57,6 +51,12 @@
   </url>
   
   <url>
+    <loc>https://limingjie.github.io/categories/tex/</loc>
+    <lastmod>2019-05-29T23:50:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://limingjie.github.io/posts/2019-05-29-katex-pinyin/</loc>
     <lastmod>2019-05-29T23:50:59+08:00</lastmod>
   </url>
@@ -76,12 +76,6 @@
   <url>
     <loc>https://limingjie.github.io/posts/2019-05-28-render-tex-in-hugo/</loc>
     <lastmod>2019-05-29T00:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://limingjie.github.io/categories/tex/</loc>
-    <lastmod>2019-05-29T00:30:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
