@@ -27,7 +27,7 @@ Required Components  The default Blackfriday markdown engine. $\KaTeX$ math type
       <base href="https://limingjie.github.io/posts/2019-05-28-render-tex-in-hugo/">
     
     <title>
-Render TeX in Hugo Blog · Mingjie Li
+  Render TeX in Hugo Blog · Mingjie Li
 </title>
 
     
@@ -95,32 +95,32 @@ Render TeX in Hugo Blog · Mingjie Li
 
       <div class="content">
         
-<section class="container post">
+  <section class="container post">
     <article>
-        <header>
-            <div class="post-title">
-                <h1 class="title">Render TeX in Hugo Blog</h1>
-            </div>
-            <div class="post-meta">
-                <div class="date">
-                    <span class="posted-on">
-                        <i class="fas fa-calendar"></i>
-                        <time datetime='2019-05-29T00:30:00&#43;08:00'>
-                            May 29 2019, 12:30AM CST 
-                        </time>
-                    </span>
-                    <span class="reading-time">
-                        <i class="fas fa-clock"></i>
-                        3 minutes read
-                    </span>
-                </div>
-                <div class="categories">
+      <header>
+        <div class="post-title">
+          <h1 class="title">Render TeX in Hugo Blog</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2019-05-29T00:30:00&#43;08:00'>
+                May 29 2019, 12:30AM CST 
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              3 minutes read
+            </span>
+          </div>
+          <div class="categories">
   <i class="fas fa-folder"></i>
     <a href="/categories/hugo/">Hugo</a>
       <span class="separator">•</span>
     <a href="/categories/tex/">TeX</a></div>
 
-                <div class="tags">
+          <div class="tags">
   <i class="fas fa-tag"></i>
     <a href="/tags/hugo/">Hugo</a>
       <span class="separator">•</span>
@@ -130,10 +130,12 @@ Render TeX in Hugo Blog · Mingjie Li
       <span class="separator">•</span>
     <a href="/tags/tex/">TeX</a></div>
 
-            </div>
-        </header>
+        </div>
+      </header>
 
-        <div><nav id="TableOfContents">
+      <div>
+        
+          <nav id="TableOfContents">
 <ul>
 <li>
 <ul>
@@ -152,9 +154,12 @@ Render TeX in Hugo Blog · Mingjie Li
 <li><a href="#useful-links">Useful Links</a></li>
 </ul></li>
 </ul>
-</nav></div>
-        <div>
-            
+</nav>
+        
+      </div>
+
+      <div>
+        
 
 <p>Recently, I started to think about learning $\TeX$, adding $\TeX$ support to blog looks like a good start for me. It took me quite some time to figure out all the culprits of embedding $\TeX$ in markdown. I hope this blog could save you some time before starting writing in $\TeX$.</p>
 
@@ -409,47 +414,35 @@ $$
 <li><a href="https://katex.org/docs/supported.html">$\KaTeX$ Supported Functions</a></li>
 </ul>
 
-        </div>
+      </div>
 
-        <footer>
-            
+      <footer>
+        
 
 
-            
-        </footer>
+        
+      </footer>
     </article>
 
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"
-  integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j"
-  crossorigin="anonymous"
-/>
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"
-  integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ"
-  crossorigin="anonymous"
-></script>
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"
-  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
-  crossorigin="anonymous"
-></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-      delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\[", right: "\\]", display: true },
-        { left: "$", right: "$", display: false },
-        { left: "\\(", right: "\\)", display: false }
-      ]
+    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ]
+      });
     });
-  });
-</script>
-</section>
+  </script>
+
+
+  </section>
 
       </div>
 
