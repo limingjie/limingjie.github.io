@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>KaTex on Mingjie Li</title>
+    <title>KaTeX on Mingjie Li</title>
     <link>https://limingjie.github.io/tags/katex/</link>
-    <description>Recent content in KaTex on Mingjie Li</description>
+    <description>Recent content in KaTeX on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 May 2019 23:50:59 +0800</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Wed, 29 May 2019 23:50:59 +0800</pubDate>
       
       <guid>https://limingjie.github.io/posts/2019-05-29-katex-pinyin/</guid>
-      <description>$$ \def\py#1#2{\text{\scriptsize{#2}} \atop \text{#1}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} \\~\\ {\py{关}{gu\=an}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} {\py{鸠}{ji\=u}} {\py{，}{}} {\py{在}{z\`ai}} {\py{河}{h\&#39;e}} {\py{之}{zh\=\i}} {\py{洲}{zh\=ou}} {\py{。}{}} \\~\\ {\py{窈}{y\v{a}o}} {\py{窕}{ti\v{a}o}} {\py{淑}{sh\=u}} {\py{女}{n\v{\&#34;u}}} {\py{，}{}} {\py{君}{j\=un}} {\py{子}{z\v\i}} {\py{好}{h\v{a}o}} {\py{逑}{qi\&#39;u}} {\py{。}{}} $$  1 2 3 4 5 6 7 8 9 10  \def\py#1#2{\text{\scriptsize{#2}} \atop \text{#1}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} \\~\\ {\py{关}{gu\=an}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} {\py{鸠}{ji\=u}} {\py{，}{}} {\py{在}{z\`ai}} {\py{河}{h\&amp;#39;e}} {\py{之}{zh\=\i}} {\py{洲}{zh\=ou}} {\py{。}{}} \\~\\ {\py{窈}{y\v{a}o}} {\py{窕}{ti\v{a}o}} {\py{淑}{sh\=u}} {\py{女}{n\v{\&amp;#34;u}}} {\py{，}{}} {\py{君}{j\=un}} {\py{子}{z\v\i}} {\py{好}{h\v{a}o}} {\py{逑}{qi\&amp;#39;u}} {\py{。}{}}   Note: Wrap the code in &amp;lt;div&amp;gt;$$ and $$&amp;lt;/div&amp;gt;.</description>
+      <description>Use \atop  $$ \def\py#1#2{\text{\scriptsize{#2}}\atop\text{\;#1\;}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} \\~\\ {\py{关}{gu\=an}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} {\py{鸠}{ji\=u}} {\py{，}{}} {\py{在}{z\`ai}} {\py{河}{h\&#39;e}} {\py{之}{zh\=\i}} {\py{洲}{zh\=ou}} {\py{。}{}} \\~\\ {\py{窈}{y\v{a}o}} {\py{窕}{ti\v{a}o}} {\py{淑}{sh\=u}} {\py{女}{n\v{\&#34;u}}} {\py{，}{}} {\py{君}{j\=un}} {\py{子}{z\v\i}} {\py{好}{h\v{a}o}} {\py{逑}{qi\&#39;u}} {\py{。}{}} $$  1 2 3 4 5 6 7 8 9 10  \def\py#1#2{\text{\scriptsize{#2}}\atop\text{\;#1\;}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} \\~\\ {\py{关}{gu\=an}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} {\py{鸠}{ji\=u}} {\py{，}{}} {\py{在}{z\`ai}} {\py{河}{h\&amp;#39;e}} {\py{之}{zh\=\i}} {\py{洲}{zh\=ou}} {\py{。}{}} \\~\\ {\py{窈}{y\v{a}o}} {\py{窕}{ti\v{a}o}} {\py{淑}{sh\=u}} {\py{女}{n\v{\&amp;#34;u}}} {\py{，}{}} {\py{君}{j\=un}} {\py{子}{z\v\i}} {\py{好}{h\v{a}o}} {\py{逑}{qi\&amp;#39;u}} {\py{。}{}}   Use \overset  $$ \def\py#1#2{\overset\text{#2}\text{\;#1\;}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} \\ {\py{关}{gu\=an}} {\py{关}{gu\=an}} {\py{雎}{j\=u}} {\py{鸠}{ji\=u}} {\py{，}{}} {\py{在}{z\`ai}} {\py{河}{h\&#39;e}} {\py{之}{zh\=\i}} {\py{洲}{zh\=ou}} {\py{。}{}} \\ {\py{窈}{y\v{a}o}} {\py{窕}{ti\v{a}o}} {\py{淑}{sh\=u}} {\py{女}{n\v{\&#34;</description>
     </item>
     
     <item>
