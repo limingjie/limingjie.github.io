@@ -1,6 +1,5 @@
 /* Code Block */
 pre {
-  line-height: 20px;
   margin: 0;
   padding: 0;
 }
@@ -8,8 +7,8 @@ pre {
 code {
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
     monospace;
-  font-size: 14px;
-  padding: 0;
+  font-size: inherit;
+  padding: 2px 4px;
 }
 
 .chroma .lntable {
@@ -76,7 +75,7 @@ table tr th:last-child {
 }
 
 /* Remove heading H1, with blog title this level is not required in markdown. */
-#TableOfContents>ul {
+#TableOfContents > ul {
   list-style-type: none;
   padding-left: 0;
 }

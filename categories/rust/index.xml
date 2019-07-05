@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Mingjie Li</title>
-    <link>https://limingjie.github.io/tags/programming/</link>
-    <description>Recent content in Programming on Mingjie Li</description>
+    <title>Rust on Mingjie Li</title>
+    <link>https://limingjie.github.io/categories/rust/</link>
+    <description>Recent content in Rust on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Jul 2019 21:35:00 +0800</lastBuildDate>
     
-	<atom:link href="https://limingjie.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://limingjie.github.io/categories/rust/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -78,31 +78,6 @@ Cargo Examples Check cargo installation 1 2  $ cargo --version cargo 1.36.0 (c4f
 Install Rust Install Rust using rustup.
 1  $ curl https://sh.rustup.rs -sSf | sh   After installation, running rustc —version to check the installed version.
 1 2  $ rustc --version rustc 1.36.0 (a53f9df32 2019-07-03)   Update installation by running rustup update, for more information see the rustup documentation.</description>
-    </item>
-    
-    <item>
-      <title>Algorithm: Array Summary Threshold</title>
-      <link>https://limingjie.github.io/posts/2019-05-27-algorithm-summary-threshold/</link>
-      <pubDate>Sun, 26 May 2019 22:00:00 +0800</pubDate>
-      
-      <guid>https://limingjie.github.io/posts/2019-05-27-algorithm-summary-threshold/</guid>
-      <description>Question Given an array of integers $A (a_i \geq 0, i \in [0, n])$ and a threshold $T$.
-If $\sum_{i = 0}^n a_i &amp;gt; T$, find an integer $t$, for $a_i &amp;gt; t (i \in [0, n]) \to a_i = t$.
-Find the largest $t$ which makes $\sum_{i = 0}^n a_i \leq T$.
-For Example, $A = [30, 20, 10, 50, 40],\,\,T = 127$. Expecting $t = 33$.
-Answer ArraySummaryThreshold.</description>
-    </item>
-    
-    <item>
-      <title>Golang Closure Exercise</title>
-      <link>https://limingjie.github.io/posts/2019-05-25-golang-closure-exercise/</link>
-      <pubDate>Sat, 25 May 2019 15:00:00 +0800</pubDate>
-      
-      <guid>https://limingjie.github.io/posts/2019-05-25-golang-closure-exercise/</guid>
-      <description>I always had a question, if Golang does not have the static variable, how could it gracefully handle long lifetime variables except using global variables?
-Until last night, I saw this Exercise: Fibonacci closure in A tour of Go. I have to admit I am not a fan of closure, sometimes it makes easy logic complex. But it is still great for learning.
- Exercise: Fibonacci closure
-Let&amp;rsquo;s have some fun with functions.</description>
     </item>
     
   </channel>
