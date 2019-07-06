@@ -6,10 +6,20 @@
     <description>Recent content in Programming on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jul 2019 21:35:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2019 00:39:00 +0800</lastBuildDate>
     
 	<atom:link href="https://limingjie.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Rust Book Chapter 4.1 What is Ownership?</title>
+      <link>https://limingjie.github.io/posts/2019-07-07-chapter-4.1-what-is-ownership/</link>
+      <pubDate>Sun, 07 Jul 2019 00:39:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2019-07-07-chapter-4.1-what-is-ownership/</guid>
+      <description>This is my notes of learning The Rust Book from a C++ programmer&amp;rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
+This chapter starts to introduce memory management of rust language. Similar to mutability, rust simplified the copy and move behaviors and make them explicit in language, the advantage is to make it easy to find problems at compile time. I am looking forward to reading the next chapter on references and borrowing.</description>
+    </item>
     
     <item>
       <title>The Rust Book Chapter 3.5 Control Flow</title>
