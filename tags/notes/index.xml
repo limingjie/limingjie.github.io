@@ -6,10 +6,21 @@
     <description>Recent content in Notes on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jul 2019 21:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 23:59:00 +0800</lastBuildDate>
     
 	<atom:link href="https://limingjie.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Rust Book Chapter 4.3 The Slice Type</title>
+      <link>https://limingjie.github.io/posts/2019-07-08-chapter-4.3-the-slices-type/</link>
+      <pubDate>Mon, 08 Jul 2019 23:59:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2019-07-08-chapter-4.3-the-slices-type/</guid>
+      <description>This is my notes of learning The Rust Book from a C++ programmer&amp;rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
+Slice references a contiguous sequence of elements in a collection rather than the whole collection, it does not have ownership.
+Take a string as an example, using index to save specific position is not safe, if the string is cleared, the index is still valid but pointing to invalid data.</description>
+    </item>
     
     <item>
       <title>The Rust Book Chapter 4.2 References and Borrowing</title>
