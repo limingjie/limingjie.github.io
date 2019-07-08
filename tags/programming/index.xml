@@ -6,10 +6,21 @@
     <description>Recent content in Programming on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jul 2019 00:39:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 21:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://limingjie.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Rust Book Chapter 4.2 References and Borrowing</title>
+      <link>https://limingjie.github.io/posts/2019-07-08-chapter-4.2-references-and-borrowing/</link>
+      <pubDate>Mon, 08 Jul 2019 21:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2019-07-08-chapter-4.2-references-and-borrowing/</guid>
+      <description>This is my notes of learning The Rust Book from a C++ programmer&amp;rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
+Because of the ownership rule: there can only be one owner at a time. Here are the 2 valid ways of using variable as an argument.
+ Transfer the ownership, then transfer it back. Borrow by reference.  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  fn main(){lets1=String::from(&amp;#34;Hello&amp;#34;);let(s1,len)=calculate_length_by_move(s1);println!</description>
+    </item>
     
     <item>
       <title>The Rust Book Chapter 4.1 What is Ownership?</title>
