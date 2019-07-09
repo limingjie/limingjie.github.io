@@ -6,10 +6,33 @@
     <description>Recent content in Programming on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jul 2019 23:59:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jul 2019 23:10:00 +0800</lastBuildDate>
     
 	<atom:link href="https://limingjie.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Rust Book Chapter 5.3 Method Syntax</title>
+      <link>https://limingjie.github.io/posts/2019-07-09-chapter-5.3-method-syntax/</link>
+      <pubDate>Tue, 09 Jul 2019 23:10:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2019-07-09-chapter-5.3-method-syntax/</guid>
+      <description>This is my notes of learning The Rust Book from a C++ programmer&amp;rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
+Defining Methods 1 2 3 4 5 6 7 8 9 10  struct Rectangle{width: u32,height: u32,}implRectangle{fn area(&amp;amp;self)-&amp;gt; u32 {self.width*self.height}}   The reason for explicitly self is flexible type.
+ &amp;amp;self - reading &amp;amp;mut self - mutating self - consuming. Having a method that takes ownership of the instance by using just selfas the first parameter is rare; this technique is usually used when the method transforms self into something else and you want to prevent the caller from using the original instance after the transformation.</description>
+    </item>
+    
+    <item>
+      <title>The Rust Book Chapter 5.1 Defining and Instantiating Structs</title>
+      <link>https://limingjie.github.io/posts/2019-07-09-chapter-5.1-defining-and-instantiating-structs/</link>
+      <pubDate>Tue, 09 Jul 2019 22:30:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2019-07-09-chapter-5.1-defining-and-instantiating-structs/</guid>
+      <description>This is my notes of learning The Rust Book from a C++ programmer&amp;rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
+Structs are similar to tuples.
+ Each field can be a different type. Each field has a name, do not have to rely on the order to access the values.  Define struct.
+1 2 3 4 5 6  struct User{username: String,email: String,sign_in_count: u64,active: bool,}   Create an instance of the struct.</description>
+    </item>
     
     <item>
       <title>The Rust Book Chapter 4.3 The Slice Type</title>
