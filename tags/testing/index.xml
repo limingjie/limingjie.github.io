@@ -6,10 +6,21 @@
     <description>Recent content in Testing on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 May 2019 22:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jul 2019 20:05:00 +0800</lastBuildDate>
     
 	<atom:link href="https://limingjie.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Test of Randomness - Knuth Shuffle</title>
+      <link>https://limingjie.github.io/posts/2019-07-18-knuth-shuffle/</link>
+      <pubDate>Thu, 18 Jul 2019 20:05:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2019-07-18-knuth-shuffle/</guid>
+      <description>Test of Randomness using a fixed seed. A fixed seed will generate fixed sequence of random numbers.
+shuffle.go
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  package shuffle import ( &amp;#34;math/rand&amp;#34; ) // Shuffle - Knuth Shuffle // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle // &amp;gt; -- To shuffle an array a of n elements (indices 0.</description>
+    </item>
     
     <item>
       <title>Algorithm: Array Summary Threshold</title>
