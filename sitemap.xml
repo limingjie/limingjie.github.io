@@ -1,59 +1,80 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://limingjie.github.io/categories/</loc>
+    <lastmod>2019-11-27T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/kid/</loc>
+    <lastmod>2019-11-27T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/categories/kid/</loc>
+    <lastmod>2019-11-27T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/categories/knowledge/</loc>
+    <lastmod>2019-11-27T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/knowledge/</loc>
+    <lastmod>2019-11-27T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/</loc>
+    <lastmod>2019-11-27T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/posts/</loc>
+    <lastmod>2019-11-27T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/</loc>
+    <lastmod>2019-11-27T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/temperature/</loc>
+    <lastmod>2019-11-27T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/posts/2019-11-27-kid-temperature/</loc>
+    <lastmod>2019-11-27T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://limingjie.github.io/tags/algorithm/</loc>
     <lastmod>2019-07-18T20:05:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/categories/algorithm/</loc>
     <lastmod>2019-07-18T20:05:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://limingjie.github.io/categories/</loc>
-    <lastmod>2019-07-18T20:05:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/tags/golang/</loc>
     <lastmod>2019-07-18T20:05:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://limingjie.github.io/</loc>
-    <lastmod>2019-07-18T20:05:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://limingjie.github.io/posts/</loc>
-    <lastmod>2019-07-18T20:05:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://limingjie.github.io/tags/programming/</loc>
-    <lastmod>2019-07-18T20:05:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/categories/programming/</loc>
     <lastmod>2019-07-18T20:05:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://limingjie.github.io/tags/</loc>
+    <loc>https://limingjie.github.io/tags/programming/</loc>
     <lastmod>2019-07-18T20:05:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -64,25 +85,21 @@
   <url>
     <loc>https://limingjie.github.io/tags/testing/</loc>
     <lastmod>2019-07-18T20:05:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/tags/notes/</loc>
     <lastmod>2019-07-09T23:10:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://limingjie.github.io/tags/rust/</loc>
-    <lastmod>2019-07-09T23:10:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/categories/rust/</loc>
     <lastmod>2019-07-09T23:10:00+08:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/rust/</loc>
+    <lastmod>2019-07-09T23:10:00+08:00</lastmod>
   </url>
   
   <url>
@@ -143,31 +160,26 @@
   <url>
     <loc>https://limingjie.github.io/tags/katex/</loc>
     <lastmod>2019-05-29T23:50:59+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/tags/latex/</loc>
     <lastmod>2019-05-29T23:50:59+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/tags/pinyin/</loc>
     <lastmod>2019-05-29T23:50:59+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://limingjie.github.io/tags/tex/</loc>
-    <lastmod>2019-05-29T23:50:59+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/categories/tex/</loc>
     <lastmod>2019-05-29T23:50:59+08:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://limingjie.github.io/tags/tex/</loc>
+    <lastmod>2019-05-29T23:50:59+08:00</lastmod>
   </url>
   
   <url>
@@ -178,13 +190,11 @@
   <url>
     <loc>https://limingjie.github.io/tags/hugo/</loc>
     <lastmod>2019-05-29T00:30:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/categories/hugo/</loc>
     <lastmod>2019-05-29T00:30:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -200,13 +210,11 @@
   <url>
     <loc>https://limingjie.github.io/tags/closure/</loc>
     <lastmod>2019-05-25T15:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/categories/golang/</loc>
     <lastmod>2019-05-25T15:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -217,25 +225,21 @@
   <url>
     <loc>https://limingjie.github.io/tags/diy/</loc>
     <lastmod>2019-05-01T00:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/tags/gh60/</loc>
     <lastmod>2019-05-01T00:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/tags/keyboard/</loc>
     <lastmod>2019-05-01T00:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/categories/mechanical-keyboard/</loc>
     <lastmod>2019-05-01T00:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -246,19 +250,16 @@
   <url>
     <loc>https://limingjie.github.io/categories/arduino/</loc>
     <lastmod>2019-04-10T22:10:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/tags/esp32/</loc>
     <lastmod>2019-04-10T22:10:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://limingjie.github.io/tags/m5stack/</loc>
     <lastmod>2019-04-10T22:10:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -269,7 +270,6 @@
   <url>
     <loc>https://limingjie.github.io/tags/toy/</loc>
     <lastmod>2019-04-10T22:10:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

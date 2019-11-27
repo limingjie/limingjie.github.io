@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>KaTex on Mingjie Li</title>
+    <title>KaTeX on Mingjie Li</title>
     <link>https://limingjie.github.io/tags/katex/</link>
-    <description>Recent content in KaTex on Mingjie Li</description>
+    <description>Recent content in KaTeX on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 May 2019 23:50:59 +0800</lastBuildDate>

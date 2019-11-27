@@ -13,16 +13,18 @@
 <meta name="twitter:title" content="The Rust Book Chapter 4.2 References and Borrowing"/>
 <meta name="twitter:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
 Because of the ownership rule: there can only be one owner at a time. Here are the 2 valid ways of using variable as an argument.
- Transfer the ownership, then transfer it back. Borrow by reference.  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  fn main(){lets1=String::from(&#34;Hello&#34;);let(s1,len)=calculate_length_by_move(s1);println!"/>
+ Transfer the ownership, then transfer it back. Borrow by reference.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  fn main(){lets1=String::from(&#34;Hello&#34;);let(s1,len)=calculate_length_by_move(s1);println!"/>
 
     <meta property="og:title" content="The Rust Book Chapter 4.2 References and Borrowing" />
 <meta property="og:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
 Because of the ownership rule: there can only be one owner at a time. Here are the 2 valid ways of using variable as an argument.
- Transfer the ownership, then transfer it back. Borrow by reference.  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  fn main(){lets1=String::from(&#34;Hello&#34;);let(s1,len)=calculate_length_by_move(s1);println!" />
+ Transfer the ownership, then transfer it back. Borrow by reference.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  fn main(){lets1=String::from(&#34;Hello&#34;);let(s1,len)=calculate_length_by_move(s1);println!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://limingjie.github.io/posts/2019-07-08-chapter-4.2-references-and-borrowing/" />
-<meta property="article:published_time" content="2019-07-08T21:00:00&#43;08:00"/>
-<meta property="article:modified_time" content="2019-07-08T21:00:00&#43;08:00"/>
+<meta property="article:published_time" content="2019-07-08T21:00:00+08:00" />
+<meta property="article:modified_time" content="2019-07-08T21:00:00+08:00" />
 
 
     
@@ -61,7 +63,7 @@ Because of the ownership rule: there can only be one owner at a time. Here are t
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.59.1" />
   </head>
 
   <body class=" ">
@@ -159,8 +161,8 @@ Because of the ownership rule: there can only be one owner at a time. Here are t
 
 <ul>
 <li>Transfer the ownership, then transfer it back.</li>
-<li>Borrow by reference.</li>
-</ul>
+
+<li><p>Borrow by reference.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
@@ -184,26 +186,28 @@ Because of the ownership rule: there can only be one owner at a time. Here are t
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">);</span><span class="w">
 </span><span class="w">
-</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculate_length_by_move</span><span class="p">(</span><span class="n">s1</span><span class="p">);</span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;Length = {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">);</span><span class="w">
+</span><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculate_length_by_move</span><span class="p">(</span><span class="n">s1</span><span class="p">);</span><span class="w">
+</span><span class="w"></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;Length = {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">);</span><span class="w">
 </span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;Length = {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">calculate_length_by_ref</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s1</span><span class="p">));</span><span class="w">
+</span><span class="w"></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;Length = {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">calculate_length_by_ref</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s1</span><span class="p">));</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span><span class="w">
 </span><span class="w"></span><span class="k">fn</span> <span class="nf">calculate_length_by_move</span><span class="p">(</span><span class="n">s</span>: <span class="nb">String</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="p">(</span><span class="nb">String</span><span class="p">,</span><span class="w"> </span><span class="kt">usize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">len</span><span class="p">();</span><span class="w">
-</span><span class="w">    </span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="w">
+</span><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">len</span><span class="p">();</span><span class="w">
+</span><span class="w"></span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span><span class="w">
 </span><span class="w"></span><span class="k">fn</span> <span class="nf">calculate_length_by_ref</span><span class="p">(</span><span class="n">s</span>: <span class="kp">&amp;</span><span class="nb">String</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">usize</span> <span class="p">{</span><span class="w"> </span><span class="c1">// s is a reference to a String
-</span><span class="c1"></span><span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">len</span><span class="p">()</span><span class="w">
+</span><span class="c1"></span><span class="n">s</span><span class="p">.</span><span class="n">len</span><span class="p">()</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="c1">// Here, s goes out of scope. But because it does not have ownership of what
-</span><span class="c1"></span><span class="w">  </span><span class="c1">// it refers to, nothing happens.
+</span><span class="c1">// it refers to, nothing happens.
 </span></code></pre></td></tr></table>
 </div>
-</div>
+</div></li>
+</ul>
+
 <p>The benefit of by reference is clear,</p>
 
 <ul>

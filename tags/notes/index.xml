@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on Mingjie Li</title>
@@ -53,7 +53,8 @@ Take a string as an example, using index to save specific position is not safe, 
       <guid>https://limingjie.github.io/posts/2019-07-08-chapter-4.2-references-and-borrowing/</guid>
       <description>This is my notes of learning The Rust Book from a C++ programmer&amp;rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
 Because of the ownership rule: there can only be one owner at a time. Here are the 2 valid ways of using variable as an argument.
- Transfer the ownership, then transfer it back. Borrow by reference.  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  fn main(){lets1=String::from(&amp;#34;Hello&amp;#34;);let(s1,len)=calculate_length_by_move(s1);println!</description>
+ Transfer the ownership, then transfer it back. Borrow by reference.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  fn main(){lets1=String::from(&amp;#34;Hello&amp;#34;);let(s1,len)=calculate_length_by_move(s1);println!</description>
     </item>
     
     <item>
