@@ -12,13 +12,13 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Rust Book Chapter 3.5 Control Flow"/>
 <meta name="twitter:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-if Expressions The condition must be a bool.
-1 2 3 4 5 6 7 8 9 10 11 12 13  fn main(){letnumber=6;ifnumber%4==0{println!(&#34;number is divisible by 4&#34;);}elseifnumber%3==0{println!(&#34;number is divisible by 3&#34;);}elseifnumber%2==0{println!(&#34;number is divisible by 2&#34;);}else{println!(&#34;number is not divisible by 4, 3, or 2&#34;);}}   Using if in a let Statement if is an expression:exclamation: The value from each branch of the expression must be the same type."/>
+ if Expressions The condition must be a bool.
+1 2 3 4 5 6 7 8 9 10 11 12 13  fn main(){letnumber=6;ifnumber%4==0{println!(&#34;number is divisible by 4&#34;);}elseifnumber%3==0{println!(&#34;number is divisible by 3&#34;);}elseifnumber%2==0{println!(&#34;number is divisible by 2&#34;);}else{println!(&#34;number is not divisible by 4, 3, or 2&#34;);}}  Using if in a let Statement if is an expression:exclamation: The value from each branch of the expression must be the same type."/>
 
     <meta property="og:title" content="The Rust Book Chapter 3.5 Control Flow" />
 <meta property="og:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-if Expressions The condition must be a bool.
-1 2 3 4 5 6 7 8 9 10 11 12 13  fn main(){letnumber=6;ifnumber%4==0{println!(&#34;number is divisible by 4&#34;);}elseifnumber%3==0{println!(&#34;number is divisible by 3&#34;);}elseifnumber%2==0{println!(&#34;number is divisible by 2&#34;);}else{println!(&#34;number is not divisible by 4, 3, or 2&#34;);}}   Using if in a let Statement if is an expression:exclamation: The value from each branch of the expression must be the same type." />
+ if Expressions The condition must be a bool.
+1 2 3 4 5 6 7 8 9 10 11 12 13  fn main(){letnumber=6;ifnumber%4==0{println!(&#34;number is divisible by 4&#34;);}elseifnumber%3==0{println!(&#34;number is divisible by 3&#34;);}elseifnumber%2==0{println!(&#34;number is divisible by 2&#34;);}else{println!(&#34;number is not divisible by 4, 3, or 2&#34;);}}  Using if in a let Statement if is an expression:exclamation: The value from each branch of the expression must be the same type." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://limingjie.github.io/posts/2019-07-05-chapter-3.5-control-flow/" />
 <meta property="article:published_time" content="2019-07-05T21:35:00+08:00" />
@@ -61,7 +61,7 @@ if Expressions The condition must be a bool.
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.65.3" />
   </head>
 
   <body class=" ">
@@ -136,43 +136,33 @@ if Expressions The condition must be a bool.
       <div>
         
           <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#if-expressions"><code>if</code> Expressions</a>
-<ul>
-<li><a href="#using-if-in-a-let-statement">Using <code>if</code> in a <code>let</code> Statement</a></li>
-</ul></li>
-<li><a href="#repetition-with-loops">Repetition with Loops</a>
-<ul>
-<li><a href="#repeating-code-wtih-loop">Repeating Code wtih <code>loop</code></a></li>
-<li><a href="#returning-values-from-loops">Returning Values from Loops</a></li>
-<li><a href="#conditional-loops-with-while">Conditional Loops with <code>while</code></a></li>
-<li><a href="#looping-through-a-collection-with-for">Looping Through a Collection with <code>for</code></a>
-<ul>
-<li><a href="#for-and-range"><code>for</code> and <code>range</code></a></li>
-<li><a href="#for-and-iterators"><code>for</code> and Iterators</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#if-expressions"><code>if</code> Expressions</a>
+      <ul>
+        <li><a href="#using-if-in-a-let-statement">Using <code>if</code> in a <code>let</code> Statement</a></li>
+      </ul>
+    </li>
+    <li><a href="#repetition-with-loops">Repetition with Loops</a>
+      <ul>
+        <li><a href="#repeating-code-wtih-loop">Repeating Code wtih <code>loop</code></a></li>
+        <li><a href="#returning-values-from-loops">Returning Values from Loops</a></li>
+        <li><a href="#conditional-loops-with-while">Conditional Loops with <code>while</code></a></li>
+        <li><a href="#looping-through-a-collection-with-for">Looping Through a Collection with <code>for</code></a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         
       </div>
 
       <div>
-        
-
-<p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
-
-<hr />
-
+        <p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
+<hr>
 <h2 id="if-expressions"><code>if</code> Expressions</h2>
-
 <p>The condition must be a <code>bool</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -202,13 +192,11 @@ if Expressions The condition must be a bool.
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="using-if-in-a-let-statement">Using <code>if</code> in a <code>let</code> Statement</h3>
-
+</div><h3 id="using-if-in-a-let-statement">Using <code>if</code> in a <code>let</code> Statement</h3>
 <p><code>if</code> is an expression:exclamation: The value from each branch of the expression must be the same type.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -232,17 +220,13 @@ if Expressions The condition must be a bool.
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="repetition-with-loops">Repetition with Loops</h2>
-
+</div><h2 id="repetition-with-loops">Repetition with Loops</h2>
 <p><code>loop</code>, <code>while</code>, <code>for</code></p>
-
 <h3 id="repeating-code-wtih-loop">Repeating Code wtih <code>loop</code></h3>
-
 <p>Loop forever, use <code>break</code> to stop it.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -256,11 +240,10 @@ if Expressions The condition must be a bool.
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="returning-values-from-loops">Returning Values from Loops</h3>
+</div><h3 id="returning-values-from-loops">Returning Values from Loops</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -290,11 +273,10 @@ if Expressions The condition must be a bool.
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="conditional-loops-with-while">Conditional Loops with <code>while</code></h3>
+</div><h3 id="conditional-loops-with-while">Conditional Loops with <code>while</code></h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
@@ -302,13 +284,11 @@ if Expressions The condition must be a bool.
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="looping-through-a-collection-with-for">Looping Through a Collection with <code>for</code></h3>
-
+</div><h3 id="looping-through-a-collection-with-for">Looping Through a Collection with <code>for</code></h3>
 <p>Use <code>for</code> loop to avoid errors, <code>while</code> with an index may run out of array boundary.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -326,11 +306,10 @@ if Expressions The condition must be a bool.
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h4 id="for-and-range"><code>for</code> and <code>range</code></h4>
+</div><h4 id="for-and-range"><code>for</code> and <code>range</code></h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -348,23 +327,23 @@ if Expressions The condition must be a bool.
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h4 id="for-and-iterators"><code>for</code> and Iterators</h4>
-
+</div><h4 id="for-and-iterators"><code>for</code> and Iterators</h4>
 <p>These 3 functions will return different views of the data within your collection.</p>
-
 <ul>
-<li><p><code>iter</code> - This borrows each element of the collection through each iteration. Thus leaving the collection untouched and available for reuse after the loop.</p></li>
-
-<li><p><code>into_iter</code> - This consumes the collection so that on each iteration the exact data is provided. Once the collection has been consumed it is no longer available for reuse as it has been &lsquo;moved&rsquo; within the loop.</p></li>
-
-<li><p><code>iter_mut</code> - This mutably borrows each element of the collection, allowing for the collection to be modified in place.</p></li>
+<li>
+<p><code>iter</code> - This borrows each element of the collection through each iteration. Thus leaving the collection untouched and available for reuse after the loop.</p>
+</li>
+<li>
+<p><code>into_iter</code> - This consumes the collection so that on each iteration the exact data is provided. Once the collection has been consumed it is no longer available for reuse as it has been &lsquo;moved&rsquo; within the loop.</p>
+</li>
+<li>
+<p><code>iter_mut</code> - This mutably borrows each element of the collection, allowing for the collection to be modified in place.</p>
+</li>
 </ul>
-
 <p>In the above snippets note the type of <code>match</code> branch, that is the key difference in the types of iteration. The difference in type then of course implies differing actions that are able to be performed.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -442,11 +421,10 @@ if Expressions The condition must be a bool.
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Run it:</p>
+</div><p>Run it:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -483,7 +461,8 @@ languages: <span class="o">[</span><span class="s2">&#34;Simplified Chinese&#34;
 -&gt; languages.into_iter<span class="o">()</span>
 - Hello Simplified Chinese
 - Hello English
-- Hello Spanish</code></pre></td></tr></table>
+- Hello Spanish
+</code></pre></td></tr></table>
 </div>
 </div>
       </div>

@@ -6,10 +6,21 @@
     <description>Recent content in Algorithm on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jul 2019 20:05:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 23:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://limingjie.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Multiply Big Numbers</title>
+      <link>https://limingjie.github.io/posts/2020-02-24-multiply-big-numbers/</link>
+      <pubDate>Mon, 24 Feb 2020 23:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2020-02-24-multiply-big-numbers/</guid>
+      <description>Multiply Strings I answered this LeetCode question many years ago and got a successful submission with a not too bad score.
+Some code like this, I tried to make it easy to understand, well it might sacrifice some performance. The code takes less than 1s to calculate 10,000! on a MBP 2017 and nearly 100s to calculate 100,000!. Bravo!
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45  #include &amp;lt;algorithm&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;iterator&amp;gt;#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt; std::string multiply(std::string a, std::string b) { size_t size_a = a.</description>
+    </item>
     
     <item>
       <title>Test of Randomness - Knuth Shuffle</title>
@@ -31,8 +42,8 @@ shuffle.go
       <description>Question Given an array of integers $A (a_i \geq 0, i \in [0, n])$ and a threshold $T$.
 If $\sum_{i = 0}^n a_i &amp;gt; T$, find an integer $t$, for $a_i &amp;gt; t (i \in [0, n]) \to a_i = t$.
 Find the largest $t$ which makes $\sum_{i = 0}^n a_i \leq T$.
-For Example, $A = [30, 20, 10, 50, 40],\,\,T = 127$. Expecting $t = 33$.
-Answer ArraySummaryThreshold.</description>
+For Example, $A = [30, 20, 10, 50, 40],,,T = 127$. Expecting $t = 33$.
+Answer ArraySummaryThreshold.go</description>
     </item>
     
   </channel>

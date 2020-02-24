@@ -12,12 +12,12 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Rust Book Chapter 1.3 Hello Cargo!"/>
 <meta name="twitter:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-Cargo Examples Check cargo installation 1 2  $ cargo --version cargo 1.36.0 (c4fcfb725 2019-05-15)   Create new project The command create a project directory, 2 files Cargo.toml, and src/main.ts. It also initialize the direction as a git repository.
+ Cargo Examples Check cargo installation 1 2  $ cargo --version cargo 1.36.0 (c4fcfb725 2019-05-15)   Create new project The command create a project directory, 2 files Cargo.toml, and src/main.ts. It also initialize the direction as a git repository.
 1  $ cargo new hello_cargo   Cargo."/>
 
     <meta property="og:title" content="The Rust Book Chapter 1.3 Hello Cargo!" />
 <meta property="og:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-Cargo Examples Check cargo installation 1 2  $ cargo --version cargo 1.36.0 (c4fcfb725 2019-05-15)   Create new project The command create a project directory, 2 files Cargo.toml, and src/main.ts. It also initialize the direction as a git repository.
+ Cargo Examples Check cargo installation 1 2  $ cargo --version cargo 1.36.0 (c4fcfb725 2019-05-15)   Create new project The command create a project directory, 2 files Cargo.toml, and src/main.ts. It also initialize the direction as a git repository.
 1  $ cargo new hello_cargo   Cargo." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://limingjie.github.io/posts/2019-07-04-chapter-1.3-hello-cargo/" />
@@ -61,7 +61,7 @@ Cargo Examples Check cargo installation 1 2  $ cargo --version cargo 1.36.0 (c4f
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.65.3" />
   </head>
 
   <body class=" ">
@@ -136,59 +136,51 @@ Cargo Examples Check cargo installation 1 2  $ cargo --version cargo 1.36.0 (c4f
       <div>
         
           <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#cargo-examples">Cargo Examples</a>
-<ul>
-<li><a href="#check-cargo-installation">Check cargo installation</a></li>
-<li><a href="#create-new-project">Create new project</a></li>
-<li><a href="#check-project">Check project</a></li>
-<li><a href="#build-project">Build project</a></li>
-<li><a href="#run-project">Run project</a></li>
-</ul></li>
-<li><a href="#cargo-mirror">Cargo Mirror</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#cargo-examples">Cargo Examples</a>
+      <ul>
+        <li><a href="#check-cargo-installation">Check cargo installation</a></li>
+        <li><a href="#create-new-project">Create new project</a></li>
+        <li><a href="#check-project">Check project</a></li>
+        <li><a href="#build-project">Build project</a></li>
+        <li><a href="#run-project">Run project</a></li>
+      </ul>
+    </li>
+    <li><a href="#cargo-mirror">Cargo Mirror</a></li>
+  </ul>
 </nav>
         
       </div>
 
       <div>
-        
-
-<p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
-
-<hr />
-
+        <p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
+<hr>
 <h2 id="cargo-examples">Cargo Examples</h2>
-
 <h3 id="check-cargo-installation">Check cargo installation</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">$ cargo --version
-cargo <span class="m">1</span>.36.0 <span class="o">(</span>c4fcfb725 <span class="m">2019</span>-05-15<span class="o">)</span></code></pre></td></tr></table>
+cargo 1.36.0 <span class="o">(</span>c4fcfb725 2019-05-15<span class="o">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="create-new-project">Create new project</h3>
-
+</div><h3 id="create-new-project">Create new project</h3>
 <p>The command create a project directory, 2 files <code>Cargo.toml</code>, and <code>src/main.ts</code>. It also initialize the direction as a git repository.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ cargo new hello_cargo</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ cargo new hello_cargo
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><code>Cargo.toml</code></p>
+</div><p><code>Cargo.toml</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -209,26 +201,24 @@ cargo <span class="m">1</span>.36.0 <span class="o">(</span>c4fcfb725 <span clas
 <span class="c"># See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html</span>
 
 <span class="p">[</span><span class="nx">dependencies</span><span class="p">]</span>
-<span class="nx">rand</span> <span class="p">=</span> <span class="s2">&#34;0.7&#34;</span></code></pre></td></tr></table>
+<span class="nx">rand</span> <span class="p">=</span> <span class="s2">&#34;0.7&#34;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="check-project">Check project</h3>
-
+</div><h3 id="check-project">Check project</h3>
 <p><code>cargo check</code> check a local package and all of its dependencies for errors</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ cargo check</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ cargo check
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="build-project">Build project</h3>
-
+</div><h3 id="build-project">Build project</h3>
 <p><code>cargo build</code> compile a local package and all of its dependencies</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -239,15 +229,14 @@ cargo <span class="m">1</span>.36.0 <span class="o">(</span>c4fcfb725 <span clas
 $ cargo build
 
 <span class="c1"># build release</span>
-$ cargo build --release</code></pre></td></tr></table>
+$ cargo build --release
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="run-project">Run project</h3>
-
+</div><h3 id="run-project">Run project</h3>
 <p><code>cargo run</code> run a binary or example of the local package.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -258,17 +247,15 @@ $ cargo build --release</code></pre></td></tr></table>
 $ cargo run
 
 <span class="c1"># run release</span>
-$ cargo run --release</code></pre></td></tr></table>
+$ cargo run --release
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="cargo-mirror">Cargo Mirror</h2>
-
+</div><h2 id="cargo-mirror">Cargo Mirror</h2>
 <p>In case you are in China&hellip;</p>
-
 <p><a href="https://lug.ustc.edu.cn/wiki/mirrors/help/rust-crates">https://lug.ustc.edu.cn/wiki/mirrors/help/rust-crates</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -279,7 +266,8 @@ $ cargo run --release</code></pre></td></tr></table>
 <span class="nv">registry</span> <span class="o">=</span> <span class="s2">&#34;https://github.com/rust-lang/crates.io-index&#34;</span>
 replace-with <span class="o">=</span> <span class="s1">&#39;ustc&#39;</span>
 <span class="o">[</span>source.ustc<span class="o">]</span>
-<span class="nv">registry</span> <span class="o">=</span> <span class="s2">&#34;git://mirrors.ustc.edu.cn/crates.io-index&#34;</span></code></pre></td></tr></table>
+<span class="nv">registry</span> <span class="o">=</span> <span class="s2">&#34;git://mirrors.ustc.edu.cn/crates.io-index&#34;</span>
+</code></pre></td></tr></table>
 </div>
 </div>
       </div>

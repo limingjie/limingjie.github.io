@@ -12,13 +12,13 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Rust Book Chapter 1.1 Getting Started with Rust"/>
 <meta name="twitter:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-Install Rust Install Rust using rustup.
+ Install Rust Install Rust using rustup.
 1  $ curl https://sh.rustup.rs -sSf | sh   After installation, running rustc —version to check the installed version.
 1 2  $ rustc --version rustc 1.36.0 (a53f9df32 2019-07-03)   Update installation by running rustup update, for more information see the rustup documentation."/>
 
     <meta property="og:title" content="The Rust Book Chapter 1.1 Getting Started with Rust" />
 <meta property="og:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-Install Rust Install Rust using rustup.
+ Install Rust Install Rust using rustup.
 1  $ curl https://sh.rustup.rs -sSf | sh   After installation, running rustc —version to check the installed version.
 1 2  $ rustc --version rustc 1.36.0 (a53f9df32 2019-07-03)   Update installation by running rustup update, for more information see the rustup documentation." />
 <meta property="og:type" content="article" />
@@ -63,7 +63,7 @@ Install Rust Install Rust using rustup.
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.65.3" />
   </head>
 
   <body class=" ">
@@ -138,56 +138,43 @@ Install Rust Install Rust using rustup.
       <div>
         
           <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#install-rust">Install Rust</a></li>
-<li><a href="#learn-rust">Learn Rust</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#install-rust">Install Rust</a></li>
+    <li><a href="#learn-rust">Learn Rust</a></li>
+  </ul>
 </nav>
         
       </div>
 
       <div>
-        
-
-<p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
-
-<hr />
-
+        <p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
+<hr>
 <h2 id="install-rust">Install Rust</h2>
-
 <p><a href="https://www.rust-lang.org/tools/install">Install Rust</a> using <code>rustup</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ curl https://sh.rustup.rs -sSf <span class="p">|</span> sh</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ curl https://sh.rustup.rs -sSf <span class="p">|</span> sh
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>After installation, running <code>rustc —version</code> to check the installed version.</p>
+</div><p>After installation, running <code>rustc —version</code> to check the installed version.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">$ rustc --version
-rustc <span class="m">1</span>.36.0 <span class="o">(</span>a53f9df32 <span class="m">2019</span>-07-03<span class="o">)</span></code></pre></td></tr></table>
+rustc 1.36.0 <span class="o">(</span>a53f9df32 2019-07-03<span class="o">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Update installation by running <code>rustup update</code>, for more information see the <a href="https://github.com/rust-lang/rustup.rs/blob/master/README.md"><code>rustup</code> documentation</a>.</p>
-
+</div><p>Update installation by running <code>rustup update</code>, for more information see the <a href="https://github.com/rust-lang/rustup.rs/blob/master/README.md"><code>rustup</code> documentation</a>.</p>
 <p>In the Rust development environment, all tools are installed to the <code>~/.cargo/bin</code>directory, and this is where you will find the Rust toolchain, including <code>rustc</code>, <code>cargo</code>, and <code>rustup</code>.</p>
-
 <p>To uninstall rust and <code>rustup</code>, run <code>rustup self uninstall</code>.</p>
-
 <h2 id="learn-rust">Learn Rust</h2>
-
 <p><a href="https://www.rust-lang.org/learn">Learn rust</a> with the official documentations. The documentation is also available locally using the <code>rustup doc</code> command.</p>
-
 <ul>
 <li>Read the book</li>
 <li>Do the rustlings course</li>

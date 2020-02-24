@@ -59,7 +59,7 @@ Required Components  The default Blackfriday markdown engine. $\KaTeX$ math type
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.65.3" />
   </head>
 
   <body class=" ">
@@ -136,59 +136,36 @@ Required Components  The default Blackfriday markdown engine. $\KaTeX$ math type
       <div>
         
           <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#required-components">Required Components</a></li>
-<li><a href="#steps-to-setup-katex-in-hugo">Steps to Setup $\KaTeX$ in Hugo</a>
-<ul>
-<li><a href="#integrate-katex-auto-render-extension">Integrate $\KaTeX$ Auto-render Extension</a></li>
-<li><a href="#enable-katex-in-markdown">Enable $\KaTeX$ in Markdown</a></li>
-<li><a href="#time-to-dance">Time to Dance</a>
-<ul>
-<li><a href="#first-the-known-issues">First, The Known Issues</a></li>
-<li><a href="#inline-math">Inline Math</a></li>
-<li><a href="#displayed-math">Displayed Math</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#useful-links">Useful Links</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#required-components">Required Components</a></li>
+    <li><a href="#steps-to-setup-katex-in-hugo">Steps to Setup $\KaTeX$ in Hugo</a>
+      <ul>
+        <li><a href="#integrate-katex-auto-render-extension">Integrate $\KaTeX$ Auto-render Extension</a></li>
+        <li><a href="#enable-katex-in-markdown">Enable $\KaTeX$ in Markdown</a></li>
+        <li><a href="#time-to-dance">Time to Dance</a></li>
+      </ul>
+    </li>
+    <li><a href="#useful-links">Useful Links</a></li>
+  </ul>
 </nav>
         
       </div>
 
       <div>
-        
-
-<p>Recently, I started to think about learning $\TeX$, adding $\TeX$ support to blog looks like a good start for me. It took me quite some time to figure out all the culprits of embedding $\TeX$ in markdown. I hope this blog could save you some time before starting writing in $\TeX$.</p>
-
+        <p>Recently, I started to think about learning $\TeX$, adding $\TeX$ support to blog looks like a good start for me. It took me quite some time to figure out all the culprits of embedding $\TeX$ in markdown. I hope this blog could save you some time before starting writing in $\TeX$.</p>
 <h2 id="required-components">Required Components</h2>
-
 <ul>
 <li>The default <a href="https://github.com/russross/blackfriday">Blackfriday</a> markdown engine.</li>
 <li><a href="https://katex.org/">$\KaTeX$</a> math typesetting library for the web.</li>
 </ul>
-
 <h2 id="steps-to-setup-katex-in-hugo">Steps to Setup $\KaTeX$ in Hugo</h2>
-
 <p><a href="https://katex.org/">$\KaTeX$</a> is an excellent fast engineer for rendering $\TeX$ on web. The <a href="https://katex.org/docs/autorender.html">$\KaTeX$ Auto-render Extension</a> is an extension to automatically render all of the math inside of text.</p>
-
 <p><strong>Example:</strong></p>
-
-<div>
-$$
-\def\f#1{f(#1)}
-\f{x} = \int_{-\infty}^\infty
-    \hat \f\xi\,e^{2 \pi i \xi x}
-    \,d\xi
-$$
-</div>
-
+<!-- raw HTML omitted -->
 <p><strong>Code:</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -197,17 +174,15 @@ $$
 <pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\def\f</span>#1<span class="nb">{</span>f(#1)<span class="nb">}</span>
 <span class="k">\f</span><span class="nb">{</span>x<span class="nb">}</span> = <span class="k">\int</span><span class="nb">_{</span>-<span class="k">\infty</span><span class="nb">}^</span><span class="k">\infty</span>
     <span class="k">\hat</span> <span class="k">\f\xi\,</span>e<span class="nb">^{</span>2 <span class="k">\pi</span> i <span class="k">\xi</span> x<span class="nb">}</span>
-    <span class="k">\,</span>d<span class="k">\xi</span></code></pre></td></tr></table>
+    <span class="k">\,</span>d<span class="k">\xi</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="integrate-katex-auto-render-extension">Integrate $\KaTeX$ Auto-render Extension</h3>
-
+</div><h3 id="integrate-katex-auto-render-extension">Integrate $\KaTeX$ Auto-render Extension</h3>
 <p>The first step is to find the right place to include the <a href="https://katex.org/docs/autorender.html">$\KaTeX$ Auto-render Extension</a>. It is different by theme, usually, the <code>header.html</code> or <code>footer.html</code> could be the ideal place; or, if the theme support math libraries, it may provide a separate HTML, in my case, it is <code>math.html</code>.</p>
-
 <p>Locate the HTML file, create the same directory structure in your project, copy the HTML, and include the library. Here is my <code>math.html</code>, a new parameter <code>katex</code> is defined in it.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -284,18 +259,17 @@ $$
     <span class="p">});</span>
 
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-{{- end -}}</code></pre></td></tr></table>
+{{- end -}}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="enable-katex-in-markdown">Enable $\KaTeX$ in Markdown</h3>
-
+</div><h3 id="enable-katex-in-markdown">Enable $\KaTeX$ in Markdown</h3>
 <p>Enable the parameter <code>katex</code> in the posts which require $\TeX$. Depend on the markdown header format, it could be TOML or YAML.</p>
-
 <ul>
-<li><p><strong>TOML</strong></p>
+<li><strong>TOML</strong></li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -306,14 +280,15 @@ $$
 <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Render $\\TeX$ in Hugo Blog&#34;</span>
 <span class="p">...</span>
 <span class="nx">katex</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="err">+++</span></code></pre></td></tr></table>
+<span class="err">+++</span>
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p><strong>YAML</strong></p>
+</div><ul>
+<li><strong>YAML</strong></li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -321,74 +296,52 @@ $$
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-yaml" data-lang="yaml">---<span class="w">
-</span><span class="w"></span>title<span class="p">:</span><span class="w"> </span><span class="s2">&#34;Render $\\TeX$ in Hugo Blog&#34;</span><span class="w">
+</span><span class="w"></span><span class="k">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Render $\\TeX$ in Hugo Blog&#34;</span><span class="w">
 </span><span class="w"></span>...<span class="w">
-</span><span class="w"></span>katex<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w"></span>---</code></pre></td></tr></table>
+</span><span class="w"></span><span class="k">katex</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w"></span>---<span class="w">
+</span></code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-
-<h3 id="time-to-dance">Time to Dance</h3>
-
+</div><h3 id="time-to-dance">Time to Dance</h3>
 <h4 id="first-the-known-issues">First, The Known Issues</h4>
-
 <p>Check the official document for <a href="https://gohugo.io/content-management/formats/#issues-with-markdown">Issues with Markdown</a> and <a href="https://gohugo.io/content-management/formats/#solution">Solution</a>.</p>
-
 <ul>
-<li><p><strong>The underscore character <code>_</code></strong></p>
-
+<li>
+<p><strong>The underscore character <code>_</code></strong></p>
 <p>It is interpreted by Markdown as a way to wrap text in <code>emph</code> blocks while it is a way to create a subscript in $\TeX$.</p>
-
 <ul>
 <li>Escape each underscore in your math code by entering <code>\_</code> instead of <code>_</code>.</li>
 <li>Wrap the math expression inside a <code>&lt;div&gt;</code> <code>&lt;/div&gt;</code> block.</li>
-</ul></li>
-
-<li><p><strong>The newline <code>\\</code></strong></p>
-
+</ul>
+</li>
+<li>
+<p><strong>The newline <code>\\</code></strong></p>
 <p>Markdown engineer interprets <code>\\</code> as <code>&lt;br&gt;</code>, it breaks the $\TeX$.</p>
-
 <ul>
 <li>Use <code>\newline</code> instead of <code>\\</code>.</li>
 <li>Wrap the math expression inside a <code>&lt;div&gt;</code> <code>&lt;/div&gt;</code> block.</li>
-</ul></li>
-
-<li><p><strong>Escape slash character<code>\</code></strong></p>
-
+</ul>
+</li>
+<li>
+<p><strong>Escape slash character<code>\</code></strong></p>
 <ul>
 <li>Escape the inline delimiter <code>\\(</code> and <code>\\)</code>.</li>
 <li>Another case I found is the slash in markdown title.</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h4 id="inline-math">Inline Math</h4>
-
 <p>Use <code>$</code> <code>$</code> or <code>\(</code> <code>\)</code> as delimiters for inline math. It can also be used to align a block on left.</p>
-
 <p><strong>Example:</strong> Given an array of integers $A (a_i \geq 0, i \in [0, n])$</p>
-
 <p><strong>Code:</strong> <code>Given an array of integers $A (a\_i \geq 0, i \in [0, n])$</code></p>
-
 <h4 id="displayed-math">Displayed Math</h4>
-
 <p>Use <code>$$</code> <code>$$</code> or <code>\[</code> <code>\]</code> as delimiters for inline math, and wrap the section by <code>&lt;div&gt;</code> <code>&lt;/div&gt;</code></p>
-
 <p><strong>Example:</strong></p>
-
-<div>
-$$
-F_0=0 \quad F_1=1 \\
-and \\
-F_n=F_{n-1}+F_{n-2} \\
-for \quad n > 1
-$$
-</div>
-
+<!-- raw HTML omitted -->
 <p><strong>Code:</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -405,11 +358,10 @@ $$
 </span><span class="nb">F_n</span><span class="o">=</span><span class="nb">F_{n</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="o">+</span><span class="nb">F_{n</span><span class="o">-</span><span class="m">2</span><span class="nb">} </span><span class="nv">\\</span><span class="nb">
 </span><span class="nb">for </span><span class="nv">\quad</span><span class="nb"> n &gt; </span><span class="m">1</span><span class="nb">
 </span><span class="nb"></span><span class="s">$$</span>
-&lt;/div&gt;</code></pre></td></tr></table>
+&lt;/div&gt;
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="useful-links">Useful Links</h2>
-
+</div><h2 id="useful-links">Useful Links</h2>
 <ul>
 <li><a href="https://katex.org/docs/supported.html">$\KaTeX$ Supported Functions</a></li>
 </ul>

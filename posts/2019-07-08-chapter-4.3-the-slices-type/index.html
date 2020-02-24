@@ -12,12 +12,12 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Rust Book Chapter 4.3 The Slice Type"/>
 <meta name="twitter:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-Slice references a contiguous sequence of elements in a collection rather than the whole collection, it does not have ownership.
+ Slice references a contiguous sequence of elements in a collection rather than the whole collection, it does not have ownership.
 Take a string as an example, using index to save specific position is not safe, if the string is cleared, the index is still valid but pointing to invalid data."/>
 
     <meta property="og:title" content="The Rust Book Chapter 4.3 The Slice Type" />
 <meta property="og:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-Slice references a contiguous sequence of elements in a collection rather than the whole collection, it does not have ownership.
+ Slice references a contiguous sequence of elements in a collection rather than the whole collection, it does not have ownership.
 Take a string as an example, using index to save specific position is not safe, if the string is cleared, the index is still valid but pointing to invalid data." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://limingjie.github.io/posts/2019-07-08-chapter-4.3-the-slices-type/" />
@@ -61,7 +61,7 @@ Take a string as an example, using index to save specific position is not safe, 
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.65.3" />
   </head>
 
   <body class=" ">
@@ -136,37 +136,27 @@ Take a string as an example, using index to save specific position is not safe, 
       <div>
         
           <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#string-slices">String Slices</a></li>
-<li><a href="#string-literals-are-slices">String Literals Are Slices</a></li>
-<li><a href="#string-slices-as-parameters">String Slices as Parameters</a></li>
-<li><a href="#other-slices">Other Slices</a></li>
-<li><a href="#summary">Summary</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#string-slices">String Slices</a></li>
+    <li><a href="#string-literals-are-slices">String Literals Are Slices</a></li>
+    <li><a href="#string-slices-as-parameters">String Slices as Parameters</a></li>
+    <li><a href="#other-slices">Other Slices</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
 </nav>
         
       </div>
 
       <div>
-        
-
-<p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
-
-<hr />
-
+        <p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
+<hr>
 <p>Slice references a contiguous sequence of elements in a collection rather than the whole collection, it does not have ownership.</p>
-
 <p>Take a string as an example, using index to save specific position is not safe, if the string is cleared, the index is still valid but pointing to invalid data.</p>
-
 <p>The slice type is to help solve this problem.</p>
-
 <h2 id="string-slices">String Slices</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -178,11 +168,10 @@ Take a string as an example, using index to save specific position is not safe, 
 </span><span class="c1"></span><span class="kd">let</span><span class="w"> </span><span class="n">world</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">..</span><span class="mi">11</span><span class="p">];</span><span class="w"> </span><span class="c1">// [6, 11)
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Other valid slides.</p>
+</div><p>Other valid slides.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -214,11 +203,10 @@ Take a string as an example, using index to save specific position is not safe, 
 </span><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">slice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">[..];</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Now, how rust protects us. Check the following code :x:</p>
+</div><p>Now, how rust protects us. Check the following code :x:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -240,25 +228,21 @@ Take a string as an example, using index to save specific position is not safe, 
 </span><span class="c1"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="string-literals-are-slices">String Literals Are Slices</h2>
+</div><h2 id="string-literals-are-slices">String Literals Are Slices</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-rust" data-lang="rust"><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hello, world!&#34;</span><span class="p">;</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>The type of <code>s</code> here is <code>&amp;str</code>: it’s a slice pointing to that specific point of the binary. This is also why string literals are immutable; <code>&amp;str</code> is an immutable reference.</p>
-
+</div><p>The type of <code>s</code> here is <code>&amp;str</code>: it’s a slice pointing to that specific point of the binary. This is also why string literals are immutable; <code>&amp;str</code> is an immutable reference.</p>
 <p>Wow, rust also clearly explained the string literal.</p>
-
 <h2 id="string-slices-as-parameters">String Slices as Parameters</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -300,11 +284,10 @@ Take a string as an example, using index to save specific position is not safe, 
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="other-slices">Other Slices</h2>
+</div><h2 id="other-slices">Other Slices</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
@@ -314,9 +297,7 @@ Take a string as an example, using index to save specific position is not safe, 
 </span><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">slice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">..</span><span class="mi">3</span><span class="p">];</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="summary">Summary</h2>
-
+</div><h2 id="summary">Summary</h2>
 <p>The concepts of ownership, borrowing, and slices ensure memory safety in Rust programs at compile time. The Rust language gives you control over your memory usage in the same way as other systems programming languages, but having the owner of data automatically clean up that data when the owner goes out of scope means you don’t have to write and debug extra code to get this control.</p>
 
       </div>

@@ -12,11 +12,11 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Rust Book Chapter 3.2 Data Types"/>
 <meta name="twitter:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-Rust is a statically typed language. The compiler can usually infer what type we want to use based on the value and how we use it. In case when many types are possible, such as when we converted a String to a numeric type using parse, we must add type annotation, like this:"/>
+ Rust is a statically typed language. The compiler can usually infer what type we want to use based on the value and how we use it. In case when many types are possible, such as when we converted a String to a numeric type using parse, we must add type annotation, like this:"/>
 
     <meta property="og:title" content="The Rust Book Chapter 3.2 Data Types" />
 <meta property="og:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-Rust is a statically typed language. The compiler can usually infer what type we want to use based on the value and how we use it. In case when many types are possible, such as when we converted a String to a numeric type using parse, we must add type annotation, like this:" />
+ Rust is a statically typed language. The compiler can usually infer what type we want to use based on the value and how we use it. In case when many types are possible, such as when we converted a String to a numeric type using parse, we must add type annotation, like this:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://limingjie.github.io/posts/2019-07-05-chapter-3.2-data-type/" />
 <meta property="article:published_time" content="2019-07-05T21:00:00+08:00" />
@@ -59,7 +59,7 @@ Rust is a statically typed language. The compiler can usually infer what type we
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.65.3" />
   </head>
 
   <body class=" ">
@@ -134,44 +134,35 @@ Rust is a statically typed language. The compiler can usually infer what type we
       <div>
         
           <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#scalar-types">Scalar Types</a>
-<ul>
-<li><a href="#integer-types">Integer Types</a>
-<ul>
-<li><a href="#integer-overflow">Integer Overflow</a></li>
-</ul></li>
-<li><a href="#floating-point-types">Floating-Point Types</a></li>
-<li><a href="#numeric-operation">Numeric Operation</a></li>
-<li><a href="#the-boolean-type">The Boolean Type</a></li>
-<li><a href="#the-character-type">The Character Type</a></li>
-</ul></li>
-<li><a href="#compound-types">Compound Types</a>
-<ul>
-<li><a href="#the-tuple-type">The Tuple Type</a></li>
-<li><a href="#the-array-type">The Array Type</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#scalar-types">Scalar Types</a>
+      <ul>
+        <li><a href="#integer-types">Integer Types</a></li>
+        <li><a href="#floating-point-types">Floating-Point Types</a></li>
+        <li><a href="#numeric-operation">Numeric Operation</a></li>
+        <li><a href="#the-boolean-type">The Boolean Type</a></li>
+        <li><a href="#the-character-type">The Character Type</a></li>
+      </ul>
+    </li>
+    <li><a href="#compound-types">Compound Types</a>
+      <ul>
+        <li><a href="#the-tuple-type">The Tuple Type</a></li>
+        <li><a href="#the-array-type">The Array Type</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         
       </div>
 
       <div>
-        
-
-<p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
-
-<hr />
-
+        <p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
+<hr>
 <p>Rust is a <strong>statically typed</strong> language. The compiler can usually infer what type we want to use based on the value and how we use it. In case when many types are possible, such as when we converted a <code>String</code> to a numeric type using <code>parse</code>, we must add type annotation, like this:</p>
-
 <p>src/main.rs :heavy_check_mark:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -195,11 +186,10 @@ Rust is a statically typed language. The compiler can usually infer what type we
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Run the program:</p>
+</div><p>Run the program:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -208,13 +198,13 @@ Rust is a statically typed language. The compiler can usually infer what type we
 <pre class="chroma"><code class="language-shell" data-lang="shell">u: <span class="nv">i8</span>  <span class="o">=</span> <span class="m">127</span>
 u: <span class="nv">u32</span> <span class="o">=</span> <span class="m">127</span>
 f: <span class="nv">f32</span> <span class="o">=</span> <span class="m">127</span>
-f: <span class="nv">f64</span> <span class="o">=</span> <span class="m">127</span></code></pre></td></tr></table>
+f: <span class="nv">f64</span> <span class="o">=</span> <span class="m">127</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>src/main.rs :x:</p>
+</div><p>src/main.rs :x:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -226,11 +216,10 @@ f: <span class="nv">f64</span> <span class="o">=</span> <span class="m">127</spa
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Run the program:</p>
+</div><p>Run the program:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -265,24 +254,19 @@ error: aborting due to previous error
 For more information about this error, try <span class="sb">`</span>rustc --explain E0282<span class="sb">`</span>.
 error: Could not compile <span class="sb">`</span>variables<span class="sb">`</span>.
 
-To learn more, run the <span class="nb">command</span> again with --verbose.</code></pre></td></tr></table>
+To learn more, run the <span class="nb">command</span> again with --verbose.
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="scalar-types">Scalar Types</h2>
-
+</div><h2 id="scalar-types">Scalar Types</h2>
 <p>A scalar type represents a single value.</p>
-
 <ul>
 <li>Integer Types</li>
 <li>Floating-Point Types</li>
 <li>The Boolean Type</li>
 <li>The Character Type</li>
 </ul>
-
 <h3 id="integer-types">Integer Types</h3>
-
 <p>The default integer type is <code>i32</code>.</p>
-
 <table>
 <thead>
 <tr>
@@ -291,38 +275,32 @@ To learn more, run the <span class="nb">command</span> again with --verbose.</co
 <th>Unsigned</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>8-bit</td>
 <td><code>i8</code></td>
 <td><code>u8</code></td>
 </tr>
-
 <tr>
 <td>16-bit</td>
 <td><code>i16</code></td>
 <td><code>u16</code></td>
 </tr>
-
 <tr>
 <td>32-bit</td>
 <td><code>i32</code></td>
 <td><code>u32</code></td>
 </tr>
-
 <tr>
 <td>64-bit</td>
 <td><code>i64</code></td>
 <td><code>u64</code></td>
 </tr>
-
 <tr>
 <td>128-bit</td>
 <td><code>i128</code></td>
 <td><code>u128</code></td>
 </tr>
-
 <tr>
 <td>arch</td>
 <td><code>isize</code></td>
@@ -330,11 +308,8 @@ To learn more, run the <span class="nb">command</span> again with --verbose.</co
 </tr>
 </tbody>
 </table>
-
 <p><code>isize</code> and <code>usize</code> types depends on the computer/OS architecure.</p>
-
 <p>All number literals expect the byte literal allow a type suffix, such as <code>255u8</code>, and <code>_</code> as a visual separator, such as <code>1_000</code>.</p>
-
 <table>
 <thead>
 <tr>
@@ -342,52 +317,41 @@ To learn more, run the <span class="nb">command</span> again with --verbose.</co
 <th>Example</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Decimal</td>
 <td><code>98_222</code></td>
 </tr>
-
 <tr>
 <td>Hex</td>
 <td><code>0xff</code></td>
 </tr>
-
 <tr>
 <td>Octal</td>
 <td><code>0o77</code></td>
 </tr>
-
 <tr>
 <td>Binary</td>
 <td><code>0b1111_0000</code></td>
 </tr>
-
 <tr>
 <td>Byte (<code>u8</code> only)</td>
 <td><code>b'A'</code></td>
 </tr>
 </tbody>
 </table>
-
 <h4 id="integer-overflow">Integer Overflow</h4>
-
 <ul>
 <li>Debug mode - Rust includes checks for integer overflow, which cause program to panic at runtime.</li>
 <li>Release mode - The checks are not included. Instead, Rust performs two&rsquo;s complement wrapping. i.e. in case of <code>u8</code>, <code>256</code> becomes <code>0</code>.</li>
 </ul>
-
 <h3 id="floating-point-types">Floating-Point Types</h3>
-
 <p><code>f32</code> and <code>f64</code>. The default type is <code>f64</code>.</p>
-
 <h3 id="numeric-operation">Numeric Operation</h3>
-
 <p>src/main.rs</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -423,32 +387,22 @@ To learn more, run the <span class="nb">command</span> again with --verbose.</co
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="the-boolean-type">The Boolean Type</h3>
-
+</div><h3 id="the-boolean-type">The Boolean Type</h3>
 <p><code>bool</code>, value: <code>true</code> and <code>false</code>.</p>
-
 <h3 id="the-character-type">The Character Type</h3>
-
 <p><code>char</code>, 4 bytes, Unicode Scalar Values range from <code>U+0000</code> to <code>U+D7FF</code> and <code>U+E000</code> to <code>U+10FFFF</code> inclusive.</p>
-
 <h2 id="compound-types">Compound Types</h2>
-
 <p>Group multiple values into one type.</p>
-
 <ul>
 <li>Tuples</li>
 <li>Arrays</li>
 </ul>
-
 <h3 id="the-tuple-type">The Tuple Type</h3>
-
 <p>Tuples have a fixed length once declared, they cannot grow or shrink in size.</p>
-
 <p>Comma-seprated list of values inside parentheses. The types of the values in tuple do not have to be the same, the type annotations is optional.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -468,7 +422,7 @@ To learn more, run the <span class="nb">command</span> again with --verbose.</co
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -492,7 +446,7 @@ To learn more, run the <span class="nb">command</span> again with --verbose.</co
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -530,15 +484,12 @@ To learn more, run the <span class="nb">command</span> again with --verbose.</co
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="the-array-type">The Array Type</h3>
-
+</div><h3 id="the-array-type">The Array Type</h3>
 <p>Collection of multiple values of the same type. Array is fixed length.</p>
-
 <p>The values are comma-separated list inside square brackets.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -556,8 +507,7 @@ To learn more, run the <span class="nb">command</span> again with --verbose.</co
 </span><span class="c1"></span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="mi">5</span><span class="p">];</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Access array by index out of boundary will cause panic.</p>
+</div><p>Access array by index out of boundary will cause panic.</p>
 
       </div>
 

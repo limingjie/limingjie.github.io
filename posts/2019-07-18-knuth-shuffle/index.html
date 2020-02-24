@@ -61,7 +61,7 @@ shuffle.go
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.65.3" />
   </head>
 
   <body class=" ">
@@ -141,11 +141,10 @@ shuffle.go
 
       <div>
         <p>Test of Randomness using a fixed seed. A fixed seed will generate fixed sequence of random numbers.</p>
-
 <p>shuffle.go</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -200,13 +199,13 @@ shuffle.go
 </span><span class="c1"></span>	<span class="nx">clone</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">cards</span><span class="p">[:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">],</span> <span class="nx">cards</span><span class="o">...</span><span class="p">)</span>
 	<span class="nf">Shuffle</span><span class="p">(</span><span class="nx">clone</span><span class="p">)</span>
 	<span class="k">return</span>
-<span class="p">}</span></code></pre></td></tr></table>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>shuffle_test.go</p>
+</div><p>shuffle_test.go</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -263,13 +262,13 @@ shuffle.go
 			<span class="nx">t</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;ShuffleClone(%s) failed, expected \&#34;%s\&#34;, got \&#34;%s\&#34;.&#34;</span><span class="p">,</span> <span class="nb">string</span><span class="p">(</span><span class="nx">input</span><span class="p">),</span> <span class="nb">string</span><span class="p">(</span><span class="nx">outputs</span><span class="p">[</span><span class="nx">index</span><span class="p">]),</span> <span class="nb">string</span><span class="p">(</span><span class="nx">output</span><span class="p">))</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
-<span class="p">}</span></code></pre></td></tr></table>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Test coverage</p>
+</div><p>Test coverage</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -277,8 +276,9 @@ shuffle.go
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">$ go <span class="nb">test</span> -cover
 PASS
-coverage: <span class="m">100</span>.0% of statements
-ok      _/Users/mingjie/Documents/Development/shuffle   <span class="m">0</span>.010s</code></pre></td></tr></table>
+coverage: 100.0% of statements
+ok      _/Users/mingjie/Documents/Development/shuffle   0.010s
+</code></pre></td></tr></table>
 </div>
 </div>
       </div>

@@ -59,7 +59,7 @@ This chapter starts to introduce memory management of rust language. Similar to 
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.65.3" />
   </head>
 
   <body class=" ">
@@ -134,49 +134,37 @@ This chapter starts to introduce memory management of rust language. Similar to 
       <div>
         
           <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#the-stack-and-the-heap">The Stack and the Heap</a></li>
-<li><a href="#ownership-rules">Ownership Rules</a></li>
-<li><a href="#variable-scope">Variable Scope</a></li>
-<li><a href="#the-string-type">The <code>String</code> Type</a></li>
-<li><a href="#memory-and-allocation">Memory and Allocation</a>
-<ul>
-<li><a href="#ways-variables-and-data-interact-move">Ways Variables and Data Interact: Move</a></li>
-<li><a href="#ways-variables-and-data-interact-clone">Ways Variables and Data Interact: Clone</a></li>
-<li><a href="#stack-only-data-copy">Stack-Only Data: Copy</a></li>
-</ul></li>
-<li><a href="#ownership-and-functions">Ownership and Functions</a></li>
-<li><a href="#return-values-and-scope">Return Values and Scope</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#the-stack-and-the-heap">The Stack and the Heap</a></li>
+    <li><a href="#ownership-rules">Ownership Rules</a></li>
+    <li><a href="#variable-scope">Variable Scope</a></li>
+    <li><a href="#the-string-type">The <code>String</code> Type</a></li>
+    <li><a href="#memory-and-allocation">Memory and Allocation</a>
+      <ul>
+        <li><a href="#ways-variables-and-data-interact-move">Ways Variables and Data Interact: Move</a></li>
+        <li><a href="#ways-variables-and-data-interact-clone">Ways Variables and Data Interact: Clone</a></li>
+        <li><a href="#stack-only-data-copy">Stack-Only Data: Copy</a></li>
+      </ul>
+    </li>
+    <li><a href="#ownership-and-functions">Ownership and Functions</a></li>
+    <li><a href="#return-values-and-scope">Return Values and Scope</a></li>
+  </ul>
 </nav>
         
       </div>
 
       <div>
-        
-
-<p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
-
+        <p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
 <p>This chapter starts to introduce memory management of rust language. Similar to mutability, rust simplified the copy and move behaviors and make them explicit in language, the advantage is to make it easy to find problems at compile time. I am looking forward to reading the next chapter on references and borrowing.</p>
-
 <p>The C++ background would really help to understand the rust memory management.</p>
-
-<hr />
-
+<hr>
 <p>How programs manager memory?</p>
-
 <ul>
 <li>Some programming languages have GC.</li>
 <li>In other programming languages, the programmer must explicitly allocate and free the memory.</li>
 </ul>
-
 <p>Rust uses a third approach, memory is managed through a system of ownership with a set of rules that the compiler checks at compile time. Since it is checked at compile time, the ownership features won&rsquo;t slow down program while it&rsquo;s running.</p>
-
 <h2 id="the-stack-and-the-heap">The Stack and the Heap</h2>
-
 <table>
 <thead>
 <tr>
@@ -185,38 +173,32 @@ This chapter starts to introduce memory management of rust language. Similar to 
 <th>Head</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td><strong>Memory Allocation</strong></td>
 <td>LIFO</td>
 <td>Random order</td>
 </tr>
-
 <tr>
 <td><strong>Compile Time</strong></td>
 <td>Size known</td>
 <td>Size unknown or might change</td>
 </tr>
-
 <tr>
 <td><strong>Data Size</strong></td>
 <td>Fixed</td>
 <td>Flexible</td>
 </tr>
-
 <tr>
 <td><strong>Accessing Speed</strong></td>
 <td>Faster, just push.</td>
 <td>Slower, OS find space and perform bookkeeping.</td>
 </tr>
-
 <tr>
 <td><strong>Cost</strong></td>
 <td>Lower</td>
 <td>Higher</td>
 </tr>
-
 <tr>
 <td><strong>Issue</strong></td>
 <td>Limited storage</td>
@@ -224,25 +206,19 @@ This chapter starts to introduce memory management of rust language. Similar to 
 </tr>
 </tbody>
 </table>
-
 <h2 id="ownership-rules">Ownership Rules</h2>
-
 <ul>
 <li>Each value in Rust has a variable that’s called its <em>owner</em>.</li>
 <li>There can only be one owner at a time.</li>
 <li>When the owner goes out of scope, the value will be dropped.</li>
 </ul>
-
 <h2 id="variable-scope">Variable Scope</h2>
-
 <p>Similar to C.</p>
-
 <h2 id="the-string-type">The <code>String</code> Type</h2>
-
-<p>The string literal and <code>String</code> type. Check this <a href="https://stackoverflow.com/questions/24158114/what-are-the-differences-between-rusts-string-and-str">question</a> on stackoverflow for more details of the difference. It took me quite a lot of time here, and end up find it is similar to C++&rsquo;s <code>char *</code> and <code>std::string</code>.</p>
+<p>The string literal and <code>String</code> type. Check this <a href="https://stackoverflow.com/questions/24158114/what-are-the-differences-between-rusts-string-and-str">question</a> on stackoverflow for more details of the difference. It took me quite a lot of time here, and end up find it is similar to C++'s <code>char *</code> and <code>std::string</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
@@ -252,11 +228,10 @@ This chapter starts to introduce memory management of rust language. Similar to 
 </span><span class="c1"></span><span class="kd">let</span><span class="w"> </span><span class="n">muts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hello&#34;</span><span class="p">;</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Introduce <code>String</code> type that is allocated on the heap to illustrate the rules of ownership. (<code>String</code> type implements <code>drop</code> trait for destruction.)</p>
+</div><p>Introduce <code>String</code> type that is allocated on the heap to illustrate the rules of ownership. (<code>String</code> type implements <code>drop</code> trait for destruction.)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -270,37 +245,25 @@ This chapter starts to introduce memory management of rust language. Similar to 
 </span><span class="w"></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;{}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span><span class="w"> </span><span class="c1">// This will print `hello, world!`
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p><code>String</code> is mutable but string literals cannot, since the two types deal with memory differently.</p>
-
+</div><p><code>String</code> is mutable but string literals cannot, since the two types deal with memory differently.</p>
 <h2 id="memory-and-allocation">Memory and Allocation</h2>
-
 <p>Similar to C++ :laughing:, and similarly the complexity comes from multiple references to the same data allocated on the heap.</p>
-
 <p>When a variable goes out of scope, Rust calls a special function for us. This function is called <code>drop</code>, and it’s where the author of <code>String</code> can put the code to return the memory. Rust calls <code>drop</code> automatically at the closing curly bracket.</p>
-
 <blockquote>
 <p>Note: In C++, this pattern of deallocating resources at the end of an item’s lifetime is sometimes called <em>Resource Acquisition Is Initialization (RAII)</em>. The <code>drop</code> function in Rust will be familiar to you if you’ve used RAII patterns</p>
 </blockquote>
-
 <p>Base on <a href="https://doc.rust-lang.org/std/ops/trait.Drop.html">Trait std::ops::Drop</a>:</p>
-
 <blockquote>
 <p>Used to run some code when a value goes out of scope. This is sometimes called a &lsquo;destructor&rsquo;.</p>
-
 <p>When a value goes out of scope, it will have its <code>drop</code> method called if its type implements <code>Drop</code>. Then, any fields the value contains will also be dropped recursively.</p>
-
 <p>Because of this recursive dropping, you do not need to implement this trait unless your type needs its own destructor logic.</p>
-
 <p>Refer to <a href="https://doc.rust-lang.org/book/ch15-03-drop.html">the chapter on <code>Drop</code> in <em>The Rust Programming Language</em></a> for some more elaboration.</p>
 </blockquote>
-
 <h3 id="ways-variables-and-data-interact-move">Ways Variables and Data Interact: Move</h3>
-
 <p>Rust do copy on simple values with a known, fixed size.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
@@ -308,13 +271,11 @@ This chapter starts to introduce memory management of rust language. Similar to 
 </span><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Two <code>5</code> values are pushed onto the stack.</p>
-
+</div><p>Two <code>5</code> values are pushed onto the stack.</p>
 <p>The <code>String</code> version:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
@@ -322,18 +283,15 @@ This chapter starts to introduce memory management of rust language. Similar to 
 </span><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>For types with heap memory allocation, by default, it uses move. To avoid the existing issues:</p>
-
+</div><p>For types with heap memory allocation, by default, it uses move. To avoid the existing issues:</p>
 <ul>
 <li>Deep copy - operation <code>s2 = s1</code> could be very expensive in terms of runtime performance.</li>
 <li>Shadow copy - multiple references points to the same memory, when more than 1 variable go out of scope, multiple <code>drop</code> operation will try to free the same memory, causes double free error which can lead to memory corruption and potentially lead to security vulnerabilities.</li>
 </ul>
-
 <p>To ensure memory safety, there’s one more detail to what happens in this situation in Rust. Instead of trying to copy the allocated memory, Rust considers <code>s1</code> to no longer be valid and, therefore, Rust doesn’t need to free anything when <code>s1</code> goes out of scope. Check out what happens when you try to use <code>s1</code> after <code>s2</code> is created; it won’t work:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -345,22 +303,17 @@ This chapter starts to introduce memory management of rust language. Similar to 
 </span><span class="w"></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;{}, world!&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">);</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>With only <code>s2</code> valid, when it goes out of scope, it alone will free the memory, and we’re done.</p>
-
+</div><p>With only <code>s2</code> valid, when it goes out of scope, it alone will free the memory, and we’re done.</p>
 <p>The advantages of move by default:</p>
-
 <ul>
 <li>Simplified memory management and enables compile time check.</li>
-<li>Rust will never automatically create “deep” copies of your data. Therefore, any *automatic*copying can be assumed to be inexpensive in terms of runtime performance.</li>
+<li>Rust will never automatically create “deep” copies of your data. Therefore, any <em>automatic</em>copying can be assumed to be inexpensive in terms of runtime performance.</li>
 </ul>
-
 <h3 id="ways-variables-and-data-interact-clone">Ways Variables and Data Interact: Clone</h3>
-
 <p>Explicit deep copy by <code>clone</code> method. Keep in mind that <code>clone</code> might be expensive.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -376,15 +329,10 @@ This chapter starts to introduce memory management of rust language. Similar to 
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="stack-only-data-copy">Stack-Only Data: Copy</h3>
-
+</div><h3 id="stack-only-data-copy">Stack-Only Data: Copy</h3>
 <p>Types such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make.</p>
-
 <p>Further reading on <code>Copy</code> trait in Chapter 10. Rust won’t let us annotate a type with the <code>Copy</code> trait if the type, or any of its parts, has implemented the <code>Drop</code> trait.</p>
-
 <p>Any group of simple scalar values can be <code>Copy</code>, and nothing that requires allocation or is some form of resource is <code>Copy</code>. Here are some of the types that are <code>Copy</code>:</p>
-
 <ul>
 <li>All the integer types, such as <code>u32</code>.</li>
 <li>The Boolean type, <code>bool</code>, with values <code>true</code> and <code>false</code>.</li>
@@ -392,15 +340,12 @@ This chapter starts to introduce memory management of rust language. Similar to 
 <li>The character type, <code>char</code>.</li>
 <li>Tuples, if they only contain types that are also <code>Copy</code>. For example, <code>(i32, i32)</code> is <code>Copy</code>, but <code>(i32, String)</code> is not.</li>
 </ul>
-
 <h2 id="ownership-and-functions">Ownership and Functions</h2>
-
 <p>The book has an good example on this.</p>
-
 <p>The semantics for passing a value to a function are similar to those for assigning a value to a variable. Passing a variable to a function will move or copy, just as assignment does.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -450,13 +395,11 @@ This chapter starts to introduce memory management of rust language. Similar to 
 </span><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="c1">// Here, some_integer goes out of scope. Nothing special happens.
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="return-values-and-scope">Return Values and Scope</h2>
-
+</div><h2 id="return-values-and-scope">Return Values and Scope</h2>
 <p>Returning values can also transfer ownership. And a good example.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4

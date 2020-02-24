@@ -12,17 +12,17 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Rust Book Chapter 3.1 Variables and Mutability"/>
 <meta name="twitter:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-In Rust, by default variables are immutable (unchangeable).
+ In Rust, by default variables are immutable (unchangeable).
 Create a new project:
 1  $ cargo new variables   src/main.rs :x:
-1 2 3 4 5 6  fn main(){letx=0;println!(&#34;The value of x = {}&#34;,x);x=10;println!(&#34;The value of x = {}&#34;,x);}   Run the program:"/>
+1 2 3 4 5 6  fn main(){letx=0;println!(&#34;The value of x = {}&#34;,x);x=10;println!(&#34;The value of x = {}&#34;,x);}  Run the program:"/>
 
     <meta property="og:title" content="The Rust Book Chapter 3.1 Variables and Mutability" />
 <meta property="og:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-In Rust, by default variables are immutable (unchangeable).
+ In Rust, by default variables are immutable (unchangeable).
 Create a new project:
 1  $ cargo new variables   src/main.rs :x:
-1 2 3 4 5 6  fn main(){letx=0;println!(&#34;The value of x = {}&#34;,x);x=10;println!(&#34;The value of x = {}&#34;,x);}   Run the program:" />
+1 2 3 4 5 6  fn main(){letx=0;println!(&#34;The value of x = {}&#34;,x);x=10;println!(&#34;The value of x = {}&#34;,x);}  Run the program:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://limingjie.github.io/posts/2019-07-04-chapter-3.1-variables-and-mutability/" />
 <meta property="article:published_time" content="2019-07-04T23:35:00+08:00" />
@@ -65,7 +65,7 @@ Create a new project:
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.65.3" />
   </head>
 
   <body class=" ">
@@ -140,39 +140,31 @@ Create a new project:
       <div>
         
           <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#differences-between-variables-and-constants">Differences Between Variables and Constants</a></li>
-<li><a href="#shadowing">Shadowing</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#differences-between-variables-and-constants">Differences Between Variables and Constants</a></li>
+    <li><a href="#shadowing">Shadowing</a></li>
+  </ul>
 </nav>
         
       </div>
 
       <div>
-        
-
-<p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
-
-<hr />
-
+        <p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
+<hr>
 <p>In Rust, by default variables are immutable (unchangeable).</p>
-
 <p>Create a new project:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ cargo new variables</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ cargo new variables
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>src/main.rs :x:</p>
+</div><p>src/main.rs :x:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -188,11 +180,10 @@ Create a new project:
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Run the program:</p>
+</div><p>Run the program:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -217,13 +208,13 @@ Create a new project:
 error<span class="o">[</span>E0384<span class="o">]</span>: cannot assign twice to immutable variable <span class="sb">`</span>x<span class="sb">`</span>
  --&gt; src/main.rs:4:5
   <span class="p">|</span>
-<span class="m">2</span> <span class="p">|</span>     <span class="nb">let</span> <span class="nv">x</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
+<span class="m">2</span> <span class="p">|</span>     <span class="nb">let</span> <span class="nv">x</span> <span class="o">=</span> 0<span class="p">;</span>
   <span class="p">|</span>         -
   <span class="p">|</span>         <span class="p">|</span>
   <span class="p">|</span>         first assignment to <span class="sb">`</span>x<span class="sb">`</span>
   <span class="p">|</span>         help: make this binding mutable: <span class="sb">`</span>mut x<span class="sb">`</span>
 <span class="m">3</span> <span class="p">|</span>     println!<span class="o">(</span><span class="s2">&#34;The value of x = {}&#34;</span>, x<span class="o">)</span><span class="p">;</span>
-<span class="m">4</span> <span class="p">|</span>     <span class="nv">x</span> <span class="o">=</span> <span class="m">10</span><span class="p">;</span>
+<span class="m">4</span> <span class="p">|</span>     <span class="nv">x</span> <span class="o">=</span> 10<span class="p">;</span>
   <span class="p">|</span>     ^^^^^^ cannot assign twice to immutable variable
 
 error: aborting due to previous error
@@ -231,15 +222,14 @@ error: aborting due to previous error
 For more information about this error, try <span class="sb">`</span>rustc --explain E0384<span class="sb">`</span>.
 error: Could not compile <span class="sb">`</span>variables<span class="sb">`</span>.
 
-To learn more, run the <span class="nb">command</span> again with --verbose.</code></pre></td></tr></table>
+To learn more, run the <span class="nb">command</span> again with --verbose.
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>By adding <code>mut</code> in front of variable name make it mutable, and the code in line 4 will be allowed to change the value of the variable <code>x</code>.</p>
-
+</div><p>By adding <code>mut</code> in front of variable name make it mutable, and the code in line 4 will be allowed to change the value of the variable <code>x</code>.</p>
 <p>src/main.rs :heavy_check_mark:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -255,20 +245,18 @@ To learn more, run the <span class="nb">command</span> again with --verbose.</co
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Run the program:</p>
+</div><p>Run the program:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">The value of <span class="nv">x</span> <span class="o">=</span> <span class="m">0</span>
-The value of <span class="nv">x</span> <span class="o">=</span> <span class="m">10</span></code></pre></td></tr></table>
+The value of <span class="nv">x</span> <span class="o">=</span> <span class="m">10</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="differences-between-variables-and-constants">Differences Between Variables and Constants</h2>
-
+</div><h2 id="differences-between-variables-and-constants">Differences Between Variables and Constants</h2>
 <table>
 <thead>
 <tr>
@@ -277,38 +265,32 @@ The value of <span class="nv">x</span> <span class="o">=</span> <span class="m">
 <th>Constants</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td align="center">Keyword</td>
 <td align="left"><code>let</code></td>
 <td><code>const</code></td>
 </tr>
-
 <tr>
 <td align="center">Example</td>
-<td align="left"><code>let x = 0;</code><br /><code>let mut x = 0;</code></td>
+<td align="left"><code>let x = 0;</code><!-- raw HTML omitted --><code>let mut x = 0;</code></td>
 <td><code>const MAX_POINTS: u32 = 100_000;</code></td>
 </tr>
-
 <tr>
 <td align="center">Naming Conversion</td>
-<td align="left"><strong>Local variables</strong>: <code>snake_case</code><br /><strong>Static variables</strong>: <code>SCREAMING_SNAKE_CASE</code></td>
-<td>All uppercase with underscores between words,<br />and underscores can be inserted in numeric literals to improve readability</td>
+<td align="left"><strong>Local variables</strong>: <code>snake_case</code><!-- raw HTML omitted --><strong>Static variables</strong>: <code>SCREAMING_SNAKE_CASE</code></td>
+<td>All uppercase with underscores between words,<!-- raw HTML omitted -->and underscores can be inserted in numeric literals to improve readability</td>
 </tr>
-
 <tr>
 <td align="center"><code>mut</code></td>
 <td align="left">:heavy_check_mark:</td>
 <td>:x:</td>
 </tr>
-
 <tr>
 <td align="center">Scope</td>
 <td align="left"></td>
 <td>Any scope including global</td>
 </tr>
-
 <tr>
 <td align="center">Value</td>
 <td align="left"></td>
@@ -316,17 +298,13 @@ The value of <span class="nv">x</span> <span class="o">=</span> <span class="m">
 </tr>
 </tbody>
 </table>
-
 <h2 id="shadowing">Shadowing</h2>
-
 <p>Declare a new variable with the same name as a previous variable, and the new variable shadows the previous variable.</p>
-
 <p>Shadowing a variable is different from a mutable variable, the <code>let</code> keyword is always required, otherwise we will get a compile-time error.</p>
-
 <p>src/main.rs</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -370,11 +348,10 @@ The value of <span class="nv">x</span> <span class="o">=</span> <span class="m">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Run the program:</p>
+</div><p>Run the program:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -389,13 +366,13 @@ The value of <span class="nv">x</span> <span class="o">=</span> <span class="m">
 <span class="nv">F3</span> <span class="o">=</span> <span class="m">2</span>
 <span class="nv">F4</span> <span class="o">=</span> <span class="m">3</span>
 <span class="nv">F5</span> <span class="o">=</span> <span class="m">5</span>
-<span class="nv">F6</span> <span class="o">=</span> <span class="m">8</span></code></pre></td></tr></table>
+<span class="nv">F6</span> <span class="o">=</span> <span class="m">8</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>As shadowing creates a new variable, the type of the variable can be changed, but it is not possible by using <code>mut</code>.</p>
+</div><p>As shadowing creates a new variable, the type of the variable can be changed, but it is not possible by using <code>mut</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">

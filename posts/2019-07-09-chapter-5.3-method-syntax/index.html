@@ -12,12 +12,12 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Rust Book Chapter 5.3 Method Syntax"/>
 <meta name="twitter:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-Defining Methods 1 2 3 4 5 6 7 8 9 10  struct Rectangle{width: u32,height: u32,}implRectangle{fn area(&amp;self)-&gt; u32 {self.width*self.height}}   The reason for explicitly self is flexible type.
+ Defining Methods 1 2 3 4 5 6 7 8 9 10  struct Rectangle{width: u32,height: u32,}implRectangle{fn area(&amp;self)-&gt; u32 {self.width*self.height}}  The reason for explicitly self is flexible type.
  &amp;self - reading &amp;mut self - mutating self - consuming. Having a method that takes ownership of the instance by using just selfas the first parameter is rare; this technique is usually used when the method transforms self into something else and you want to prevent the caller from using the original instance after the transformation."/>
 
     <meta property="og:title" content="The Rust Book Chapter 5.3 Method Syntax" />
 <meta property="og:description" content="This is my notes of learning The Rust Book from a C&#43;&#43; programmer&rsquo;s perspective, it is recommended to read the book online or offline by command rustup doc.
-Defining Methods 1 2 3 4 5 6 7 8 9 10  struct Rectangle{width: u32,height: u32,}implRectangle{fn area(&amp;self)-&gt; u32 {self.width*self.height}}   The reason for explicitly self is flexible type.
+ Defining Methods 1 2 3 4 5 6 7 8 9 10  struct Rectangle{width: u32,height: u32,}implRectangle{fn area(&amp;self)-&gt; u32 {self.width*self.height}}  The reason for explicitly self is flexible type.
  &amp;self - reading &amp;mut self - mutating self - consuming. Having a method that takes ownership of the instance by using just selfas the first parameter is rare; this technique is usually used when the method transforms self into something else and you want to prevent the caller from using the original instance after the transformation." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://limingjie.github.io/posts/2019-07-09-chapter-5.3-method-syntax/" />
@@ -61,7 +61,7 @@ Defining Methods 1 2 3 4 5 6 7 8 9 10  struct Rectangle{width: u32,height: u32,}
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.65.3" />
   </head>
 
   <body class=" ">
@@ -136,33 +136,27 @@ Defining Methods 1 2 3 4 5 6 7 8 9 10  struct Rectangle{width: u32,height: u32,}
       <div>
         
           <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#defining-methods">Defining Methods</a>
-<ul>
-<li><a href="#where-s-the-operator">Where&rsquo;s the <code>-&gt;</code> Operator?</a></li>
-</ul></li>
-<li><a href="#methods-with-more-parameters">Methods with More Parameters</a></li>
-<li><a href="#associated-functions">Associated Functions</a></li>
-<li><a href="#multiple-impl-blocks">Multiple <code>impl</code> Blocks</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#defining-methods">Defining Methods</a>
+      <ul>
+        <li><a href="#wheres-the---operator">Where&rsquo;s the <code>-&gt;</code> Operator?</a></li>
+      </ul>
+    </li>
+    <li><a href="#methods-with-more-parameters">Methods with More Parameters</a></li>
+    <li><a href="#associated-functions">Associated Functions</a></li>
+    <li><a href="#multiple-impl-blocks">Multiple <code>impl</code> Blocks</a></li>
+  </ul>
 </nav>
         
       </div>
 
       <div>
-        
-
-<p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
-
-<hr />
-
+        <p>This is my notes of learning The Rust Book from a C++ programmer&rsquo;s perspective, it is recommended to read the book <a href="https://doc.rust-lang.org/book/">online</a> or offline by command <code>rustup doc</code>.</p>
+<hr>
 <h2 id="defining-methods">Defining Methods</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -186,25 +180,19 @@ Defining Methods 1 2 3 4 5 6 7 8 9 10  struct Rectangle{width: u32,height: u32,}
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<p>The reason for explicitly self is flexible type.</p>
-
+</div><p>The reason for explicitly self is flexible type.</p>
 <ul>
 <li><code>&amp;self</code> - reading</li>
 <li><code>&amp;mut self</code> - mutating</li>
 <li><code>self</code> - consuming. Having a method that takes ownership of the instance by using just <code>self</code>as the first parameter is rare; this technique is usually used when the method transforms <code>self</code> into something else and you want to prevent the caller from using the original instance after the transformation.</li>
 </ul>
-
-<h3 id="where-s-the-operator">Where&rsquo;s the <code>-&gt;</code> Operator?</h3>
-
+<h3 id="wheres-the---operator">Where&rsquo;s the <code>-&gt;</code> Operator?</h3>
 <p>Like Golang, there is no <code>-&gt;</code> operator.</p>
-
 <p>Rust doesn’t have an equivalent to the <code>-&gt;</code> operator; instead, Rust has a feature called <em>automatic referencing and dereferencing</em>. Calling methods is one of the few places in Rust that has this behavior.</p>
-
 <h2 id="methods-with-more-parameters">Methods with More Parameters</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -226,13 +214,11 @@ Defining Methods 1 2 3 4 5 6 7 8 9 10  struct Rectangle{width: u32,height: u32,}
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="associated-functions">Associated Functions</h2>
-
+</div><h2 id="associated-functions">Associated Functions</h2>
 <p>Methods without <code>self</code> as a parameter are called associated functions. Associated functions are often used for constructors that will return a new instance of the struct.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -250,9 +236,7 @@ Defining Methods 1 2 3 4 5 6 7 8 9 10  struct Rectangle{width: u32,height: u32,}
 </span><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">sq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Rectangle</span>::<span class="n">square</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="multiple-impl-blocks">Multiple <code>impl</code> Blocks</h2>
-
+</div><h2 id="multiple-impl-blocks">Multiple <code>impl</code> Blocks</h2>
 <p>Multiple <code>impl</code> blocks are allowed.</p>
 
       </div>
