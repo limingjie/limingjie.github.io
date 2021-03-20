@@ -1,0 +1,468 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>RGB Colors</title>
+
+    <style>
+        body {
+            overflow-y: auto;
+            max-width: 100%;
+            padding: 0;
+        }
+
+        label,
+        input {
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+
+        label {
+            width: 80px;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        input[type="range"] {
+            height: 36px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 500px;
+            max-width: 100%;
+            margin: 3px 0;
+        }
+
+        .presets {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .bg.rgb {
+            width: 100%;
+            height: 200px;
+        }
+
+        .rgb {
+            width: 100%;
+            height: 200px;
+        }
+
+        .sample {
+            width: 18px;
+            height: 18px;
+            border: 1px black solid;
+        }
+
+        .preset {
+            width: 30px;
+            height: 30px;
+            margin: 1px;
+            border: 1px black solid;
+        }
+
+        /* https://stackoverflow.com/questions/35361986/css-gradient-checkerboard-pattern */
+        .bg {
+            background-image: linear-gradient(45deg, #eee 25%, transparent 25%),
+                linear-gradient(-45deg, #eee 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #eee 75%),
+                linear-gradient(-45deg, transparent 75%, #eee 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+
+        /* https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+        input[type="range"] {
+            -webkit-appearance: none;
+            /* Hides the slider so that custom slider can be made */
+            width: 100%;
+            /* Specific width is required for Firefox. */
+            background: transparent;
+            /* Otherwise white in Chrome */
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]:focus {
+            outline: none;
+            /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+        }
+
+        input[type="range"]::-ms-track {
+            width: 100%;
+            cursor: pointer;
+
+            /* Hides the slider so custom styles can be added */
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+
+        /* Special styling for WebKit/Blink */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border: 1px solid #000000;
+            height: 36px;
+            width: 22px;
+            background: #ffffff;
+            cursor: pointer;
+            margin-top: -14px;
+            /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+        }
+
+        /* All the same stuff for Firefox */
+        input[type="range"]::-moz-range-thumb {
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            border: 1px solid #000000;
+            height: 36px;
+            width: 22px;
+            background: #ffffff;
+            cursor: pointer;
+        }
+
+        /* All the same stuff for IE */
+        input[type="range"]::-ms-thumb {
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            border: 1px solid #000000;
+            height: 36px;
+            width: 22px;
+            background: #ffffff;
+            cursor: pointer;
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8.4px;
+            cursor: pointer;
+            background: #3071a9;
+            border: 0.2px solid #010101;
+        }
+
+        input[type="range"]:focus::-webkit-slider-runnable-track {
+            background: #367ebd;
+        }
+
+        input[type="range"]::-moz-range-track {
+            width: 100%;
+            height: 8.4px;
+            cursor: pointer;
+            background: #3071a9;
+            border: 0.2px solid #010101;
+        }
+
+        input[type="range"]::-ms-track {
+            width: 100%;
+            height: 8.4px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            border-width: 16px 0;
+            color: transparent;
+        }
+
+        input[type="range"]::-ms-fill-lower {
+            background: #2a6495;
+            border: 0.2px solid #010101;
+            border-radius: 2.6px;
+        }
+
+        input[type="range"]:focus::-ms-fill-lower {
+            background: #3071a9;
+        }
+
+        input[type="range"]::-ms-fill-upper {
+            background: #3071a9;
+            border: 0.2px solid #010101;
+            border-radius: 2.6px;
+        }
+
+        input[type="range"]:focus::-ms-fill-upper {
+            background: #367ebd;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>RGB Colors</h1>
+    <div class="row">
+        <label for="r">Red</label>
+        <div class="bg alpha">
+            <div id="rs" class="sample" style="background-color: rgb(255, 0, 0)"></div>
+        </div>
+        <input type="range" id="r" min="0" max="255" value="255" />
+    </div>
+    <div class="row">
+        <label for="g">Green</label>
+        <div class="bg alpha">
+            <div id="gs" class="sample" style="background-color: rgb(0, 0, 0)"></div>
+        </div>
+        <input type="range" id="g" min="0" max="255" value="0" />
+    </div>
+    <div class="row">
+        <label for="b">Blue</label>
+        <div class="bg alpha">
+            <div id="bs" class="sample" style="background-color: rgb(0, 0, 255)"></div>
+        </div>
+        <input type="range" id="b" min="0" max="255" value="255" />
+    </div>
+    <div class="row">
+        <label for="a">Alpha</label>
+        <div class="bg alpha">
+            <div id="as" class="sample" style="background-color: rgb(255, 255, 255)"></div>
+        </div>
+        <input type="range" id="a" min="0" max="100" value="100" />
+    </div>
+    <div class="row">
+        <input type="text" id="rgbText" readonly="" />
+    </div>
+    <div class="row">
+        <div class="bg rgb">
+            <div id="rgb" class="rgb" style="background-color: rgb(255, 0, 255)"></div>
+        </div>
+    </div>
+    <div id="presets" class="row presets">
+    </div>
+
+    <script>
+        var r = document.getElementById("r");
+        var rs = document.getElementById("rs");
+        var g = document.getElementById("g");
+        var gs = document.getElementById("gs");
+        var b = document.getElementById("b");
+        var bs = document.getElementById("bs");
+        var a = document.getElementById("a");
+        var as = document.getElementById("as");
+        var rgb = document.getElementById("rgb");
+        var rgbText = document.getElementById("rgbText");
+
+        updateColor();
+
+        document.querySelectorAll("input[type='range']").forEach(function (el) {
+            el.addEventListener("input", (event) => {
+                updateColor();
+            });
+        });
+
+        generatePresets();
+
+        function updateColor() {
+            var text = colorRGBA(r.value, g.value, b.value, a.value / 100);
+            rgbText.value = text;
+            rgb.style.backgroundColor = text;
+            rs.style.backgroundColor = colorRGB(r.value, 0, 0);
+            gs.style.backgroundColor = colorRGB(0, g.value, 0);
+            bs.style.backgroundColor = colorRGB(0, 0, b.value);
+            as.style.backgroundColor = colorRGBA(255, 255, 255, a.value / 100);
+        }
+
+        function colorRGB(r, g, b) {
+            return "rgb(" + r + ", " + g + ", " + b + ")";
+        }
+
+        function colorRGBA(r, g, b, a) {
+            return "rgba(" + r + ", " + g + ", " + b + ", " + a + ")";
+        }
+
+        function generatePresets() {
+            var colors = [
+                // r, g, b, name
+                [255, 255, 255, "white"],
+                [192, 192, 192, "silver"],
+                [128, 128, 128, "gray"],
+                [0, 0, 0, "black"],
+                [255, 0, 0, "red"],
+                [128, 0, 0, "maroon"],
+                [255, 255, 0, "yellow"],
+                [128, 128, 0, "olive"],
+                [0, 255, 0, "lime"],
+                [0, 128, 0, "green"],
+                [0, 255, 255, "aqua"],
+                [0, 128, 128, "teal"],
+                [0, 0, 255, "blue"],
+                [0, 0, 128, "navy"],
+                [255, 0, 255, "fuchsia"],
+                [128, 0, 128, "purple"],
+                [199, 21, 133, "MediumVioletRed"],
+                [255, 20, 147, "DeepPink"],
+                [219, 112, 147, "PaleVioletRed"],
+                [255, 105, 180, "HotPink"],
+                [255, 182, 193, "LightPink"],
+                [255, 192, 203, "Pink"],
+                [139, 0, 0, "DarkRed"],
+                [255, 0, 0, "Red"],
+                [178, 34, 34, "Firebrick"],
+                [220, 20, 60, "Crimson"],
+                [205, 92, 92, "IndianRed"],
+                [240, 128, 128, "LightCoral"],
+                [250, 128, 114, "Salmon"],
+                [233, 150, 122, "DarkSalmon"],
+                [255, 160, 122, "LightSalmon"],
+                [255, 69, 0, "OrangeRed"],
+                [255, 99, 71, "Tomato"],
+                [255, 140, 0, "DarkOrange"],
+                [255, 127, 80, "Coral"],
+                [255, 165, 0, "Orange"],
+                [189, 183, 107, "DarkKhaki"],
+                [255, 215, 0, "Gold"],
+                [240, 230, 140, "Khaki"],
+                [255, 218, 185, "PeachPuff"],
+                [255, 255, 0, "Yellow"],
+                [238, 232, 170, "PaleGoldenrod"],
+                [255, 228, 181, "Moccasin"],
+                [255, 239, 213, "PapayaWhip"],
+                [250, 250, 210, "LightGoldenrodYellow"],
+                [255, 250, 205, "LemonChiffon"],
+                [255, 255, 224, "LightYellow"],
+                [128, 0, 0, "Maroon"],
+                [165, 42, 42, "Brown"],
+                [139, 69, 19, "SaddleBrown"],
+                [160, 82, 45, "Sienna"],
+                [210, 105, 30, "Chocolate"],
+                [184, 134, 11, "DarkGoldenrod"],
+                [205, 133, 63, "Peru"],
+                [188, 143, 143, "RosyBrown"],
+                [218, 165, 32, "Goldenrod"],
+                [244, 164, 96, "SandyBrown"],
+                [210, 180, 140, "Tan"],
+                [222, 184, 135, "Burlywood"],
+                [245, 222, 179, "Wheat"],
+                [255, 222, 173, "NavajoWhite"],
+                [255, 228, 196, "Bisque"],
+                [255, 235, 205, "BlanchedAlmond"],
+                [255, 248, 220, "Cornsilk"],
+                [0, 100, 0, "DarkGreen"],
+                [0, 128, 0, "Green"],
+                [85, 107, 47, "DarkOliveGreen"],
+                [34, 139, 34, "ForestGreen"],
+                [46, 139, 87, "SeaGreen"],
+                [128, 128, 0, "Olive"],
+                [107, 142, 35, "OliveDrab"],
+                [60, 179, 113, "MediumSeaGreen"],
+                [50, 205, 50, "LimeGreen"],
+                [0, 255, 0, "Lime"],
+                [0, 255, 127, "SpringGreen"],
+                [0, 250, 154, "MediumSpringGreen"],
+                [143, 188, 143, "DarkSeaGreen"],
+                [102, 205, 170, "MediumAquamarine"],
+                [154, 205, 50, "YellowGreen"],
+                [124, 252, 0, "LawnGreen"],
+                [127, 255, 0, "Chartreuse"],
+                [144, 238, 144, "LightGreen"],
+                [173, 255, 47, "GreenYellow"],
+                [152, 251, 152, "PaleGreen"],
+                [0, 128, 128, "Teal"],
+                [0, 139, 139, "DarkCyan"],
+                [32, 178, 170, "LightSeaGreen"],
+                [95, 158, 160, "CadetBlue"],
+                [0, 206, 209, "DarkTurquoise"],
+                [72, 209, 204, "MediumTurquoise"],
+                [64, 224, 208, "Turquoise"],
+                [0, 255, 255, "Aqua"],
+                [0, 255, 255, "Cyan"],
+                [127, 255, 212, "Aquamarine"],
+                [175, 238, 238, "PaleTurquoise"],
+                [224, 255, 255, "LightCyan"],
+                [0, 0, 128, "Navy"],
+                [0, 0, 139, "DarkBlue"],
+                [0, 0, 205, "MediumBlue"],
+                [0, 0, 255, "Blue"],
+                [25, 25, 112, "MidnightBlue"],
+                [65, 105, 225, "RoyalBlue"],
+                [70, 130, 180, "SteelBlue"],
+                [30, 144, 255, "DodgerBlue"],
+                [0, 191, 255, "DeepSkyBlue"],
+                [100, 149, 237, "CornflowerBlue"],
+                [135, 206, 235, "SkyBlue"],
+                [135, 206, 250, "LightSkyBlue"],
+                [176, 196, 222, "LightSteelBlue"],
+                [173, 216, 230, "LightBlue"],
+                [176, 224, 230, "PowderBlue"],
+                [75, 0, 130, "Indigo"],
+                [128, 0, 128, "Purple"],
+                [139, 0, 139, "DarkMagenta"],
+                [148, 0, 211, "DarkViolet"],
+                [72, 61, 139, "DarkSlateBlue"],
+                [138, 43, 226, "BlueViolet"],
+                [153, 50, 204, "DarkOrchid"],
+                [255, 0, 255, "Magenta"],
+                [106, 90, 205, "SlateBlue"],
+                [123, 104, 238, "MediumSlateBlue"],
+                [186, 85, 211, "MediumOrchid"],
+                [147, 112, 219, "MediumPurple"],
+                [218, 112, 214, "Orchid"],
+                [238, 130, 238, "Violet"],
+                [221, 160, 221, "Plum"],
+                [216, 191, 216, "Thistle"],
+                [230, 230, 250, "Lavender"],
+                [255, 228, 225, "MistyRose"],
+                [250, 235, 215, "AntiqueWhite"],
+                [250, 240, 230, "Linen"],
+                [245, 245, 220, "Beige"],
+                [245, 245, 245, "WhiteSmoke"],
+                [255, 240, 245, "LavenderBlush"],
+                [253, 245, 230, "OldLace"],
+                [240, 248, 255, "AliceBlue"],
+                [255, 245, 238, "Seashell"],
+                [248, 248, 255, "GhostWhite"],
+                [240, 255, 240, "Honeydew"],
+                [255, 250, 240, "FloralWhite"],
+                [240, 255, 255, "Azure"],
+                [245, 255, 250, "MintCream"],
+                [255, 250, 250, "Snow"],
+                [255, 255, 240, "Ivory"],
+                [255, 255, 255, "White"],
+                [0, 0, 0, "Black"],
+                [47, 79, 79, "DarkSlateGray"],
+                [105, 105, 105, "DimGray"],
+                [112, 128, 144, "SlateGray"],
+                [128, 128, 128, "Gray"],
+                [119, 136, 153, "LightSlateGray"],
+                [169, 169, 169, "DarkGray"],
+                [192, 192, 192, "Silver"],
+                [211, 211, 211, "LightGray"],
+                [220, 220, 220, "Gainsboro"],
+            ];
+
+            var presets = document.getElementById("presets");
+            var html = "";
+            colors.forEach(function (color) {
+                html +=
+                    "<div class='preset' ontouchstart title='" +
+                    color[3] +
+                    "'<div></div>";
+            });
+            presets.innerHTML = html;
+
+            var index = 0;
+            document.querySelectorAll(".preset").forEach(function (el) {
+                var rv = colors[index][0];
+                var gv = colors[index][1];
+                var bv = colors[index][2];
+                index++;
+                el.setAttribute("r", rv);
+                el.setAttribute("g", gv);
+                el.setAttribute("b", bv);
+                el.style.backgroundColor = colorRGB(rv, gv, bv);
+
+                el.addEventListener("click", (event) => {
+                    r.value = rv;
+                    g.value = gv;
+                    b.value = bv;
+                    a.value = 100;
+                    updateColor();
+                });
+            });
+        }
+
+    </script>
+</body>
+
+</html>
