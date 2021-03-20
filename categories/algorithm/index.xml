@@ -6,11 +6,7 @@
     <description>Recent content in Algorithm on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Feb 2020 23:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://limingjie.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 24 Feb 2020 23:00:00 +0800</lastBuildDate><atom:link href="https://limingjie.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Multiply Big Numbers</title>
       <link>https://limingjie.github.io/posts/2020-02-24-multiply-big-numbers/</link>

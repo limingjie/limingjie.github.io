@@ -6,11 +6,7 @@
     <description>Recent content in Hugo on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 May 2019 00:30:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://limingjie.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 29 May 2019 00:30:00 +0800</lastBuildDate><atom:link href="https://limingjie.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Render TeX in Hugo Blog</title>
       <link>https://limingjie.github.io/posts/2019-05-28-render-tex-in-hugo/</link>
@@ -18,7 +14,8 @@
       
       <guid>https://limingjie.github.io/posts/2019-05-28-render-tex-in-hugo/</guid>
       <description>Recently, I started to think about learning $\TeX$, adding $\TeX$ support to blog looks like a good start for me. It took me quite some time to figure out all the culprits of embedding $\TeX$ in markdown. I hope this blog could save you some time before starting writing in $\TeX$.
-Required Components  The default Blackfriday markdown engine. $\KaTeX$ math typesetting library for the web.  Steps to Setup $\KaTeX$ in Hugo $\KaTeX$ is an excellent fast engineer for rendering $\TeX$ on web.</description>
+ Note: Some contents in this post is outdated. Hugo markdown engine moved from Blackfriday to Goldmark.
+ Required Components  The default Blackfriday markdown engine.</description>
     </item>
     
   </channel>
