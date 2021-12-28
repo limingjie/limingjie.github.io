@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Mingjie Li</title>
+    <link>https://limingjie.github.io/tags/python/</link>
+    <description>Recent content in Python on Mingjie Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Dec 2021 12:59:00 +0800</lastBuildDate><atom:link href="https://limingjie.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert Jupyter Notebook With CJK to PDF on Macos</title>
+      <link>https://limingjie.github.io/posts/2021-12-28-convert-jupyter-notebook-with-cjk-to-pdf-on-macos/</link>
+      <pubDate>Tue, 28 Dec 2021 12:59:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2021-12-28-convert-jupyter-notebook-with-cjk-to-pdf-on-macos/</guid>
+      <description>Install Dependencies Follow nbconvert Installation Guide to install dependencies.
+1 2 3  pip install nbconvert pip install pandoc brew install mactex   Install CJK Font Use system font or install any CJK font. I prefer Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕).
+1  brew install font-sarasa-gothic   Convert the Notebook to PDF   Convert the notebook to tex
+1  jupyter nbconvert --to latex notebook-to-convert.</description>
+    </item>
+    
+  </channel>
+</rss>

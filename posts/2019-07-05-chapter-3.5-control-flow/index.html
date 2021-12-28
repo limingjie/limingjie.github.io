@@ -20,9 +20,10 @@
  if Expressions The condition must be a bool.
 1 2 3 4 5 6 7 8 9 10 11 12 13  fn main(){letnumber=6;ifnumber%4==0{println!(&#34;number is divisible by 4&#34;);}elseifnumber%3==0{println!(&#34;number is divisible by 3&#34;);}elseifnumber%2==0{println!(&#34;number is divisible by 2&#34;);}else{println!(&#34;number is not divisible by 4, 3, or 2&#34;);}}  Using if in a let Statement if is an expression:exclamation: The value from each branch of the expression must be the same type." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://limingjie.github.io/posts/2019-07-05-chapter-3.5-control-flow/" />
+<meta property="og:url" content="https://limingjie.github.io/posts/2019-07-05-chapter-3.5-control-flow/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-07-05T21:35:00+08:00" />
 <meta property="article:modified_time" content="2019-07-05T21:35:00+08:00" />
+
 
 
     
@@ -61,7 +62,7 @@
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.91.2" />
   </head>
 
   <body class=" ">
@@ -162,7 +163,7 @@
 <p>The condition must be a <code>bool</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -177,17 +178,17 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w">
 </span><span class="w">
 </span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">        </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;number is divisible by 4&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;number is divisible by 4&#34;</span><span class="p">);</span><span class="w">
 </span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">        </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;number is divisible by 3&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;number is divisible by 3&#34;</span><span class="p">);</span><span class="w">
 </span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">        </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;number is divisible by 2&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;number is divisible by 2&#34;</span><span class="p">);</span><span class="w">
 </span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">        </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;number is not divisible by 4, 3, or 2&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;number is not divisible by 4, 3, or 2&#34;</span><span class="p">);</span><span class="w">
 </span><span class="w">    </span><span class="p">}</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
@@ -196,7 +197,7 @@
 <p><code>if</code> is an expression:exclamation: The value from each branch of the expression must be the same type.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -208,7 +209,7 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">
 </span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w">        </span><span class="mi">5</span><span class="w">
@@ -216,7 +217,7 @@
 </span><span class="w">        </span><span class="mi">6</span><span class="w">
 </span><span class="w">    </span><span class="p">};</span><span class="w">
 </span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;The value of number is: {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="p">);</span><span class="w">
+</span><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;The value of number is: {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="p">);</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
@@ -226,16 +227,16 @@
 <p>Loop forever, use <code>break</code> to stop it.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w">    </span><span class="k">loop</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">        </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;again!&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;again!&#34;</span><span class="p">);</span><span class="w">
 </span><span class="w">    </span><span class="p">}</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
@@ -243,7 +244,7 @@
 </div><h3 id="returning-values-from-loops">Returning Values from Loops</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -258,7 +259,7 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">
 </span><span class="w">
 </span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">loop</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -269,18 +270,18 @@
 </span><span class="w">        </span><span class="p">}</span><span class="w">
 </span><span class="w">    </span><span class="p">};</span><span class="w">
 </span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;The result is {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span><span class="w">
+</span><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;The result is {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div><h3 id="conditional-loops-with-while">Conditional Loops with <code>while</code></h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">while</span><span class="w"> </span><span class="n">boolean_condition</span><span class="w"> </span><span class="p">{</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="k">while</span><span class="w"> </span><span class="n">boolean_condition</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
@@ -288,7 +289,7 @@
 <p>Use <code>for</code> loop to avoid errors, <code>while</code> with an index may run out of array boundary.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -297,11 +298,11 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">];</span><span class="w">
 </span><span class="w">
 </span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">iter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">        </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;the value is: {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">element</span><span class="p">);</span><span class="w">
+</span><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;the value is: {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">element</span><span class="p">);</span><span class="w">
 </span><span class="w">    </span><span class="p">}</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
@@ -309,7 +310,7 @@
 </div><h4 id="for-and-range"><code>for</code> and <code>range</code></h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -318,12 +319,12 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="c1">// a..b -&gt; [a, b)
-</span><span class="c1"></span><span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="p">..</span><span class="mi">101</span><span class="w"> </span><span class="p">{</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="c1">// a..b -&gt; [a, b)
+</span><span class="c1"></span><span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="o">..</span><span class="mi">101</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span><span class="w">
 </span><span class="w"></span><span class="c1">// a..=b -&gt; [a, b]
-</span><span class="c1"></span><span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="p">..</span><span class="o">=</span><span class="mi">100</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="c1"></span><span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="o">..=</span><span class="mi">100</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
@@ -343,7 +344,7 @@
 <p>In the above snippets note the type of <code>match</code> branch, that is the key difference in the types of iteration. The difference in type then of course implies differing actions that are able to be performed.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -382,40 +383,40 @@
 </span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">languages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec</span><span class="o">!</span><span class="p">[</span><span class="s">&#34;Chinese&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;English&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Spanish&#34;</span><span class="p">];</span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;languages: {:?}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">languages</span><span class="p">);</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">languages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="s">&#34;Chinese&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;English&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Spanish&#34;</span><span class="p">];</span><span class="w">
+</span><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;languages: {:?}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">languages</span><span class="p">);</span><span class="w">
 </span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;\n-&gt; languages.iter()&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;\n-&gt; languages.iter()&#34;</span><span class="p">);</span><span class="w">
 </span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">language</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">languages</span><span class="p">.</span><span class="n">iter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w">        </span><span class="k">match</span><span class="w"> </span><span class="n">language</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">            </span><span class="o">&amp;</span><span class="s">&#34;Chinese&#34;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;- My mother tongue!&#34;</span><span class="p">),</span><span class="w">
-</span><span class="w">            </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;- Hello {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">language</span><span class="p">),</span><span class="w">
+</span><span class="w">            </span><span class="o">&amp;</span><span class="s">&#34;Chinese&#34;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;- My mother tongue!&#34;</span><span class="p">),</span><span class="w">
+</span><span class="w">            </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;- Hello {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">language</span><span class="p">),</span><span class="w">
 </span><span class="w">        </span><span class="p">}</span><span class="w">
 </span><span class="w">    </span><span class="p">}</span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;languages: {:?}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">languages</span><span class="p">);</span><span class="w">
+</span><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;languages: {:?}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">languages</span><span class="p">);</span><span class="w">
 </span><span class="w">
 </span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">languages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">languages</span><span class="p">;</span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;\n-&gt; languages.iter_mut()&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;\n-&gt; languages.iter_mut()&#34;</span><span class="p">);</span><span class="w">
 </span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">language</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">languages</span><span class="p">.</span><span class="n">iter_mut</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w">        </span><span class="o">*</span><span class="n">language</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">language</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w">            </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="s">&#34;Chinese&#34;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">                </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;- My mother tongue!&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w">                </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;- My mother tongue!&#34;</span><span class="p">);</span><span class="w">
 </span><span class="w">                </span><span class="s">&#34;Simplified Chinese&#34;</span><span class="w">
 </span><span class="w">            </span><span class="p">}</span><span class="w">
 </span><span class="w">            </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">                </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;- Hello {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">language</span><span class="p">);</span><span class="w">
+</span><span class="w">                </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;- Hello {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">language</span><span class="p">);</span><span class="w">
 </span><span class="w">                </span><span class="n">language</span><span class="w">
 </span><span class="w">            </span><span class="p">}</span><span class="w">
 </span><span class="w">        </span><span class="p">}</span><span class="w">
 </span><span class="w">    </span><span class="p">}</span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;languages: {:?}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">languages</span><span class="p">);</span><span class="w">
+</span><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;languages: {:?}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">languages</span><span class="p">);</span><span class="w">
 </span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;\n-&gt; languages.into_iter()&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;\n-&gt; languages.into_iter()&#34;</span><span class="p">);</span><span class="w">
 </span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">language</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">languages</span><span class="p">.</span><span class="n">into_iter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span><span class="w">        </span><span class="k">match</span><span class="w"> </span><span class="n">language</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">            </span><span class="s">&#34;Chinese&#34;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;- My mother tongue!&#34;</span><span class="p">),</span><span class="w">
-</span><span class="w">            </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;- Hello {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">language</span><span class="p">),</span><span class="w">
+</span><span class="w">            </span><span class="s">&#34;Chinese&#34;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;- My mother tongue!&#34;</span><span class="p">),</span><span class="w">
+</span><span class="w">            </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;- Hello {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">language</span><span class="p">),</span><span class="w">
 </span><span class="w">        </span><span class="p">}</span><span class="w">
 </span><span class="w">    </span><span class="p">}</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
@@ -424,7 +425,7 @@
 </div><p>Run it:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -444,7 +445,7 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">languages: <span class="o">[</span><span class="s2">&#34;Chinese&#34;</span>, <span class="s2">&#34;English&#34;</span>, <span class="s2">&#34;Spanish&#34;</span><span class="o">]</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">languages: <span class="o">[</span><span class="s2">&#34;Chinese&#34;</span>, <span class="s2">&#34;English&#34;</span>, <span class="s2">&#34;Spanish&#34;</span><span class="o">]</span>
 
 -&gt; languages.iter<span class="o">()</span>
 - My mother tongue!
