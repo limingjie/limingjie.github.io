@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PDF on Mingjie Li</title>
-    <link>https://limingjie.github.io/tags/pdf/</link>
-    <description>Recent content in PDF on Mingjie Li</description>
+    <title>MacOS on Mingjie Li</title>
+    <link>https://limingjie.github.io/tags/macos/</link>
+    <description>Recent content in MacOS on Mingjie Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Dec 2021 12:59:00 +0800</lastBuildDate><atom:link href="https://limingjie.github.io/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Dec 2021 12:59:00 +0800</lastBuildDate><atom:link href="https://limingjie.github.io/tags/macos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Convert Jupyter Notebook with CJK to PDF on MacOS</title>
       <link>https://limingjie.github.io/posts/2021-12-28-convert-jupyter-notebook-with-cjk-to-pdf-on-macos/</link>

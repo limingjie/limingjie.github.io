@@ -10,15 +10,15 @@
     <meta name="keywords" content="blog,developer,personal">
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Convert Jupyter Notebook with CJK to PDF on Macos"/>
+<meta name="twitter:title" content="Convert Jupyter Notebook with CJK to PDF on MacOS"/>
 <meta name="twitter:description" content="Install Dependencies Follow nbconvert Installation Guide to install dependencies.
-1 2 3  pip install nbconvert pip install pandoc brew install mactex   Install CJK Font Use system font or install any CJK font. I prefer Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕).
+1 2 3  pip install nbconvert pip install pandoc brew install mactex   Install CJK Font Use system font or install any CJK font. I recommend Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕).
 1  brew install font-sarasa-gothic   Convert the Notebook to PDF   Convert the notebook to tex
 1  jupyter nbconvert --to latex notebook-to-convert."/>
 
-    <meta property="og:title" content="Convert Jupyter Notebook with CJK to PDF on Macos" />
+    <meta property="og:title" content="Convert Jupyter Notebook with CJK to PDF on MacOS" />
 <meta property="og:description" content="Install Dependencies Follow nbconvert Installation Guide to install dependencies.
-1 2 3  pip install nbconvert pip install pandoc brew install mactex   Install CJK Font Use system font or install any CJK font. I prefer Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕).
+1 2 3  pip install nbconvert pip install pandoc brew install mactex   Install CJK Font Use system font or install any CJK font. I recommend Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕).
 1  brew install font-sarasa-gothic   Convert the Notebook to PDF   Convert the notebook to tex
 1  jupyter nbconvert --to latex notebook-to-convert." />
 <meta property="og:type" content="article" />
@@ -32,7 +32,7 @@
       <base href="https://limingjie.github.io/posts/2021-12-28-convert-jupyter-notebook-with-cjk-to-pdf-on-macos/">
     
     <title>
-  Convert Jupyter Notebook with CJK to PDF on Macos · Mingjie Li
+  Convert Jupyter Notebook with CJK to PDF on MacOS · Mingjie Li
 </title>
 
     
@@ -104,7 +104,7 @@
     <article>
       <header>
         <div class="post-title">
-          <h1 class="title">Convert Jupyter Notebook with CJK to PDF on Macos</h1>
+          <h1 class="title">Convert Jupyter Notebook with CJK to PDF on MacOS</h1>
         </div>
         <div class="post-meta">
           <div class="date">
@@ -116,14 +116,12 @@
             </span>
             <span class="reading-time">
               <i class="fas fa-clock"></i>
-              One minute read
+              2 minutes read
             </span>
           </div>
           <div class="categories">
   <i class="fas fa-folder"></i>
     <a href="/categories/jupyter-notebook/">Jupyter Notebook</a>
-      <span class="separator">•</span>
-    <a href="/categories/python/">Python</a>
       <span class="separator">•</span>
     <a href="/categories/tex/">TeX</a>
       <span class="separator">•</span>
@@ -137,7 +135,9 @@
       <span class="separator">•</span>
     <a href="/tags/tex/">TeX</a>
       <span class="separator">•</span>
-    <a href="/tags/pdf/">PDF</a></div>
+    <a href="/tags/pdf/">PDF</a>
+      <span class="separator">•</span>
+    <a href="/tags/macos/">MacOS</a></div>
 
         </div>
       </header>
@@ -149,6 +149,7 @@
     <li><a href="#install-dependencies">Install Dependencies</a></li>
     <li><a href="#install-cjk-font">Install CJK Font</a></li>
     <li><a href="#convert-the-notebook-to-pdf">Convert the Notebook to PDF</a></li>
+    <li><a href="#shell-script-helper">Shell Script Helper</a></li>
   </ul>
 </nav>
         
@@ -170,7 +171,7 @@ brew install mactex
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="install-cjk-font">Install CJK Font</h2>
-<p>Use system font or install any CJK font. I prefer <a href="https://github.com/be5invis/Sarasa-Gothic">Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕)</a>.</p>
+<p>Use system font or install any CJK font. I recommend <a href="https://github.com/be5invis/Sarasa-Gothic">Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕)</a>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -219,12 +220,77 @@ brew install mactex
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xelatex notebook-to-convert.tex &gt; notebook-to-convert.pdf
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xelatex notebook-to-convert.tex
 </code></pre></td></tr></table>
 </div>
 </div></li>
 </ol>
+<h2 id="shell-script-helper">Shell Script Helper</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/zsh
+</span><span class="cp"></span>
+<span class="nv">FILE</span><span class="o">=</span><span class="s2">&#34;notebook-to-convert&#34;</span>
 
+<span class="c1"># Remove files</span>
+rm <span class="nv">$FILE</span>.html <span class="nv">$FILE</span>.tex <span class="nv">$FILE</span>.md <span class="nv">$FILE</span>.pdf
+
+<span class="c1"># Generate HTML</span>
+jupyter nbconvert --to html <span class="nv">$FILE</span>.ipynb
+<span class="c1"># Install latest nbconvert to get line number option https://github.com/jupyter/nbconvert</span>
+<span class="c1"># jupyter nbconvert --to html $FILE.ipynb --Highlight2HTML.extra_formatter_options linenos=table</span>
+
+<span class="c1"># Generate Markdown</span>
+jupyter nbconvert --to markdown <span class="nv">$FILE</span>.ipynb
+
+<span class="c1"># Generate Tex</span>
+jupyter nbconvert --to latex <span class="nv">$FILE</span>.ipynb
+
+<span class="c1"># Enable CJK</span>
+<span class="c1"># Note: sed MacOS syntax</span>
+sed -i <span class="s1">&#39;&#39;</span> <span class="s1">&#39;2i\
+</span><span class="s1">    \\usepackage[slantfont, boldfont]{xeCJK}\
+</span><span class="s1">    \\setCJKmainfont{Sarasa UI SC}&#39;</span> <span class="nv">$FILE</span>.tex
+
+<span class="c1"># Generate PDF</span>
+xelatex <span class="nv">$FILE</span>.tex
+
+<span class="c1"># cleanup</span>
+rm <span class="nv">$FILE</span>.log <span class="nv">$FILE</span>.out <span class="nv">$FILE</span>.aux
+</code></pre></td></tr></table>
+</div>
+</div>
       </div>
 
       <footer>
