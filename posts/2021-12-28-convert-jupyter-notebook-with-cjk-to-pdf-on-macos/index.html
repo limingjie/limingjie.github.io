@@ -116,7 +116,7 @@
             </span>
             <span class="reading-time">
               <i class="fas fa-clock"></i>
-              2 minutes read
+              One minute read
             </span>
           </div>
           <div class="categories">
@@ -243,36 +243,11 @@ brew install mactex
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/zsh
 </span><span class="cp"></span>
 <span class="nv">FILE</span><span class="o">=</span><span class="s2">&#34;notebook-to-convert&#34;</span>
-
-<span class="c1"># Remove files</span>
-rm <span class="nv">$FILE</span>.html <span class="nv">$FILE</span>.tex <span class="nv">$FILE</span>.md <span class="nv">$FILE</span>.pdf
-
-<span class="c1"># Generate HTML</span>
-jupyter nbconvert --to html <span class="nv">$FILE</span>.ipynb
-<span class="c1"># Install latest nbconvert to get line number option https://github.com/jupyter/nbconvert</span>
-<span class="c1"># jupyter nbconvert --to html $FILE.ipynb --Highlight2HTML.extra_formatter_options linenos=table</span>
-
-<span class="c1"># Generate Markdown</span>
-jupyter nbconvert --to markdown <span class="nv">$FILE</span>.ipynb
 
 <span class="c1"># Generate Tex</span>
 jupyter nbconvert --to latex <span class="nv">$FILE</span>.ipynb
@@ -285,9 +260,6 @@ sed -i <span class="s1">&#39;&#39;</span> <span class="s1">&#39;2i\
 
 <span class="c1"># Generate PDF</span>
 xelatex <span class="nv">$FILE</span>.tex
-
-<span class="c1"># cleanup</span>
-rm <span class="nv">$FILE</span>.log <span class="nv">$FILE</span>.out <span class="nv">$FILE</span>.aux
 </code></pre></td></tr></table>
 </div>
 </div>
