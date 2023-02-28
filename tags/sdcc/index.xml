@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SDCC on Mingjie Li</title>
+    <link>https://limingjie.github.io/tags/sdcc/</link>
+    <description>Recent content in SDCC on Mingjie Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Sep 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://limingjie.github.io/tags/sdcc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CH552/CH554 Development Guide - macOS</title>
+      <link>https://limingjie.github.io/posts/2022-09-27-ch552-development/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2022-09-27-ch552-development/</guid>
+      <description>CH552G/CH554G Pinout (Get original SVG image from GitHub)
+# Pin Timer SPI PWM UART Timer Interrupt Touch USB ADC From Datasheet 1 P3.2 TXD1_ INT0 VBUS1 AIN3 P3.2/TXD1_/INT0/VBUS1/AIN3 2 P1.4 T2_/CAP1_ SCS TIN2 UCC1 AIN1 P1.4/T2_/CAP1_/SCS/TIN2/UCC1/AIN1 3 P1.5 MOSI PWM1 TIN3 UCC2 AIN2 P1.5/MOSI/PWM1/TIN3/UCC2/AIN2 4 P1.6 MISO RXD1 TIN4 P1.6/MISO/RXD1/TIN4 5 P1.7 SCK TXD1 TIN5 P1.7/SCK/TXD1/TIN5 6 RST T2EX_/CAP2_ RST/T2EX_/CAP2_ 7 P3.1 PWM2_ TXD P3.1/PWM2_/TXD 8 P3.0 PWM1_ RXD P3.0/PWM1_/RXD 9 P1.</description>
+    </item>
+    
+  </channel>
+</rss>

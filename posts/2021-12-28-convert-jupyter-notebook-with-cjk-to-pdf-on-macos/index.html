@@ -12,20 +12,19 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Convert Jupyter Notebook with CJK to PDF on MacOS"/>
 <meta name="twitter:description" content="Install Dependencies Follow nbconvert Installation Guide to install dependencies.
-1 2 3  pip install nbconvert pip install pandoc brew install mactex   Install CJK Font Use system font or install any CJK font. I recommend Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕).
-1  brew install font-sarasa-gothic   Convert the Notebook to PDF   Convert the notebook to tex
-1  jupyter nbconvert --to latex notebook-to-convert."/>
+1 2 3 pip install nbconvert pip install pandoc brew install mactex Install CJK Font Use system font or install any CJK font. I recommend Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕).
+1 brew install font-sarasa-gothic Convert the Notebook to PDF Convert the notebook to tex
+1 jupyter nbconvert --to latex notebook-to-convert.ipynb Modify the tex file to add CJK package and set CJK font"/>
 
     <meta property="og:title" content="Convert Jupyter Notebook with CJK to PDF on MacOS" />
 <meta property="og:description" content="Install Dependencies Follow nbconvert Installation Guide to install dependencies.
-1 2 3  pip install nbconvert pip install pandoc brew install mactex   Install CJK Font Use system font or install any CJK font. I recommend Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕).
-1  brew install font-sarasa-gothic   Convert the Notebook to PDF   Convert the notebook to tex
-1  jupyter nbconvert --to latex notebook-to-convert." />
+1 2 3 pip install nbconvert pip install pandoc brew install mactex Install CJK Font Use system font or install any CJK font. I recommend Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕).
+1 brew install font-sarasa-gothic Convert the Notebook to PDF Convert the notebook to tex
+1 jupyter nbconvert --to latex notebook-to-convert.ipynb Modify the tex file to add CJK package and set CJK font" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://limingjie.github.io/posts/2021-12-28-convert-jupyter-notebook-with-cjk-to-pdf-on-macos/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-12-28T12:59:00+08:00" />
 <meta property="article:modified_time" content="2021-12-28T12:59:00+08:00" />
-
 
 
     
@@ -64,7 +63,7 @@
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.91.2" />
+    <meta name="generator" content="Hugo 0.110.0">
   </head>
 
   <body class=" ">
@@ -165,10 +164,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">pip install nbconvert
-pip install pandoc
-brew install mactex
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip install nbconvert
+</span></span><span class="line"><span class="cl">pip install pandoc
+</span></span><span class="line"><span class="cl">brew install mactex
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="install-cjk-font">Install CJK Font</h2>
 <p>Use system font or install any CJK font. I recommend <a href="https://github.com/be5invis/Sarasa-Gothic">Sarasa Gothic (更纱黑体 / 更紗黑體 / 更紗ゴシック / 사라사고딕)</a>.</p>
@@ -177,8 +176,8 @@ brew install mactex
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">brew install font-sarasa-gothic
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">brew install font-sarasa-gothic
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="convert-the-notebook-to-pdf">Convert the Notebook to PDF</h2>
 <ol>
@@ -189,8 +188,8 @@ brew install mactex
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">jupyter nbconvert --to latex notebook-to-convert.ipynb
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">jupyter nbconvert --to latex notebook-to-convert.ipynb
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -205,12 +204,12 @@ brew install mactex
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\documentclass</span><span class="na">[11pt]</span><span class="nb">{</span>article<span class="nb">}</span>
-    <span class="k">\usepackage</span><span class="na">[slantfont, boldfont]</span><span class="nb">{</span>xeCJK<span class="nb">}</span>
-    <span class="k">\setCJKmainfont</span><span class="nb">{</span>Sarasa UI SC<span class="nb">}</span>
-    <span class="k">\usepackage</span><span class="na">[breakable]</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>
-    <span class="k">\usepackage</span><span class="nb">{</span>parskip<span class="nb">}</span> <span class="c">% Stop auto-indenting (to mimic markdown behaviour)
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-tex" data-lang="tex"><span class="line"><span class="cl"><span class="k">\documentclass</span><span class="na">[11pt]</span><span class="nb">{</span>article<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\usepackage</span><span class="na">[slantfont, boldfont]</span><span class="nb">{</span>xeCJK<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\setCJKmainfont</span><span class="nb">{</span>Sarasa UI SC<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\usepackage</span><span class="na">[breakable]</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\usepackage</span><span class="nb">{</span>parskip<span class="nb">}</span> <span class="c">% Stop auto-indenting (to mimic markdown behaviour)
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -220,8 +219,8 @@ brew install mactex
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xelatex notebook-to-convert.tex
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">xelatex notebook-to-convert.tex
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ol>
@@ -245,22 +244,22 @@ brew install mactex
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/zsh
-</span><span class="cp"></span>
-<span class="nv">FILE</span><span class="o">=</span><span class="s2">&#34;notebook-to-convert&#34;</span>
-
-<span class="c1"># Generate Tex</span>
-jupyter nbconvert --to latex <span class="nv">$FILE</span>.ipynb
-
-<span class="c1"># Enable CJK</span>
-<span class="c1"># Note: sed MacOS syntax</span>
-sed -i <span class="s1">&#39;&#39;</span> <span class="s1">&#39;2i\
-</span><span class="s1">    \\usepackage[slantfont, boldfont]{xeCJK}\
-</span><span class="s1">    \\setCJKmainfont{Sarasa UI SC}&#39;</span> <span class="nv">$FILE</span>.tex
-
-<span class="c1"># Generate PDF</span>
-xelatex <span class="nv">$FILE</span>.tex
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/zsh
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">FILE</span><span class="o">=</span><span class="s2">&#34;notebook-to-convert&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Generate Tex</span>
+</span></span><span class="line"><span class="cl">jupyter nbconvert --to latex <span class="nv">$FILE</span>.ipynb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Enable CJK</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Note: sed MacOS syntax</span>
+</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;&#39;</span> <span class="s1">&#39;2i\
+</span></span></span><span class="line"><span class="cl"><span class="s1">    \\usepackage[slantfont, boldfont]{xeCJK}\
+</span></span></span><span class="line"><span class="cl"><span class="s1">    \\setCJKmainfont{Sarasa UI SC}&#39;</span> <span class="nv">$FILE</span>.tex
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Generate PDF</span>
+</span></span><span class="line"><span class="cl">xelatex <span class="nv">$FILE</span>.tex
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
       </div>

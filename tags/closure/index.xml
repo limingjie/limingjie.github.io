@@ -15,7 +15,7 @@
       <guid>https://limingjie.github.io/posts/2019-05-25-golang-closure-exercise/</guid>
       <description>I always had a question, if Golang does not have the static variable, how could it gracefully handle long lifetime variables except using global variables?
 Until last night, I saw this Exercise: Fibonacci closure in A tour of Go. I have to admit I am not a fan of closure, sometimes it makes easy logic complex. But it is still great for learning.
- Exercise: Fibonacci closure
+Exercise: Fibonacci closure
 Let&amp;rsquo;s have some fun with functions.</description>
     </item>
     

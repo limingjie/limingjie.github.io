@@ -14,8 +14,8 @@
       
       <guid>https://limingjie.github.io/posts/2019-05-28-render-tex-in-hugo/</guid>
       <description>Recently, I started to think about learning $\TeX$, adding $\TeX$ support to blog looks like a good start for me. It took me quite some time to figure out all the culprits of embedding $\TeX$ in markdown. I hope this blog could save you some time before starting writing in $\TeX$.
- Note: Some contents in this post is outdated. Hugo markdown engine moved from Blackfriday to Goldmark.
- Required Components  The default Blackfriday markdown engine.</description>
+Note: Some contents in this post is outdated. Hugo markdown engine moved from Blackfriday to Goldmark.
+Required Components The default Blackfriday markdown engine.</description>
     </item>
     
   </channel>

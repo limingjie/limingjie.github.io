@@ -12,18 +12,17 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Render TeX in Hugo Blog"/>
 <meta name="twitter:description" content="Recently, I started to think about learning $\TeX$, adding $\TeX$ support to blog looks like a good start for me. It took me quite some time to figure out all the culprits of embedding $\TeX$ in markdown. I hope this blog could save you some time before starting writing in $\TeX$.
- Note: Some contents in this post is outdated. Hugo markdown engine moved from Blackfriday to Goldmark.
- Required Components  The default Blackfriday markdown engine."/>
+Note: Some contents in this post is outdated. Hugo markdown engine moved from Blackfriday to Goldmark.
+Required Components The default Blackfriday markdown engine."/>
 
     <meta property="og:title" content="Render TeX in Hugo Blog" />
 <meta property="og:description" content="Recently, I started to think about learning $\TeX$, adding $\TeX$ support to blog looks like a good start for me. It took me quite some time to figure out all the culprits of embedding $\TeX$ in markdown. I hope this blog could save you some time before starting writing in $\TeX$.
- Note: Some contents in this post is outdated. Hugo markdown engine moved from Blackfriday to Goldmark.
- Required Components  The default Blackfriday markdown engine." />
+Note: Some contents in this post is outdated. Hugo markdown engine moved from Blackfriday to Goldmark.
+Required Components The default Blackfriday markdown engine." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://limingjie.github.io/posts/2019-05-28-render-tex-in-hugo/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-05-29T00:30:00+08:00" />
 <meta property="article:modified_time" content="2019-05-29T00:30:00+08:00" />
-
 
 
     
@@ -62,7 +61,7 @@
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.91.2" />
+    <meta name="generator" content="Hugo 0.110.0">
   </head>
 
   <body class=" ">
@@ -184,11 +183,11 @@ $$
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\def\f</span>#1#2<span class="nb">{</span>#1f(#2)<span class="nb">}</span>
-<span class="k">\f\relax</span><span class="nb">{</span>x<span class="nb">}</span> = <span class="k">\int</span><span class="nb">_{</span>-<span class="k">\infty</span><span class="nb">}^</span><span class="k">\infty</span>
-    <span class="k">\f\hat\xi\,</span>e<span class="nb">^{</span>2 <span class="k">\pi</span> i <span class="k">\xi</span> x<span class="nb">}</span>
-    <span class="k">\,</span>d<span class="k">\xi</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-tex" data-lang="tex"><span class="line"><span class="cl"><span class="k">\def\f</span>#1#2<span class="nb">{</span>#1f(#2)<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\f\relax</span><span class="nb">{</span>x<span class="nb">}</span> = <span class="k">\int</span><span class="nb">_{</span>-<span class="k">\infty</span><span class="nb">}^</span><span class="k">\infty</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\f\hat\xi\,</span>e<span class="nb">^{</span>2 <span class="k">\pi</span> i <span class="k">\xi</span> x<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\,</span>d<span class="k">\xi</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="integrate-katex-auto-render-extension">Integrate $\KaTeX$ Auto-render Extension</h3>
 <p>The first step is to find the right place to include the <a href="https://katex.org/docs/autorender.html">$\KaTeX$ Auto-render Extension</a>. It is different by theme, usually, the <code>header.html</code> or <code>footer.html</code> could be the ideal place; or, if the theme support math libraries, it may provide a separate HTML, in my case, it is <code>math.html</code>.</p>
@@ -218,28 +217,28 @@ $$
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">{{- if .Params.katex -}}
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;DOMContentLoaded&#34;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">{</span>
-          <span class="c1">// customised options
-</span><span class="c1"></span>          <span class="c1">// • auto-render specific keys, e.g.:
-</span><span class="c1"></span>          <span class="nx">delimiters</span><span class="o">:</span> <span class="p">[</span>
-              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;$$&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;$$&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span>
-              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">false</span><span class="p">},</span>
-              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;\\(&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;\\)&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">false</span><span class="p">},</span>
-              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;\\[&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;\\]&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">true</span><span class="p">}</span>
-          <span class="p">],</span>
-          <span class="c1">// • rendering keys, e.g.:
-</span><span class="c1"></span>          <span class="nx">throwOnError</span> <span class="o">:</span> <span class="kc">false</span>
-        <span class="p">});</span>
-    <span class="p">});</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-{{- end -}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- if .Params.katex -}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;DOMContentLoaded&#34;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="c1">// customised options
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="c1">// • auto-render specific keys, e.g.:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nx">delimiters</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;$$&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;$$&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">false</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;\\(&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;\\)&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">false</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">              <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;\\[&#39;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s1">&#39;\\]&#39;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">true</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">          <span class="p">],</span>
+</span></span><span class="line"><span class="cl">          <span class="c1">// • rendering keys, e.g.:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nx">throwOnError</span> <span class="o">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{- end -}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="enable-katex-in-markdown">Enable $\KaTeX$ in Markdown</h3>
 <p>Enable the parameter <code>katex</code> in the posts which require $\TeX$. Depend on the markdown header format, it could be TOML or YAML.</p>
@@ -255,12 +254,12 @@ $$
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="err">+++</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Render $\\TeX$ in Hugo Blog&#34;</span>
-<span class="p">...</span>
-<span class="nx">katex</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="err">+++</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Render $\\TeX$ in Hugo Blog&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="nx">katex</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><strong>YAML</strong></li>
@@ -274,12 +273,12 @@ $$
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">---</span><span class="w">
-</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Render $\\TeX$ in Hugo Blog&#34;</span><span class="w">
-</span><span class="w"></span><span class="nn">...</span><span class="w">
-</span><span class="w"></span><span class="nt">katex</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w"></span><span class="nn">---</span><span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Render $\\TeX$ in Hugo Blog&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">katex</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="time-to-dance">Time to Dance</h3>
 <h4 id="first-the-known-issues">First, The Known Issues</h4>
@@ -337,15 +336,15 @@ $$
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-tex" data-lang="tex">&lt;div&gt;
-<span class="sb">$$</span><span class="nb">
-</span><span class="nb">F_</span><span class="m">0</span><span class="o">=</span><span class="m">0</span><span class="nb"> </span><span class="nv">\quad</span><span class="nb"> F_</span><span class="m">1</span><span class="o">=</span><span class="m">1</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
-</span><span class="nb">and </span><span class="nv">\\</span><span class="nb">
-</span><span class="nb">F_n</span><span class="o">=</span><span class="nb">F_{n</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="o">+</span><span class="nb">F_{n</span><span class="o">-</span><span class="m">2</span><span class="nb">} </span><span class="nv">\\</span><span class="nb">
-</span><span class="nb">for </span><span class="nv">\quad</span><span class="nb"> n &gt; </span><span class="m">1</span><span class="nb">
-</span><span class="nb"></span><span class="s">$$</span>
-&lt;/div&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-tex" data-lang="tex"><span class="line"><span class="cl">&lt;div&gt;
+</span></span><span class="line"><span class="cl"><span class="sb">$$</span><span class="nb">
+</span></span></span><span class="line"><span class="cl"><span class="nb">F_</span><span class="m">0</span><span class="o">=</span><span class="m">0</span><span class="nb"> </span><span class="nv">\quad</span><span class="nb"> F_</span><span class="m">1</span><span class="o">=</span><span class="m">1</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+</span></span></span><span class="line"><span class="cl"><span class="nb">and </span><span class="nv">\\</span><span class="nb">
+</span></span></span><span class="line"><span class="cl"><span class="nb">F_n</span><span class="o">=</span><span class="nb">F_{n</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="o">+</span><span class="nb">F_{n</span><span class="o">-</span><span class="m">2</span><span class="nb">} </span><span class="nv">\\</span><span class="nb">
+</span></span></span><span class="line"><span class="cl"><span class="nb">for </span><span class="nv">\quad</span><span class="nb"> n &gt; </span><span class="m">1</span><span class="nb">
+</span></span></span><span class="line"><span class="cl"><span class="nb"></span><span class="s">$$</span>
+</span></span><span class="line"><span class="cl">&lt;/div&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="useful-links">Useful Links</h2>
 <ul>

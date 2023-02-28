@@ -15,7 +15,7 @@
       <guid>https://limingjie.github.io/posts/2020-02-24-multiply-big-numbers/</guid>
       <description>Multiply Strings I answered this LeetCode question many years ago and got a successful submission with a not too bad score.
 Some code like this, I tried to make it easy to understand, well it might sacrifice some performance. The code takes less than 1s to calculate 10,000! on a MBP 2017 and nearly 100s to calculate 100,000!. Bravo!
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45  #include &amp;lt;algorithm&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;iterator&amp;gt;#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt; std::string multiply(std::string a, std::string b) { size_t size_a = a.</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 #include &amp;lt;algorithm&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;iterator&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;vector&amp;gt; std::string multiply(std::string a, std::string b) { size_t size_a = a.</description>
     </item>
     
   </channel>
