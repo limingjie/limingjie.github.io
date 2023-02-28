@@ -11,12 +11,12 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Op Amps for Everyone Notes"/>
-<meta name="twitter:description" content="Chapter 2 - Development of the Ideal Op Amp Equations Ideal Op Amp Parameter Value $I_{IN}$ - Input current 0 $V_{OS}$ - Input offset voltage 0 $Z_{IN}$ - Input impedance $\infin$ $Z_{OUT}$ - Outage impedance 0 $a$ - Gain $\infin$ From Wikipedia - Operational Amplifier:
-Infinite open-loop gain $G = v_{out} / v_{in}$ Infinite input impedance $R_{in}$, and so zero input current Zero input offset voltage Infinite output voltage range Infinite bandwidth with zero phase shift and infinite slew rate Zero output impedance $R_{out}$, and so infinite output current range Zero noise Infinite common-mode rejection ratio (CMRR) Infinite power supply rejection ratio."/>
+<meta name="twitter:description" content="Chapter 2 - Development of the Ideal Op Amp Equations Ideal Op Amp Parameter Value $I_{\text{IN}}$ - Input current 0 $V_{\text{OS}}$ - Input offset voltage 0 $Z_{\text{IN}}$ - Input impedance $\infin$ $Z_{\text{OUT}}$ - Outage impedance 0 $a$ - Gain $\infin$ From Wikipedia - Operational Amplifier:
+Infinite open-loop gain $G = v_{\text{out}} / v_{\text{in}}$ Infinite input impedance $R_{\text{in}}$, and so zero input current Zero input offset voltage Infinite output voltage range Infinite bandwidth with zero phase shift and infinite slew rate Zero output impedance $R_{\text{out}}$, and so infinite output current range Zero noise Infinite common-mode rejection ratio (CMRR) Infinite power supply rejection ratio."/>
 
     <meta property="og:title" content="Op Amps for Everyone Notes" />
-<meta property="og:description" content="Chapter 2 - Development of the Ideal Op Amp Equations Ideal Op Amp Parameter Value $I_{IN}$ - Input current 0 $V_{OS}$ - Input offset voltage 0 $Z_{IN}$ - Input impedance $\infin$ $Z_{OUT}$ - Outage impedance 0 $a$ - Gain $\infin$ From Wikipedia - Operational Amplifier:
-Infinite open-loop gain $G = v_{out} / v_{in}$ Infinite input impedance $R_{in}$, and so zero input current Zero input offset voltage Infinite output voltage range Infinite bandwidth with zero phase shift and infinite slew rate Zero output impedance $R_{out}$, and so infinite output current range Zero noise Infinite common-mode rejection ratio (CMRR) Infinite power supply rejection ratio." />
+<meta property="og:description" content="Chapter 2 - Development of the Ideal Op Amp Equations Ideal Op Amp Parameter Value $I_{\text{IN}}$ - Input current 0 $V_{\text{OS}}$ - Input offset voltage 0 $Z_{\text{IN}}$ - Input impedance $\infin$ $Z_{\text{OUT}}$ - Outage impedance 0 $a$ - Gain $\infin$ From Wikipedia - Operational Amplifier:
+Infinite open-loop gain $G = v_{\text{out}} / v_{\text{in}}$ Infinite input impedance $R_{\text{in}}$, and so zero input current Zero input offset voltage Infinite output voltage range Infinite bandwidth with zero phase shift and infinite slew rate Zero output impedance $R_{\text{out}}$, and so infinite output current range Zero noise Infinite common-mode rejection ratio (CMRR) Infinite power supply rejection ratio." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://limingjie.github.io/posts/2023-02-28-op-amps-for-everyone-notes/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-02-28T00:00:00+08:00" />
@@ -151,8 +151,11 @@ Infinite open-loop gain $G = v_{out} / v_{in}$ Infinite input impedance $R_{in}$
       <div>
         <h2 id="chapter-2---development-of-the-ideal-op-amp-equations">Chapter 2 - Development of the Ideal Op Amp Equations</h2>
 <h3 id="ideal-op-amp">Ideal Op Amp</h3>
-<p><img src="/images/Op_Amp/Op-Amp_Internal.jpeg" alt="Op Amp Internal"></p>
-<blockquote>
+<picture>
+      <source srcset="/images/Op_Amp/Op-Amp_Internal_hu2dc00842ae5879cdb84dd1eda8fdf06f_144989_350x1025_fit_q75_h2_box.webp" type="image/webp">
+      <source srcset="/images/Op_Amp/Op-Amp_Internal_hu2dc00842ae5879cdb84dd1eda8fdf06f_144989_350x1025_fit_q75_box.jpeg" type="image/jpeg">
+      <img src="/images/Op_Amp/Op-Amp_Internal_hu2dc00842ae5879cdb84dd1eda8fdf06f_144989_350x1025_fit_q75_box.jpeg" alt="My image" width="350" height="193">
+    </picture>
 <table>
 <thead>
 <tr>
@@ -162,19 +165,19 @@ Infinite open-loop gain $G = v_{out} / v_{in}$ Infinite input impedance $R_{in}$
 </thead>
 <tbody>
 <tr>
-<td>$I_{IN}$ - Input current</td>
+<td>$I_{\text{IN}}$ - Input current</td>
 <td>0</td>
 </tr>
 <tr>
-<td>$V_{OS}$ - Input offset voltage</td>
+<td>$V_{\text{OS}}$ - Input offset voltage</td>
 <td>0</td>
 </tr>
 <tr>
-<td>$Z_{IN}$ - Input impedance</td>
+<td>$Z_{\text{IN}}$ - Input impedance</td>
 <td>$\infin$</td>
 </tr>
 <tr>
-<td>$Z_{OUT}$ - Outage impedance</td>
+<td>$Z_{\text{OUT}}$ - Outage impedance</td>
 <td>0</td>
 </tr>
 <tr>
@@ -183,16 +186,15 @@ Infinite open-loop gain $G = v_{out} / v_{in}$ Infinite input impedance $R_{in}$
 </tr>
 </tbody>
 </table>
-</blockquote>
 <p>From <a href="https://en.wikipedia.org/wiki/Operational_amplifier">Wikipedia - Operational Amplifier</a>:</p>
 <blockquote>
 <ul>
-<li>Infinite open-loop gain $G = v_{out} / v_{in}$</li>
-<li>Infinite input impedance $R_{in}$, and so zero input current</li>
+<li>Infinite open-loop gain $G = v_{\text{out}} / v_{\text{in}}$</li>
+<li>Infinite input impedance $R_{\text{in}}$, and so zero input current</li>
 <li>Zero input offset voltage</li>
 <li>Infinite output voltage range</li>
 <li>Infinite bandwidth with zero phase shift and infinite slew rate</li>
-<li>Zero output impedance $R_{out}$, and so infinite output current range</li>
+<li>Zero output impedance $R_{\text{out}}$, and so infinite output current range</li>
 <li>Zero noise</li>
 <li>Infinite common-mode rejection ratio (CMRR)</li>
 <li>Infinite power supply rejection ratio.</li>
@@ -209,13 +211,13 @@ $$</p>
 <p>Substituting this into the gain equation, we obtain</p>
 <p>$$
 \begin{align}
-V_{\text{OUT}} &amp;= A_{\text{OL}}(V_{\text{IN}} - \beta V_{\text{OUT}}) \
+V_{\text{OUT}} &amp;= A_{\text{OL}}(V_{\text{IN}} - \beta V_{\text{OUT}})
 \end{align}
 $$</p>
 <p>Solving for out $V_{{\text{OUT}}}$:</p>
 <p>$$
 \begin{align}
-V_{\text{OUT}} &amp;= V_{\text{IN}} \left(\frac {1} {\beta + \frac {1} {A_{\text{OL}}}} \right) \
+V_{\text{OUT}} &amp;= V_{\text{IN}} \left(\frac {1} {\beta + \displaystyle \frac {1} {A_{\text{OL}}}} \right)
 \end{align}
 $$</p>
 <p>If $A_{\text{OL}}$ is vary large (100,000 or more), this simplifies to</p>
