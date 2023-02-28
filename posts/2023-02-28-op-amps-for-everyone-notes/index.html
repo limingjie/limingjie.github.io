@@ -119,7 +119,7 @@ Infinite open-loop gain $G = v_{\text{out}} / v_{\text{in}}$ Infinite input impe
             </span>
             <span class="reading-time">
               <i class="fas fa-clock"></i>
-              One minute read
+              3 minutes read
             </span>
           </div>
           <div class="categories">
@@ -141,6 +141,9 @@ Infinite open-loop gain $G = v_{\text{out}} / v_{\text{in}}$ Infinite input impe
       <ul>
         <li><a href="#ideal-op-amp">Ideal Op Amp</a></li>
         <li><a href="#the-non-inverting-op-amp">The Non-inverting Op Amp</a></li>
+        <li><a href="#the-inverting-op-amp">The Inverting Op Amp</a></li>
+        <li><a href="#the-adder">The Adder</a></li>
+        <li><a href="#the-differential-amplifier">The Differential Amplifier</a></li>
       </ul>
     </li>
   </ul>
@@ -223,7 +226,76 @@ $$</p>
 <p>If $A_{\text{OL}}$ is vary large (100,000 or more), this simplifies to</p>
 <p>$$
 \begin{align}
-{V_{\text{OUT}} \approx {\frac {V_{\text{IN}}}{\beta }}={\frac {V_{\text{IN}}}{\frac {R_{G}}{R_{F}+R_{G}}}}=V_{\text{IN}}\left(1+{\frac {R_{F}}{R_{G}}}\right).}
+V_{\text{OUT}} \approx {\frac {V_{\text{IN}}}{\beta }} &amp;= {\frac {V_{\text{IN}}}{\frac {R_{\text{G}}}{R_{\text{F}}+R_{\text{G}}}}}=V_{\text{IN}}\left(1+{\frac {R_{\text{F}}}{R_{\text{G}}}}\right) \cr
+\frac {V_{\text{OUT}}}{V_{\text{IN}}} &amp;= \left(1+{\frac {R_{\text{F}}}{R_{\text{G}}}}\right).
+\end{align}
+$$</p>
+<p>When $R_{\text{G}}$ becomes very large, $\displaystyle \frac {R_{\text{F}}}{R_{\text{G}}} \implies 0$, the circuit becomes a unity gain buffer.</p>
+<p>$$
+\frac {V_{\text{OUT}}}{V_{\text{IN}}} = 1
+$$</p>
+<ul>
+<li>$R_{\text{G}} = \infin$ - Usually removed.</li>
+<li>$R_{\text{F}}$ is used to protect the inverting input from overvoltage.</li>
+</ul>
+<h3 id="the-inverting-op-amp">The Inverting Op Amp</h3>
+<p><img src="/images/Op_Amp/The_Inverting_Op_Amp.png" alt="The Inverting Op Amp"></p>
+<p>$$
+\begin{align}
+V_{\text{OUT}} &amp;= A_{\text{OL}}(V_{+} - V_{-})
+\end{align}
+$$</p>
+<p>$V_{-}$ is a function to $V_{\text{IN}}$ and $V_{\text{OUT}}$ due to $R_{\text{F}}$ and $R_{\text{G}}$.</p>
+<p>$$
+\begin{align}
+\frac{V_{\text{IN}}-V_{\text{OUT}}}{R_{\text{G}}+R_{\text{F}}} = \frac{V_{-}-V_{\text{OUT}}}{R_{\text{F}}} \cr
+V_{-} = \frac{R_{\text{G}}V_{\text{OUT}}+R_{\text{F}}V_{\text{IN}}}{R_{\text{G}}+R_{\text{F}}}
+\end{align}
+$$</p>
+<p>Substituting this into the gain equation, we obtain</p>
+<p>$$
+\begin{align}
+V_{\text{OUT}} &amp;= -A_{\text{OL}}\frac{R_{\text{G}}V_{\text{OUT}}+R_{\text{F}}V_{\text{IN}}}{R_{\text{G}}+R_{\text{F}}} \cr
+(R_{\text{G}}+R_{\text{F}})V_{\text{OUT}} &amp;= -A_{\text{OL}}{R_{\text{G}}V_{\text{OUT}}-A_{\text{OL}}R_{\text{F}}V_{\text{IN}}} \cr
+V_{\text{OUT}} &amp;= -V_{\text{IN}} \frac{A_{\text{OL}}R_{\text{F}}}{A_{\text{OL}}R_{\text{G}}+R_{\text{G}}+R_{\text{F}}}
+\end{align}
+$$</p>
+<p>If $A_{\text{OL}}$ is vary large (100,000 or more), this simplifies to</p>
+<p>$$
+\begin{align}
+V_{\text{OUT}} &amp;= -V_{\text{IN}} \frac{R_{\text{F}}}{R_{\text{G}}} \cr
+\frac{V_{\text{OUT}}}{V_{\text{IN}}} &amp;= -\frac{R_{\text{F}}}{R_{\text{G}}}
+\end{align}
+$$</p>
+<h3 id="the-adder">The Adder</h3>
+<p><img src="/images/Op_Amp/The_Adder.png" alt="The Adder"></p>
+<p>The non-inverting input is grounded, so the inverting input is virtually ground, there is no current flow through the inputs</p>
+<p>$$
+\begin{align}
+I_{\text{F}} &amp;= I_{\text{1}} + I_{\text{2}} + I_{\text{N}} \cr
+\frac{0 - V_{\text{OUT}}}{R_{\text{F}}} &amp;= \frac{V_{\text{1}}}{R_{\text{1}}} + \frac{V_{\text{2}}}{R_{\text{2}}} + \frac{V_{\text{N}}}{R_{\text{N}}} \cr
+V_{\text{OUT}} &amp;= - \left(\frac{R_{\text{F}}}{R_{\text{1}}}V_{\text{1}} + \frac{R_{\text{F}}}{R_{\text{2}}}V_{\text{2}} + \frac{R_{\text{F}}}{R_{\text{N}}}V_{\text{N}} \right)
+\end{align}
+$$</p>
+<h3 id="the-differential-amplifier">The Differential Amplifier</h3>
+<p><img src="/images/Op_Amp/The_Differential_Amplifier.png" alt="The Differential Amplifier"></p>
+<p>$$
+\begin{align}
+V_{+} &amp;= V_{\text{1}}\frac{R_{\text{2}}}{R_{\text{1}}+R_{\text{2}}} \cr
+\frac{V_{\text{OUT}}-V_{2}}{R_{\text{3}}+R_{\text{4}}} &amp;= \frac{V_{-} - V_{\text{2}}}{R_{\text{3}}} \cr
+V_{\text{OUT}} &amp;= V_{-}\frac{R_{\text{3}}+R_{\text{4}}}{R_{\text{3}}}- V_{\text{2}} \frac{R_{\text{4}}}{R_{\text{3}}} \cr
+\end{align}
+$$</p>
+<p>Consider $V_{+} = V_{-}$, we have</p>
+<p>$$
+\begin{align}
+V_{\text{OUT}} &amp;= V_{\text{1}}\frac{R_{\text{3}}+R_{\text{4}}}{R_{\text{3}}} \frac{R_{\text{2}}}{R_{\text{1}}+R_{\text{2}}} - V_{\text{2}}\frac{R_{\text{4}}}{R_{\text{3}}} \cr
+\end{align}
+$$</p>
+<p>If the resisters $R_{\text{1}} = R_{\text{3}}$ and $R_{\text{2}} = R_{\text{4}}$, this simplifies to</p>
+<p>$$
+\begin{align}
+V_{\text{OUT}} &amp;= (V_{\text{1}} - V_{\text{2}})\frac{R_{\text{2}}}{R_{\text{1}}} = (V_{\text{1}} - V_{\text{2}})\frac{R_{\text{4}}}{R_{\text{3}}}
 \end{align}
 $$</p>
 
