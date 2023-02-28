@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Feb 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://limingjie.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Op Amps for Everyone Notes</title>
+      <link>https://limingjie.github.io/posts/2023-02-28-op-amps-for-everyone-notes/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://limingjie.github.io/posts/2023-02-28-op-amps-for-everyone-notes/</guid>
+      <description>Chapter 2 - Development of the Ideal Op Amp Equations Ideal Op Amp Parameter Value $I_{IN}$ - Input current 0 $V_{OS}$ - Input offset voltage 0 $Z_{IN}$ - Input impedance $\infin$ $Z_{OUT}$ - Outage impedance 0 $a$ - Gain $\infin$ From Wikipedia - Operational Amplifier:
+Infinite open-loop gain $G = v_{out} / v_{in}$ Infinite input impedance $R_{in}$, and so zero input current Zero input offset voltage Infinite output voltage range Infinite bandwidth with zero phase shift and infinite slew rate Zero output impedance $R_{out}$, and so infinite output current range Zero noise Infinite common-mode rejection ratio (CMRR) Infinite power supply rejection ratio.</description>
+    </item>
+    
+    <item>
       <title>Utilities</title>
       <link>https://limingjie.github.io/utils/</link>
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0800</pubDate>
