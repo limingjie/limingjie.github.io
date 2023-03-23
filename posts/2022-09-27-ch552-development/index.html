@@ -59,7 +59,7 @@
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://limingjie.github.io/img/favicon-16x16.png" sizes="16x16">
 
-    <meta name="generator" content="Hugo 0.110.0">
+    <meta name="generator" content="Hugo 0.111.3">
   </head>
 
   <body class=" ">
@@ -461,19 +461,29 @@
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">brew install libusb
-</span></span><span class="line"><span class="cl">python3 -mpip install ch55xtool
+</span></span><span class="line"><span class="cl"><span class="c1"># Find the python version</span>
+</span></span><span class="line"><span class="cl">python3 --version
+</span></span><span class="line"><span class="cl"><span class="c1"># For example - Python 3.11.2</span>
+</span></span><span class="line"><span class="cl">python3.11 -mpip install ch55xtool
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Replace <code>WCHISP</code> in <code>ch554_sdcc/examples/Makefile.include</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-Makefile" data-lang="Makefile"><span class="line"><span class="cl"><span class="nv">WCHISP</span> <span class="o">?=</span> python3 -m ch55xtool -f
+</span></span><span class="line"><span class="cl"><span class="c"># Or explicitly point to the python version
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nv">WCHISP</span> <span class="o">?=</span> python3.11 -m ch55xtool -f
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
